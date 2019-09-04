@@ -1,3 +1,5 @@
+Initial stage of portfolio
+
 # portfolio
 
 ## Project setup
