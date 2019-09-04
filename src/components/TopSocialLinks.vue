@@ -50,7 +50,7 @@
 		width: 25px;
 	}
 	img:hover{
-		background-color: pink;
+		//background-color: pink;
 	}
 	img.size-L{
 		width: 35px !important;
