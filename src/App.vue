@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- top layer with github/linked/stackoverflow etc -->
+	<top-social-links></top-social-links>
 	<nav>
 		<button>Portfolio</button>
 		<button>About Me</button>
@@ -9,6 +9,15 @@
     <!-- <router-view /> -->
   </div>
 </template>
+
+<script>
+	import TopSocialLinks from "@/components/TopSocialLinks.vue";
+	export default {
+		components:{
+			'top-social-links': TopSocialLinks
+		}
+	}
+</script>
 
 <style lang="scss">
 html, body{
