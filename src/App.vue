@@ -25,7 +25,7 @@ html, body{
 	background-image: url('./assets/nadine-shaabana-fs5Yi34T3ig-unsplash.jpg');
 	background-position: center;
 	background-size: cover;
-	height: 100%;
+	height: 100%
 }
 #nav {
   padding: 30px;
