@@ -1,20 +1,31 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <!-- top layer with github/linked/stackoverflow etc -->
+	<nav>
+		<button>Portfolio</button>
+		<button>About Me</button>
+		<button>Pages</button>
+	</nav>
+    <!-- <router-view /> -->
   </div>
 </template>
 
 <style lang="scss">
+html, body{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+	font-family: "Avenir", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+	background-image: url('./assets/nadine-shaabana-fs5Yi34T3ig-unsplash.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 100%;
 }
 #nav {
   padding: 30px;
