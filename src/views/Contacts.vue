@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="component">
 		contacts
 	</div>
 </template>

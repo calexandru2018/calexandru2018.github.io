@@ -30,7 +30,7 @@
 
 <style lang="scss" scoped>
 	.top-nav{
-		padding: 10px;
+		padding: 20px 10px;
 		color: white;
 		max-width: 80%;
 		margin: 0 auto;
@@ -50,7 +50,7 @@
 		width: 25px;
 	}
 	img:hover{
-		//background-color: pink;
+		box-shadow: 10px 10px 10px 10px white;
 	}
 	img.size-L{
 		width: 35px !important;

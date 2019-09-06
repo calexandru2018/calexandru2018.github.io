@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-	Show {{show}}
-
 	<top-social-links></top-social-links>
 	<nav>
-		<button @click="show = 'app-portfolio'">Portfolio</button>
-		<button @click="show = 'app-about-me'">About Me</button>
-		<button @click="show = 'app-contacts'">Contacts</button>
+		<button @click="show_component = 'app-portfolio'; class_visible = true">Portfolio</button>
+		<button @click="show_component = 'app-about-me'; class_visible = true">About Me</button>
+		<button @click="show_component = 'app-contacts'; class_visible = true">Contacts</button>
 	</nav>
 	<keep-alive>
-    	<component v-bind:is="show"></component>
+    	<component 
+			class = "component" 
+			v-bind:class = "{'show-component': class_visible}" 
+			v-bind:is = "show_component" 
+			class_visible = "class_visible"
+			></component>
 	</keep-alive>
   </div>
 </template>
@@ -23,7 +26,8 @@
 	export default {
 		data(){
 			return{
-				show: 'app-portfolio'
+				show_component: 'app-portfolio',
+				class_visible: false
 			}
 		},
 		components:{
@@ -36,8 +40,9 @@
 </script>
 
 <style lang="scss">
+/* eslint-disable */
 	html, body{
-		height: 100%;
+		height: 100vh;
 		padding: 0;
 		margin: 0;
 	}
@@ -47,20 +52,20 @@
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: white;
-		background-image: url('./assets/nadine-shaabana-fs5Yi34T3ig-unsplash.jpg');
+		background-image: url('./assets/abstract-design-diagonal-2387532(1).jpg');
 		background-position: center;
 		background-size: cover;
 		height: 100%;
-		padding: 25px;
 	}
 </style>
 <style lang="scss" scoped>
 	nav{
 		display: grid;
 		grid-template-rows: repeat(3, 1fr);
-		padding: 5px;
 		grid-row-gap: 5em;
-		margin-top: 25%;
+		margin-top: 20vh;
+		padding: 0 10px;
+		width: 80%;
 	}
 	nav button{
 		width: 50%;
@@ -79,5 +84,19 @@
 	nav button:hover{
 		color: black;
 		background-color: white
+	}
+	.component{
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		background-color: rgba(110, 110, 110, 0.7);
+		transition: all ease-in-out 0.7s;
+		transform: translate(150%);
+	}
+
+	.show-component{
+		transform: translate(0)
 	}
 </style>
