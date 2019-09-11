@@ -4,12 +4,12 @@
 	<h1>Show component {{class_visible}} </h1>
 	<app-portfolio-header></app-portfolio-header>
 	<app-navigation></app-navigation>
-	<keep-alive>
-    	<component
-			v-bind:class = "{'show-component': class_visible}" 
-			v-bind:is = "component_to_show" 
-			></component>
-	</keep-alive>
+
+	<transition name="slide" v-if="class_visible == true">
+		<keep-alive>
+			<component v-bind:is = "component_to_show" ></component>
+		</keep-alive>
+	</transition>
   </div>
 </template>
 
@@ -78,11 +78,6 @@
 		left: 0;
 		width: 100vw;
 		background-color: rgba(110, 110, 110, 0.7);
-		transition: transform ease-in-out 0.7s;
-		transform: translate(150%);
-	}
-	.show-component{
-		transform: translate(0%)
 	}
 	.hide-component-button{
 		width: 60px;
@@ -93,5 +88,28 @@
 		font-weight: bold;
 		text-transform: capitalize;
 		border-radius: 2px;
+		
+	}
+	.slide-enter-active{
+		animation: slide-in .4s ease-in-out forwards;
+	}
+	.slide-leave-active{
+		animation: slide-out .3s ease-out forwards;
+	}
+	@keyframes slide-in{
+		from{
+			transform: translateX(150%)
+		}
+		to{
+			transform: translateX(0%)
+		}
+	}
+	@keyframes slide-out{
+		from{
+			transform: translateX(0%)
+		}
+		to{
+			transform: translateX(150%)
+		}
 	}
 </style>
