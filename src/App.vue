@@ -1,24 +1,24 @@
 <template>
   <div id="app">
-	<top-social-links></top-social-links>
-	<nav>
-		<button @click="show_component = 'app-portfolio'; class_visible = true">Portfolio</button>
-		<button @click="show_component = 'app-about-me'; class_visible = true">About Me</button>
-		<button @click="show_component = 'app-contacts'; class_visible = true">Contacts</button>
-	</nav>
+	<h1> {{component_to_show}} </h1>
+	<h1>Class Visible {{class_visible}} </h1>
+	<app-portfolio-header></app-portfolio-header>
+	<app-navigation></app-navigation>
 	<keep-alive>
     	<component 
 			class = "component" 
 			v-bind:class = "{'show-component': class_visible}" 
-			v-bind:is = "show_component" 
-			class_visible = "class_visible"
+			v-bind:is = "component_to_show" 
 			></component>
 	</keep-alive>
   </div>
 </template>
 
 <script>	
+	import { eventBus } from './main.js';
 	import TopSocialLinks from "@/components/TopSocialLinks.vue";
+	import PortfolioHeader from "@/components/PortfolioHeader.vue";
+	import Navigation from "@/components/Navigation.vue";
 	import Portfolio from "@/views/Portfolio.vue";
 	import AboutMe from "@/views/AboutMe.vue";
 	import Contacts from "@/views/Contacts.vue";
@@ -26,15 +26,26 @@
 	export default {
 		data(){
 			return{
-				show_component: 'app-portfolio',
-				class_visible: false
+				component_to_show: 'app-portfolio',
+				class_visible: false,
 			}
 		},
 		components:{
 			'top-social-links': TopSocialLinks,
+			'app-navigation': Navigation,
 			'app-portfolio': Portfolio,
 			'app-about-me': AboutMe,
 			'app-contacts': Contacts,
+			'app-portfolio-header': PortfolioHeader
+		},
+		created(){
+			eventBus.$on('component-to-show', (component, show) => {
+				this.component_to_show = component
+				this.class_visible = show
+			});
+			eventBus.$on('hide-component', (booleanVal) => {
+				this.class_visible = false
+			});
 		}
 	}
 </script>
@@ -45,6 +56,7 @@
 		height: 100vh;
 		padding: 0;
 		margin: 0;
+		overflow: hidden
 	}
 	#app {
 		font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -55,39 +67,14 @@
 		background-image: url('./assets/abstract-design-diagonal-2387532(1).jpg');
 		background-position: center;
 		background-size: cover;
-		height: 100%;
+		height: inherit;
+		overflow: hidden
 	}
 </style>
 <style lang="scss" scoped>
-	nav{
-		display: grid;
-		grid-template-rows: repeat(3, 1fr);
-		grid-row-gap: 5em;
-		margin-top: 20vh;
-		padding: 0 10px;
-		width: 80%;
-	}
-	nav button{
-		width: 50%;
-		margin: 0 auto 0 0;
-		height: 40px;
-		background-color: transparent;
-		border: 2px solid white;
-		border-radius: 2px;
-		padding: 25px;
-		line-height: 0;
-		color: white;
-		font-weight: bold;
-		text-transform: uppercase;
-		transition: all ease-in 0.2s;
-	}
-	nav button:hover{
-		color: black;
-		background-color: white
-	}
 	.component{
 		height: 100vh;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100vw;
@@ -95,8 +82,7 @@
 		transition: all ease-in-out 0.7s;
 		transform: translate(150%);
 	}
-
 	.show-component{
-		transform: translate(0)
+		// transform: translate(0)
 	}
 </style>
