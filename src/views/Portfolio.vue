@@ -1,14 +1,13 @@
 <template>
-		<div>
+	<div class="component">
 		</br>
 		</br>
 		</br>
 		</br>
 		</br>
 		<h1>portfolio</h1>
-		<button @click="hideComponent">Back</button>
+		<button class="hide-component-button" @click="hideComponent">Back</button>
 	</div>
-		
 </template>
 
 <script>
@@ -23,7 +22,7 @@
 	}
 </script>
 
-style.<style lang="scss" scoped>
+<style lang="scss" scoped>
 	h1{
 		background-color: orange
 	}

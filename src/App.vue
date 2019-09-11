@@ -1,12 +1,11 @@
 <template>
   <div id="app">
 	<h1> {{component_to_show}} </h1>
-	<h1>Class Visible {{class_visible}} </h1>
+	<h1>Show component {{class_visible}} </h1>
 	<app-portfolio-header></app-portfolio-header>
 	<app-navigation></app-navigation>
 	<keep-alive>
-    	<component 
-			class = "component" 
+    	<component
 			v-bind:class = "{'show-component': class_visible}" 
 			v-bind:is = "component_to_show" 
 			></component>
@@ -43,8 +42,8 @@
 				this.component_to_show = component
 				this.class_visible = show
 			});
-			eventBus.$on('hide-component', (booleanVal) => {
-				this.class_visible = false
+			eventBus.$on('show-component', (booleanVal) => {
+				this.class_visible = booleanVal
 			});
 		}
 	}
@@ -64,14 +63,14 @@
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: white;
-		background-image: url('./assets/abstract-design-diagonal-2387532(1).jpg');
+		background-image: url('./assets/josh-rose-trYl7JYATH0-unsplash.jpg');
 		background-position: center;
 		background-size: cover;
 		height: inherit;
 		overflow: hidden
 	}
 </style>
-<style lang="scss" scoped>
+<style lang="scss">
 	.component{
 		height: 100vh;
 		position: fixed;
@@ -79,10 +78,20 @@
 		left: 0;
 		width: 100vw;
 		background-color: rgba(110, 110, 110, 0.7);
-		transition: all ease-in-out 0.7s;
+		transition: transform ease-in-out 0.7s;
 		transform: translate(150%);
 	}
 	.show-component{
-		// transform: translate(0)
+		transform: translate(0%)
+	}
+	.hide-component-button{
+		width: 60px;
+		height: 40px;
+		background-color: orange;
+		border: none;
+		color: white;
+		font-weight: bold;
+		text-transform: capitalize;
+		border-radius: 2px;
 	}
 </style>

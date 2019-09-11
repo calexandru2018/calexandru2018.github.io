@@ -41,10 +41,11 @@
 		color: white;
 		font-weight: bold;
 		text-transform: uppercase;
-		transition: all ease-in 0.2s;
+		transition: all ease-in 0.15s;
 	}
 	nav button:hover{
 		color: black;
-		background-color: white
+		background-color: white;
+		transform: scale(1.01)
 	}
 </style>
