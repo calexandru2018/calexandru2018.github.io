@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-	<h1> {{component_to_show}} </h1>
-	<h1>Show component {{class_visible}} </h1>
 	<app-portfolio-header></app-portfolio-header>
 	<app-navigation></app-navigation>
-
 	<transition name="slide" v-if="class_visible == true">
 		<keep-alive>
 			<component v-bind:is = "component_to_show" ></component>
@@ -73,22 +70,19 @@
 <style lang="scss">
 	.component{
 		height: 100vh;
+		width: 100vw;
 		position: fixed;
 		top: 0;
-		left: 0;
-		width: 100vw;
 		background-color: rgba(110, 110, 110, 0.7);
 	}
 	.hide-component-button{
-		width: 60px;
-		height: 40px;
-		background-color: orange;
+		width: inherit;
+    	height: 100%;
+		background-color: #2F394D;
 		border: none;
 		color: white;
-		font-weight: bold;
-		text-transform: capitalize;
-		border-radius: 2px;
-		
+		// enable this and change height to inherit in case the button is not be all along the line
+		// margin-top: 20em;
 	}
 	.slide-enter-active{
 		animation: slide-in .4s ease-in-out forwards;
@@ -111,5 +105,47 @@
 		to{
 			transform: translateX(150%)
 		}
+	}
+	.card-base-layout{
+		display: flex;
+		// grid-template-columns: 1fr 1fr;
+		// grid-template-columns: fit-content 1fr;
+		flex-flow: column no-wrap;
+
+	}
+	.card-base-layout div:first-child{
+		background-color: #2F394D;
+		width: 10%;
+	}
+	.card-base-layout div:nth-child(2){
+		background-color: #EEE1B3;
+		width: 90%;
+		color: #2F394D;
+	}
+	i {
+		border: solid;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 0.7em;
+		margin-left: -1.2em;
+	}
+	.right {
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+
+	.left {
+		transform: rotate(135deg);
+		-webkit-transform: rotate(135deg);
+	}
+
+	.up {
+		transform: rotate(-135deg);
+		-webkit-transform: rotate(-135deg);
+	}
+
+	.down {
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
 	}
 </style>

@@ -1,12 +1,11 @@
 <template>
-	<div class="component">
-		</br>
-		</br>
-		</br>
-		</br>
-		</br>
-		<h1>Contacts</h1>
-		<button class="hide-component-button" @click="hideComponent">Back</button>
+	<div class="component card-base-layout">
+		<div>
+			<button class="hide-component-button" @click="hideComponent"><i class="right"></i></button>
+		</div>
+		<div>
+			<h1>Contacts</h1>
+		</div>
 	</div>
 </template>
 
@@ -23,7 +22,5 @@
 </script>
 
 <style lang="scss" scoped>
-	h1{
-		background-color: orange
-	}
+
 </style>
