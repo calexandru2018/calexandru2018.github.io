@@ -107,19 +107,21 @@
 		}
 	}
 	.card-base-layout{
-		display: flex;
+		// display: flex;
 		// grid-template-columns: 1fr 1fr;
 		// grid-template-columns: fit-content 1fr;
-		flex-flow: column no-wrap;
-
+		// flex-flow: column no-wrap;
+		display: grid;
+		grid-template-columns: 10% 90%;
 	}
 	.card-base-layout div:first-child{
 		background-color: #2F394D;
-		width: 10%;
+		// width: 10%;
 	}
 	.card-base-layout div:nth-child(2){
 		background-color: #EEE1B3;
-		width: 90%;
+		// width: 90%; display flex
+		width: 100%;
 		color: #2F394D;
 	}
 	i {
