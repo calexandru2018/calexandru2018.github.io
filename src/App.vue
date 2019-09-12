@@ -73,16 +73,19 @@
 		width: 100vw;
 		position: fixed;
 		top: 0;
-		background-color: rgba(110, 110, 110, 0.7);
 	}
 	.hide-component-button{
-		width: inherit;
+		width: 100%;
     	height: 100%;
 		background-color: #2F394D;
 		border: none;
 		color: white;
-		// enable this and change height to inherit in case the button is not be all along the line
-		// margin-top: 20em;
+		padding: 0;
+		cursor: pointer;
+		transition: background-color ease-in 0.1s;
+	}
+	.hide-component-button:hover{
+		background-color: rgb(57, 67, 87);
 	}
 	.slide-enter-active{
 		animation: slide-in .4s ease-in-out forwards;
@@ -90,6 +93,56 @@
 	.slide-leave-active{
 		animation: slide-out .3s ease-out forwards;
 	}
+	.card-base-layout{
+		display: grid;
+		grid-template-columns: 10% 90%;
+	}
+	.card-base-layout div:nth-child(2){
+		background-color: #EEE1B3;
+		color: #2F394D;
+	}
+	i{
+		border: solid;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 0.7em;
+		margin-left: -1.2em;
+	}
+	i.links{
+		background-repeat: no-repeat;
+		background-position: center center;
+		border:none;
+		width: 2em;
+	}
+	// .links.github{
+		.link-github{
+		background-image: url("./assets/mark-github.svg");
+	}
+	.link-eye-open{
+		background-image: url("./assets/eye.svg");
+	}
+	.link-eye-closed{
+		background-image: url("./assets/eye-closed.svg");
+	}
+	.link-external{
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-image: url("./assets/link-external.svg");
+	}
+	.right {
+		transform: rotate(-45deg);
+	}
+	.left {
+		transform: rotate(135deg);
+	}
+	.up {
+		transform: rotate(-135deg);
+	}
+	.down {
+		transform: rotate(45deg);
+	}
+
+	//START Animations
 	@keyframes slide-in{
 		from{
 			transform: translateX(150%)
@@ -106,48 +159,5 @@
 			transform: translateX(150%)
 		}
 	}
-	.card-base-layout{
-		// display: flex;
-		// grid-template-columns: 1fr 1fr;
-		// grid-template-columns: fit-content 1fr;
-		// flex-flow: column no-wrap;
-		display: grid;
-		grid-template-columns: 10% 90%;
-	}
-	.card-base-layout > div:first-child{
-		background-color: #2F394D;
-		// width: 10%;
-	}
-	.card-base-layout div:nth-child(2){
-		background-color: #EEE1B3;
-		// width: 90%; display flex
-		width: 100%;
-		color: #2F394D;
-	}
-	i {
-		border: solid;
-		border-width: 0 3px 3px 0;
-		display: inline-block;
-		padding: 0.7em;
-		margin-left: -1.2em;
-	}
-	.right {
-		transform: rotate(-45deg);
-		-webkit-transform: rotate(-45deg);
-	}
-
-	.left {
-		transform: rotate(135deg);
-		-webkit-transform: rotate(135deg);
-	}
-
-	.up {
-		transform: rotate(-135deg);
-		-webkit-transform: rotate(-135deg);
-	}
-
-	.down {
-		transform: rotate(45deg);
-		-webkit-transform: rotate(45deg);
-	}
+	// END Animation
 </style>

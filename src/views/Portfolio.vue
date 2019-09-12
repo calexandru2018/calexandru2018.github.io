@@ -7,18 +7,38 @@
 			<h1>Portfolio</h1>
 			<div class="portfolio-grid">
 				<div class="portfolio-item">
-					<a href="https://lk-properties.pt">
-						<img src="../assets/screen-lk.png" alt="">
-					</a>
-					<h4>Lk Properties</h4>
-					<p>This is a project developped by me</p>
+					<img src="../assets/screen-lk.png" alt="">
+					<div class="item-header">
+						<h3>Lk Properties</h3>
+						<div class="item-links">
+							<span></span>
+							<img src="../assets/eye-closed.svg" alt="">
+							<span></span>
+							<a class="clickable" href="https://lk-properties.pt/" target="_blank">
+								<img src="../assets/link-external.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sint dolorum qui ut repellendus laudantium sunt debitis. Beatae suscipit tenetur cupiditate rem dolorum molestiae labore doloremque, ab nam, dolores commodi!
+					</p>
 				</div>
 				<div class="portfolio-item">
-					<a href="https://bomaoquadrado.pt">
-						<img src="../assets/screen-bom2.png" alt="">
-					</a>
-					<h4>Bom&sup2;</h4>
-					<p>This is a project developped by me</p>
+					<img src="../assets/screen-bom2.png" alt="">
+					<div class="item-header">
+						<h3>Bom&sup2;</h3>
+						<div class="item-links">
+							<span></span>
+							<img src="../assets/eye-closed.svg" alt="">
+							<span></span>
+							<a class="clickable" href="https://bomaoquadrado.pt/" target="_blank">
+								<img src="../assets/link-external.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet illum veritatis excepturi? Sapiente vero, inventore maiores explicabo fugiat ut qui ipsam magni dignissimos at nam dolor voluptates quo nesciunt facilis?
+					</p>
 				</div>
 			</div>
 		</div>
@@ -48,17 +68,51 @@
 		grid-row-gap: 2em;
 		margin: 1em 0;
 		.portfolio-item{
-			h4{
+			display:grid;
+			grid-template-rows: repeat(3, fit-content);
+			padding: 0 1.5em;
+			.item-header{
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				align-items: center;
+			}
+			.item-header > *:first-child{
+				justify-items: start;
+				text-align: left;
+			}
+			.item-header > *:last-child{
+				justify-items: center;
+			}
+			.item-links{
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				justify-items: center;
+				align-items: center;
+				img{
+					width: auto;
+					height: 1.2em;
+					vertical-align: middle;
+				}
+			}
+			h3{
 				margin: 0.5em 0;
+				
 			}
 			p{
 				font-size: 0.8em;
-				margin: 0.2em 0;
+				margin: 0.5em 0;
+				text-align: justify;
 			}
 			img{
-				width: 15em;
+				width: 100%;
 
 			}
 		}
+		.portfolio-item > div{
+			box-shadow: 0px 4px 3px -3px #2F394D;
+		}
+	}
+	.clickable{
+		cursor: pointer;
 	}
 </style>

@@ -42,6 +42,7 @@
 		font-weight: bold;
 		text-transform: uppercase;
 		transition: all ease-in 0.15s;
+		cursor: pointer;
 	}
 	nav button:hover{
 		color: black;
