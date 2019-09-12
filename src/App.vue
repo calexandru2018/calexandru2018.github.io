@@ -114,7 +114,7 @@
 		display: grid;
 		grid-template-columns: 10% 90%;
 	}
-	.card-base-layout div:first-child{
+	.card-base-layout > div:first-child{
 		background-color: #2F394D;
 		// width: 10%;
 	}
