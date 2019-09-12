@@ -1,10 +1,11 @@
 <template>
-	<div class="component card-base-layout">
-		<div>
-			<button class="hide-component-button" @click="hideComponent"><i class="right"></i></button>
+	<div class="component card-base-layout" v-bind:style="card_base_layout.grid_width">
+		<div v-bind:style="hide_comp_btn_order">
+			<button class="hide-component-btn" @click="hideComponent"><i class="right"></i></button>
 		</div>
-		<div>
+		<div v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
 			<h1>About me</h1>
+			<h2>The prop is {{card_base_layout}} </h2>
 		</div>
 	</div>
 </template>
@@ -13,6 +14,7 @@
 	import { eventBus } from '../main';
 
 	export default {
+		props: ['hide_comp_btn_order','card_base_layout'],
 		methods: {
 			hideComponent(){
 				eventBus.$emit('show-component', false);

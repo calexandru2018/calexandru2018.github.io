@@ -1,7 +1,7 @@
 <template>
 	<div class="component card-base-layout">
 		<div>
-			<button class="hide-component-button" @click="hideComponent"><i class="right"></i></button>
+			<button class="hide-component-btn" @click="hideComponent"><i class="right"></i></button>
 		</div>
 		<div class="portfolio-container">
 			<h1>Portfolio</h1>
@@ -75,6 +75,7 @@
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				align-items: center;
+				margin: 1em 0;
 			}
 			.item-header > *:first-child{
 				justify-items: start;

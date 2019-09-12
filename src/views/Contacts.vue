@@ -1,7 +1,9 @@
 <template>
 	<div class="component card-base-layout">
 		<div>
-			<button class="hide-component-button" @click="hideComponent"><i class="right"></i></button>
+			<button class="hide-component-btn" @click="hideComponent">
+				<i class="right"></i>
+			</button>
 		</div>
 		<div>
 			<h1>Contacts</h1>
