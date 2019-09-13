@@ -29,17 +29,17 @@
 			changeUseHand(){
 				if(this.left_hand_use == false){
 					this.left_hand_use = true;
-					this.arrow_orientation = 'arrow-right.svg';
-					this.nav_btn_margin = '0 0 0 auto';
-					this.change_btn_margin = '0 auto 0 0';
-				}else{
-					this.left_hand_use = false;
 					this.arrow_orientation = 'arrow-left.svg';
 					this.nav_btn_margin = '0 auto 0 0';
 					this.change_btn_margin = '0 0 0 auto';
+				}else{
+					this.left_hand_use = false;
+					this.arrow_orientation = 'arrow-right.svg';
+					this.nav_btn_margin = '0 0 0 auto';
+					this.change_btn_margin = '0 auto 0 0';
 				}
 				// console.clear();
-				// console.log(`Display left handed ${this.left_hand_use} and ${this.arrow_orientation}`);
+				console.log(`Display left handed ${this.left_hand_use} and ${this.arrow_orientation}`);
 				
 				eventBus.$emit('left-hand-use', this.left_hand_use);
 			}
