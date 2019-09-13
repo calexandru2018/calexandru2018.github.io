@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 	.contact-form{
 		display: grid;
-		height: fit-content;
+		height: 100px;
 		grid-gap: 0.5em;
 	}
 	textarea{
