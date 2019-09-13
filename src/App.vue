@@ -140,18 +140,6 @@
 	.hide-component-btn:hover{
 		background-color: rgb(57, 67, 87);
 	}
-	.slide-enter-active_left_hand{
-		animation: slide-in-left .4s ease-in-out forwards;
-	}
-	.slide-leave-active_left_hand{
-		animation: slide-out-left .3s ease-out forwards;
-	}
-	.slide-enter-active_right_hand{
-		animation: slide-in-right .4s ease-in-out forwards;
-	}
-	.slide-leave-active_right_hand{
-		animation: slide-out-right .3s ease-out forwards;
-	}
 	i{
 		border: solid;
 		border-width: 0 3px 3px 0;
@@ -192,8 +180,21 @@
 	.down {
 		transform: rotate(45deg);
 	}
-
+</style>
+<style lang="scss" scoped>
 	//START Animations
+	.slide-enter-active_left_hand{
+		animation: slide-in-left .4s ease-in-out forwards;
+	}
+	.slide-leave-active_left_hand{
+		animation: slide-out-left .3s ease-out forwards;
+	}
+	.slide-enter-active_right_hand{
+		animation: slide-in-right .4s ease-in-out forwards;
+	}
+	.slide-leave-active_right_hand{
+		animation: slide-out-right .3s ease-out forwards;
+	}
 	@keyframes slide-in-left{
 		from{
 			transform: translateX(150%)
