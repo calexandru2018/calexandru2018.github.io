@@ -77,7 +77,8 @@
 		transform: scale(1.01)
 	}
 	.change-hand-btn{
-		width: 3em;
+		width: 4em;
+   		height: 2em;
 		background-color: white;
 		border: none;
 		border-radius: 3px;
