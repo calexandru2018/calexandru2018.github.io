@@ -140,6 +140,9 @@
 	.hide-component-btn:hover{
 		background-color: rgb(57, 67, 87);
 	}
+	.portfolio-container{
+		overflow-y: auto;
+	}
 	i{
 		border: solid;
 		border-width: 0 3px 3px 0;

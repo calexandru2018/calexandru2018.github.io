@@ -7,14 +7,16 @@
 			<h1>Portfolio</h1>
 			<div class="portfolio-grid">
 				<div class="portfolio-item">
-					<img src="../assets/screen-lk.png" alt="">
+					<img class="cover-img" src="../assets/screen-prtf.png" alt="">
 					<div class="item-header">
-						<h3>Lk Properties</h3>
+						<h3>Portfolio</h3>
 						<div class="item-links">
 							<span></span>
-							<img src="../assets/eye-closed.svg" alt="">
+							<a href="https://github.com/calexandru2018/portfolio" target="_blank">
+								<img src="../assets/eye.svg" alt="">
+							</a>
 							<span></span>
-							<a class="clickable" href="https://lk-properties.pt/" target="_blank">
+							<a href="https://calexandru.com/" target="_blank">
 								<img src="../assets/link-external.svg" alt="">
 							</a>
 						</div>
@@ -22,16 +24,63 @@
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sint dolorum qui ut repellendus laudantium sunt debitis. Beatae suscipit tenetur cupiditate rem dolorum molestiae labore doloremque, ab nam, dolores commodi!
 					</p>
+					<h5>Worked with the following technologies:</h5>
+					<ul class="tech-skills-list">
+						<li>
+							<span class="list-item">PHP</span>
+						</li>
+						<li>
+							<span class="list-item">JS</span>
+						</li>
+						<li>
+							<span class="list-item">HTML/CSS</span>
+						</li>
+						<li>
+							<span class="list-item">Bootstrap</span>
+						</li>
+					</ul>
 				</div>
 				<div class="portfolio-item">
-					<img src="../assets/screen-bom2.png" alt="">
+					<img class="cover-img" src="../assets/screen-lk.png" alt="">
+					<div class="item-header">
+						<h3>Lk Properties</h3>
+						<div class="item-links">
+							<span></span>
+							<img src="../assets/eye-closed.svg" alt="">
+							<span></span>
+							<a href="https://lk-properties.pt/" target="_blank">
+								<img src="../assets/link-external.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sint dolorum qui ut repellendus laudantium sunt debitis. Beatae suscipit tenetur cupiditate rem dolorum molestiae labore doloremque, ab nam, dolores commodi!
+					</p>
+					<h5>Worked with the following technologies:</h5>
+					<ul class="tech-skills-list">
+						<li>
+							<span class="list-item">PHP</span>
+						</li>
+						<li>
+							<span class="list-item">JS</span>
+						</li>
+						<li>
+							<span class="list-item">HTML/CSS</span>
+						</li>
+						<li>
+							<span class="list-item">Bootstrap</span>
+						</li>
+					</ul>
+				</div>
+				<div class="portfolio-item">
+					<img class="cover-img" src="../assets/screen-bom2.png" alt="">
 					<div class="item-header">
 						<h3>Bom&sup2;</h3>
 						<div class="item-links">
 							<span></span>
 							<img src="../assets/eye-closed.svg" alt="">
 							<span></span>
-							<a class="clickable" href="https://bomaoquadrado.pt/" target="_blank">
+							<a href="https://bomaoquadrado.pt/" target="_blank">
 								<img src="../assets/link-external.svg" alt="">
 							</a>
 						</div>
@@ -39,6 +88,21 @@
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet illum veritatis excepturi? Sapiente vero, inventore maiores explicabo fugiat ut qui ipsam magni dignissimos at nam dolor voluptates quo nesciunt facilis?
 					</p>
+					<h5>Worked with the following technologies:</h5>
+					<ul class="tech-skills-list">
+						<li>
+							<span class="list-item">PHP</span>
+						</li>
+						<li>
+							<span class="list-item">JS</span>
+						</li>
+						<li>
+							<span class="list-item">HTML/CSS</span>
+						</li>
+						<li>
+							<span class="list-item">Webpack</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -60,9 +124,6 @@
 </script>
 
 <style lang="scss" scoped>
-	.portfolio-container{
-		overflow-y: auto;
-	}
 	.portfolio-grid{
 		display: grid;
 		grid-template-columns: 1fr;
@@ -70,13 +131,17 @@
 		margin: 1em 0;
 		.portfolio-item{
 			display:grid;
-			grid-template-rows: repeat(3, fit-content);
+			grid-template-rows: repeat(5, auto);
 			padding: 0 1.5em;
+			.cover-img{
+				width: 100%;
+			}
 			.item-header{
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				align-items: center;
 				margin: 1em 0;
+				box-shadow: 0px 4px 3px -3px #2F394D;
 			}
 			.item-header > *:first-child{
 				justify-items: start;
@@ -96,25 +161,35 @@
 					vertical-align: middle;
 				}
 			}
-			h3{
+			h3, h4, h5{
 				margin: 0.5em 0;
-				
+			}
+			h4, h5{
+				text-align: left;
 			}
 			p{
+				line-height: 0.5cm;
 				font-size: 0.8em;
 				margin: 0.5em 0;
 				text-align: justify;
 			}
-			img{
-				width: 100%;
-
+			a{
+				cursor: pointer;
 			}
 		}
-		.portfolio-item > div{
-			box-shadow: 0px 4px 3px -3px #2F394D;
+	}
+	.tech-skills-list{
+		display: grid;
+	grid-template-columns: repeat(3, 1fr);
+		text-align: left;
+		font-size: 0.8em;
+		grid-row-gap: 0.7em;
+		margin: 0.5em 0;
+    	padding-left: 1em;
+		.list-item{
+			position: relative;
+			left: -5px;
 		}
 	}
-	.clickable{
-		cursor: pointer;
-	}
+	
 </style>
