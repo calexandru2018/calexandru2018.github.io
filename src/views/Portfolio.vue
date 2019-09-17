@@ -180,7 +180,7 @@
 	}
 	.tech-skills-list{
 		display: grid;
-	grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		text-align: left;
 		font-size: 0.8em;
 		grid-row-gap: 0.7em;

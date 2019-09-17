@@ -7,9 +7,10 @@
   		v-bind:leave-active-class="updated_slide_leave"
 		v-if="class_visible == true">
 		<keep-alive>
+			<!-- v-bind:hide_comp_btn_order="hide_comp_btn_order"  -->
 			<component 
 				v-bind:is = "component_to_show"
-				v-bind:hide_comp_btn_order="hide_comp_btn_order" 
+				
 				v-bind:card_base_layout="card_base_layout" ></component>
 		</keep-alive>
 	</transition>
@@ -125,24 +126,26 @@
 		display: grid;
 	}
 	.card-base-layout div:nth-child(2){
-		background-color: #EEE1B3;
+		// background-color: #EEE1B3;
+		background-color: snow;
 		color: #2F394D;
+	}
+	.portfolio-container{
+		overflow-y: auto;
 	}
 	.hide-component-btn{
 		width: 100%;
     	height: 100%;
-		background-color: #2F394D;
+		// background-color: #2F394D;
+		background-color: rgba(100, 100, 100, 0.9);
 		border: none;
-		color: white;
+		color: snow;
 		padding: 0;
 		cursor: pointer;
 		transition: background-color ease-in 0.1s;
 	}
 	.hide-component-btn:hover{
 		background-color: rgb(57, 67, 87);
-	}
-	.portfolio-container{
-		overflow-y: auto;
 	}
 	i{
 		border: solid;
