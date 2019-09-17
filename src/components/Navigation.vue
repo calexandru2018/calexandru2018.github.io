@@ -5,7 +5,8 @@
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-contacts')">Contacts</button>
 
 		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
-			<img v-bind:src="require('../assets/' + arrow_orientation)" alt="">
+			<!-- <img v-bind:src="require('../assets/img/' + arrow_orientation)" alt=""> -->
+			<img src="../assets/img/arrow-left.svg" alt="">
 		</button> 
 	</nav>
 </template>
@@ -60,21 +61,32 @@
 		width: 50%;
 		height: 1.5em;
 		background-color: transparent;
-		border: 2px solid white;
+		border: 2.5px solid white;
 		border-radius: 2px;
 		padding: 25px;
 		line-height: 0;
 		color: white;
 		font-weight: bold;
 		text-transform: uppercase;
-		transition: all ease-in-out 0.9s;
+		transition: all ease-in-out 0.45s;
 		cursor: pointer;
     	position: relative;
 	}
+	.nav-btn:first-child{
+		transition: all ease-in-out 0.7s;
+	}
+	.nav-btn:nth-child(3){
+		transition: all ease-in-out 0.2s;
+	}
 	nav .nav-btn:hover{
-		color: black;
+		color: rgba(100,100,100,0.9);
 		background-color: white;
-		transform: scale(1.01)
+		border:none;
+		border: 2.5px solid white;
+		/* text-shadow: -1px -1px 0 slategrey, 1px -1px 0 slategrey, -1px 1px 0 slategrey, 1px 1px 0 slategrey; */
+		// border: 2px solid rgba(90,100,100, 0.9);
+		// box-shadow: inset 10px 10px 10px 10px black;
+		// box-shadow: inset 0px 0px 4px 1px rgba(100, 100, 100);
 	}
 	.change-hand-btn{
 		width: 4em;
@@ -82,11 +94,13 @@
 		background-color: white;
 		border: none;
 		border-radius: 3px;
-		transition: left 1s;
+		transition: all 0.6s;
     	position: relative;
-		img{
-			transition: all 1s;
-		}
+		
+	}
+	.change-hand-btn img{
+		// transition: all 5s;
+		vertical-align: middle;
 	}
 	.nav-btn-slide-right{//initial stage; using in left hande mode
 		left: 50%;
@@ -95,13 +109,10 @@
 		left: 0;
 	}
 	.change-hand-btn-slide-right{//initial stage; using in left hande mode
-		left: 85%;
-		.change-hand-btn img{
-			transform: rotate(180)
-		}
+		left: 80%;
+		transform: rotate(180deg);
 	}
 	.change-hand-btn-slide-left{//alt stage; using in right hande mode
 		left: 0;
 	}
-
 </style>

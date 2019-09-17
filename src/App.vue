@@ -99,12 +99,13 @@
 		overflow: hidden
 	}
 	#app {
-		font-family: "Avenir", Helvetica, Arial, sans-serif;
+		font-family: 'Inria Sans Regular';
+		// font-family: "Avenir", Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: white;
-		background-image: url('./assets/josh-rose-trYl7JYATH0-unsplash.jpg');
+		background-image: url('./assets/img/architecture2-1081912_1920.jpg');
 		background-position: center;
 		background-size: cover;
 		height: inherit;
@@ -157,19 +158,19 @@
 		width: 2em;
 	}
 	// .links.github{
-		.link-github{
-		background-image: url("./assets/mark-github.svg");
+	.link-github{
+	background-image: url("./assets/img/mark-github.svg");
 	}
 	.link-eye-open{
-		background-image: url("./assets/eye.svg");
+		background-image: url("./assets/img/eye.svg");
 	}
 	.link-eye-closed{
-		background-image: url("./assets/eye-closed.svg");
+		background-image: url("./assets/img/eye-closed.svg");
 	}
 	.link-external{
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-image: url("./assets/link-external.svg");
+		background-image: url("./assets/img/link-external.svg");
 	}
 	.right {
 		transform: rotate(-45deg);

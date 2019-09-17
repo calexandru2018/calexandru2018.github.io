@@ -2,6 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import "./registerServiceWorker";
+// import styles from './assets/fonts/fonts.css';
+import './assets/fonts/fonts.css';
 
 export const eventBus = new Vue();
 
