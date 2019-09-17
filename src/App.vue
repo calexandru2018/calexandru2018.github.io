@@ -106,7 +106,7 @@
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: white;
-		background-image: url('./assets/img/architecture2-1081912_1920.jpg');
+		background-image: url('./assets/img/custom/tim-mossholder-4P5DMXQXzRI-unsplash.jpg');
 		background-position: center;
 		background-size: cover;
 		height: inherit;
@@ -126,33 +126,44 @@
 		display: grid;
 	}
 	.card-base-layout div:nth-child(2){
-		// background-color: #EEE1B3;
 		background-color: snow;
 		color: #2F394D;
+	}
+	.card-base-layout .card-header{
+		background-color: rgb(60, 126, 136);
+		margin: auto;
+		padding: 0.3em 0 0.1em 0;
+		color: rgb(255,255,255);
+		box-shadow: inset 0px 10px 0px -5px rgb(50,116,126);
+		position: fixed;
+		width: 90%;
 	}
 	.portfolio-container{
 		overflow-y: auto;
 	}
+	.portfolio-content-container{
+		display: grid;
+		grid-template-rows: 1fr 1fr 5fr;
+		padding: 0 1.5em;
+		margin: 4em 0;
+	}
 	.hide-component-btn{
 		width: 100%;
     	height: 100%;
-		// background-color: #2F394D;
-		background-color: rgba(100, 100, 100, 0.9);
+		background-color: rgb(60, 126, 136);
 		border: none;
-		color: snow;
+		color: white;
 		padding: 0;
 		cursor: pointer;
 		transition: background-color ease-in 0.1s;
-	}
-	.hide-component-btn:hover{
-		background-color: rgb(57, 67, 87);
+		box-shadow: inset 10px 10px 0px -5px rgb(50,116,126);
 	}
 	i{
 		border: solid;
 		border-width: 0 3px 3px 0;
 		display: inline-block;
 		padding: 0.7em;
-		margin-left: -1.2em;
+		margin-left: -.6em;
 	}
 	i.links{
 		background-repeat: no-repeat;
@@ -160,20 +171,19 @@
 		border:none;
 		width: 2em;
 	}
-	// .links.github{
 	.link-github{
-	background-image: url("./assets/img/mark-github.svg");
+	background-image: url("./assets/img/utility/mark-github.svg");
 	}
 	.link-eye-open{
-		background-image: url("./assets/img/eye.svg");
+		background-image: url("./assets/img/utility/eye.svg");
 	}
 	.link-eye-closed{
-		background-image: url("./assets/img/eye-closed.svg");
+		background-image: url("./assets/img/utility/eye-closed.svg");
 	}
 	.link-external{
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-image: url("./assets/img/link-external.svg");
+		background-image: url("./assets/img/utility/link-external.svg");
 	}
 	.right {
 		transform: rotate(-45deg);

@@ -4,22 +4,23 @@
 			<button class="hide-component-btn" @click="hideComponent"><i class="right"></i></button>
 		</div>
 		<div class="portfolio-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
-			<h1>About me</h1>
-			<p>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
-			</p>
-			<p>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
-			</p>
-			<div class="no-display-m">
+			<h1 class="card-header">About me</h1>
+			<div class="portfolio-content-container">
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
 				</p>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
 				</p>
+				<div class="no-display-m">
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
+					</p>
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
+					</p>
+				</div>
 			</div>
-			
 		</div>
 	</div>
 </template>
@@ -38,9 +39,6 @@
 </script>
 
 <style lang="scss" scoped>
-	.portfolio-container{
-		padding: 0 1.5em;
-	}
 	p{
 		line-height: 0.6cm;
 		text-align: justify;

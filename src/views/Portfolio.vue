@@ -4,20 +4,20 @@
 			<button class="hide-component-btn" @click="hideComponent"><i class="right"></i></button>
 		</div>
 		<div class="portfolio-container"  v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
-			<h1>Portfolio</h1>
+			<h1 class="card-header">Portfolio</h1>
 			<div class="portfolio-grid">
 				<div class="portfolio-item">
-					<img class="cover-img" src="../assets/img/screen-prtf.png" alt="">
+					<img class="cover-img" src="../assets/img/utility/screen-prtf.png" alt="">
 					<div class="item-header">
 						<h3>Portfolio</h3>
 						<div class="item-links">
 							<span></span>
 							<a href="https://github.com/calexandru2018/portfolio" target="_blank">
-								<img src="../assets/img/eye.svg" alt="">
+								<img src="../assets/img/utility/eye.svg" alt="">
 							</a>
 							<span></span>
 							<a href="https://calexandru.com/" target="_blank">
-								<img src="../assets/img/link-external.svg" alt="">
+								<img src="../assets/img/utility/link-external.svg" alt="">
 							</a>
 						</div>
 					</div>
@@ -41,15 +41,15 @@
 					</ul>
 				</div>
 				<div class="portfolio-item">
-					<img class="cover-img" src="../assets/img/screen-lk.png" alt="">
+					<img class="cover-img" src="../assets/img/utility/screen-lk.png" alt="">
 					<div class="item-header">
 						<h3>Lk Properties</h3>
 						<div class="item-links">
 							<span></span>
-							<img src="../assets/img/eye-closed.svg" alt="">
+							<img src="../assets/img/utility/eye-closed.svg" alt="">
 							<span></span>
 							<a href="https://lk-properties.pt/" target="_blank">
-								<img src="../assets/img/link-external.svg" alt="">
+								<img src="../assets/img/utility/link-external.svg" alt="">
 							</a>
 						</div>
 					</div>
@@ -73,15 +73,15 @@
 					</ul>
 				</div>
 				<div class="portfolio-item">
-					<img class="cover-img" src="../assets/img/screen-bom2.png" alt="">
+					<img class="cover-img" src="../assets/img/utility/screen-bom2.png" alt="">
 					<div class="item-header">
 						<h3>Bom&sup2;</h3>
 						<div class="item-links">
 							<span></span>
-							<img src="../assets/img/eye-closed.svg" alt="">
+							<img src="../assets/img/utility/eye-closed.svg" alt="">
 							<span></span>
 							<a href="https://bomaoquadrado.pt/" target="_blank">
-								<img src="../assets/img/link-external.svg" alt="">
+								<img src="../assets/img/utility/link-external.svg" alt="">
 							</a>
 						</div>
 					</div>
@@ -128,7 +128,8 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-row-gap: 2em;
-		margin: 1em 0;
+		// margin: 1em 0;
+		margin: 4em 0;
 		.portfolio-item{
 			display:grid;
 			grid-template-rows: repeat(5, auto);

@@ -6,9 +6,11 @@
 			</button>
 		</div>
 		<div class="portfolio-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
-			<h1>Contacts</h1>
-			<p>You can either email me at <a href="mailto:calexandru2018@pm.me" target="_top">calexandru2018@pm.me</a> or fill the contact form:</p>
-			<app-contact-form></app-contact-form>
+			<h1 class="card-header">Contacts</h1>
+			<div class="portfolio-content-container">
+				<p>You can either email me at <a href="mailto:calexandru2018@pm.me" target="_top">calexandru2018@pm.me</a> or fill the contact form:</p>
+				<app-contact-form></app-contact-form>
+			</div>
 		</div>
 	</div>
 </template>
@@ -31,11 +33,6 @@
 </script>
 
 <style lang="scss" scoped>
-	.portfolio-container{
-		display: grid;
-		grid-template-rows: 1fr 1fr 5fr;
-		padding: 0 1.5em;
-	}
 	p{
 		text-align: justify;
 		line-height: 0.6cm;

@@ -9,6 +9,12 @@
 </template>
 
 <style lang="scss" scoped>
+	.top-nav{
+		color: white;
+		max-width: 100%;
+		margin: 10px 25px 0 25px;
+		text-align: left;
+	}
 	h2{
 		font-size: 1.79em;
 		margin: 1em 0 0 0;
@@ -16,16 +22,9 @@
 	p{
 		font-family: "Inria Sans Bold";
 		margin: 0.7em 0;
-	}
-	.top-nav{
-		// padding: 20px 10px;
-		color: white;
-		max-width: 80%;
-		// margin: 0 auto;
-		margin: 10px 25px;
-		text-align: left;
+		font-size: 1.2em;
 	}
 	.lang-select{
-		font-size: 0.8rem;
+		font-size: 1em;
 	}
 </style>

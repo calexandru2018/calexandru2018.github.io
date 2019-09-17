@@ -6,7 +6,7 @@
 
 		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
 			<!-- <img v-bind:src="require('../assets/img/' + arrow_orientation)" alt=""> -->
-			<img src="../assets/img/arrow-left.svg" alt="">
+			<img src="../assets/img/utility/arrow-left.svg" alt="">
 		</button> 
 	</nav>
 </template>
@@ -55,7 +55,7 @@
 		display: grid;
 		grid-template-rows: repeat(4, 1fr);
 		align-items: start;
-		margin: 0 25px;
+		margin: -1em 25px 0 25px;
 	}
 	nav .nav-btn{
 		width: 50%;
@@ -83,22 +83,21 @@
 		background-color: white;
 		border:none;
 		border: 2.5px solid white;
-		/* text-shadow: -1px -1px 0 slategrey, 1px -1px 0 slategrey, -1px 1px 0 slategrey, 1px 1px 0 slategrey; */
-		// border: 2px solid rgba(90,100,100, 0.9);
-		// box-shadow: inset 0px 0px 4px 1px rgba(100, 100, 100);
 	}
 	.change-hand-btn{
-		width: 4em;
-   		height: 2em;
+		width: 3.5em;
+    	height: 3.5em;
 		background-color: white;
 		border: none;
-		border-radius: 3px;
+		border-radius: 30px;
 		transition: all 0.6s;
     	position: relative;
 		align-self: center;
 	}
 	.change-hand-btn img{
-		// transition: all 5s;
+		vertical-align: middle;
+		width: 25px;
+		height: 25px;
 		vertical-align: middle;
 	}
 	.nav-btn-slide-right{//initial stage; using in left hande mode
