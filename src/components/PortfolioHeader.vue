@@ -18,6 +18,7 @@
 	h2{
 		font-size: 1.79em;
 		margin: 1em 0 0 0;
+		box-shadow: 0px 5px 0px -1px rgb(255,255,255)
 	}
 	p{
 		font-family: "Inria Sans Bold";

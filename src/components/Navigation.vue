@@ -1,8 +1,20 @@
 <template>
 	<nav>
-		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-portfolio')">Portfolio</button>
-		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-about-me')">About Me</button>
-		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-contacts')">Contacts</button>
+		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-portfolio')">
+			<span>
+				Portfolio
+			</span>
+		</button>
+		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-about-me')">
+			<span>
+				About Me
+			</span>
+		</button>
+		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-contacts')">
+			<span>
+				Contacts
+			</span>
+		</button>
 
 		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
 			<!-- <img v-bind:src="require('../assets/img/' + arrow_orientation)" alt=""> -->
