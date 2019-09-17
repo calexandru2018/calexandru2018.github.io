@@ -85,7 +85,6 @@
 		border: 2.5px solid white;
 		/* text-shadow: -1px -1px 0 slategrey, 1px -1px 0 slategrey, -1px 1px 0 slategrey, 1px 1px 0 slategrey; */
 		// border: 2px solid rgba(90,100,100, 0.9);
-		// box-shadow: inset 10px 10px 10px 10px black;
 		// box-shadow: inset 0px 0px 4px 1px rgba(100, 100, 100);
 	}
 	.change-hand-btn{
@@ -96,7 +95,7 @@
 		border-radius: 3px;
 		transition: all 0.6s;
     	position: relative;
-		
+		align-self: center;
 	}
 	.change-hand-btn img{
 		// transition: all 5s;
