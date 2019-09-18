@@ -17,7 +17,6 @@
 		</button>
 
 		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
-			<!-- <img v-bind:src="require('../assets/img/' + arrow_orientation)" alt=""> -->
 			<img src="../assets/img/utility/arrow-left.svg" alt="">
 		</button> 
 	</nav>

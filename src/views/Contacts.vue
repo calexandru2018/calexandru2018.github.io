@@ -1,9 +1,7 @@
 <template>
 	<div class="component card-base-layout" v-bind:style="card_base_layout.grid_width">
-		<div v-bind:style="hide_comp_btn_order">
-			<button class="hide-component-btn" @click="hideComponent">
-				<i class="right"></i>
-			</button>
+		<div>
+			<button class="hide-component-btn" v-bind:class="hide_comp_btn_shadow" @click="hideComponent"><i class="right"></i></button>
 		</div>
 		<div class="portfolio-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
 			<h1 class="card-header">Contacts</h1>
@@ -20,7 +18,7 @@
 	import ContactForm from '../components/ContactForm.vue'
 
 	export default {
-		props: ['hide_comp_btn_order','card_base_layout'],
+		props: ['hide_comp_btn_shadow','card_base_layout'],
 		methods: {
 			hideComponent(){
 				eventBus.$emit('show-component', false);

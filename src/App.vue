@@ -7,11 +7,10 @@
   		v-bind:leave-active-class="updated_slide_leave"
 		v-if="class_visible == true">
 		<keep-alive>
-			<!-- v-bind:hide_comp_btn_order="hide_comp_btn_order"  -->
 			<component 
 				v-bind:is = "component_to_show"
-				
-				v-bind:card_base_layout="card_base_layout" ></component>
+				v-bind:card_base_layout="card_base_layout"
+				v-bind:hide_comp_btn_shadow="hide_comp_btn_shadow"></component>
 		</keep-alive>
 	</transition>
   </div>
@@ -33,7 +32,7 @@
 				left_hand_use: true,
 				slide_enter: 'slide-enter-active_left_hand',
 				slide_leave: 'slide-leave-active_left_hand',
-				hide_comp_btn_order: 'grid-column-star: 1; grid-column-end:2',
+				hide_comp_btn_shadow: 'hide-component-btn-shadow-left',
 				card_base_layout: {
 					grid_positioning: 'grid-column-star: 2; grid-column-end:3',
 					grid_width: 'grid-template-columns: 10% 90%'
@@ -64,13 +63,15 @@
 				if(booleanVal == true){
 					this.slide_enter = 'slide-enter-active_right_hand';
 					this.slide_leave = 'slide-leave-active_right_hand';
-					this.hide_comp_btn_order = 'grid-column-star: 2; grid-column-end:3';
+					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-right';
+					// this.hide_comp_btn_order = 'grid-column-star: 2; grid-column-end:3';
 					this.card_base_layout.grid_positioning = 'grid-column-star: 1; grid-column-end:2';
 					this.card_base_layout.grid_width = 'grid-template-columns: 90% 10%';
 				}else{
 					this.slide_enter = 'slide-enter-active_left_hand';
 					this.slide_leave = 'slide-leave-active_left_hand';
-					this.hide_comp_btn_order = 'grid-column-star: 1; grid-column-end:2';
+					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-left';
+					// this.hide_comp_btn_order = 'grid-column-star: 1; grid-column-end:2';
 					this.card_base_layout.grid_positioning = 'grid-column-star: 2; grid-column-end:3';
 					this.card_base_layout.grid_width = 'grid-template-columns: 10% 90%';
 				}
@@ -132,9 +133,9 @@
 	.card-base-layout .card-header{
 		background-color: rgb(60, 126, 136);
 		margin: auto;
-		padding: 0.3em 0 0.1em 0;
+		padding: 0.6em 0 0.1em 0;
 		color: rgb(255,255,255);
-		box-shadow: inset 0px 10px 0px -5px rgb(50,116,126);
+		box-shadow: inset 0px 13px 0px -5px rgb(80, 146, 156);
 		position: fixed;
 		width: 90%;
 	}
@@ -156,7 +157,13 @@
 		padding: 0;
 		cursor: pointer;
 		transition: background-color ease-in 0.1s;
-		box-shadow: inset 10px 10px 0px -5px rgb(50,116,126);
+		// box-shadow: inset 13px 13px 0px -5px rgb(80, 146, 156);
+	}
+	.hide-component-btn-shadow-left{
+		box-shadow: inset 13px 13px 0px -5px rgb(80, 146, 156);
+	}
+	.hide-component-btn-shadow-right{
+		box-shadow: inset -13px 13px 0px -5px rgb(80, 146, 156);
 	}
 	i{
 		border: solid;
