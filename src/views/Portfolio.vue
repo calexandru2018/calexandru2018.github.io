@@ -7,7 +7,7 @@
 			<h1 class="card-header">Portfolio</h1>
 			<div class="portfolio-grid">
 				<div class="portfolio-item">
-					<img class="cover-img" src="../assets/img/utility/screen-prtf.png" alt="">
+					<img class="cover-img" src="../assets/img/projects/screen-prtf.svg" alt="">
 					<div class="item-header">
 						<h3>Portfolio</h3>
 						<div class="item-links">
@@ -41,7 +41,7 @@
 					</ul>
 				</div>
 				<div class="portfolio-item">
-					<img class="cover-img" src="../assets/img/utility/screen-lk.png" alt="">
+					<img class="cover-img" src="../assets/img/projects/screen-lk.svg" alt="">
 					<div class="item-header">
 						<h3>Lk Properties</h3>
 						<div class="item-links">
@@ -73,7 +73,7 @@
 					</ul>
 				</div>
 				<div class="portfolio-item">
-					<img class="cover-img" src="../assets/img/utility/screen-bom2.png" alt="">
+					<img class="cover-img" src="../assets/img/projects/screen-bom2.svg" alt="">
 					<div class="item-header">
 						<h3>Bom&sup2;</h3>
 						<div class="item-links">
