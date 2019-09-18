@@ -17,7 +17,7 @@
 							</a>
 							<span></span>
 							<a href="https://calexandru.com/" target="_blank">
-								<img src="../assets/img/utility/link-external.svg" alt="">
+								<img src="../assets/img/utility/domain.svg" alt="">
 							</a>
 						</div>
 					</div>
@@ -49,7 +49,7 @@
 							<img src="../assets/img/utility/eye-closed.svg" alt="">
 							<span></span>
 							<a href="https://lk-properties.pt/" target="_blank">
-								<img src="../assets/img/utility/link-external.svg" alt="">
+								<img src="../assets/img/utility/domain.svg" alt="">
 							</a>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 							<img src="../assets/img/utility/eye-closed.svg" alt="">
 							<span></span>
 							<a href="https://bomaoquadrado.pt/" target="_blank">
-								<img src="../assets/img/utility/link-external.svg" alt="">
+								<img src="../assets/img/utility/domain.svg" alt="">
 							</a>
 						</div>
 					</div>
@@ -129,11 +129,16 @@
 		grid-template-columns: 1fr;
 		grid-row-gap: 2em;
 		// margin: 1em 0;
-		margin: 4em 0;
+		// margin: 4em 0;
+		padding: 4em 0;
 		.portfolio-item{
-			display:grid;
+			display: grid;
 			grid-template-rows: repeat(5, auto);
-			padding: 0 1.5em;
+			padding: 1em 1.5em;
+			// margin: 0 1em;
+			border-radius: 5px;
+			// background-color: rgb(255,255,255);
+			box-shadow: 1px 1px 10px -6px black;
 			.cover-img{
 				width: 100%;
 			}
@@ -156,10 +161,12 @@
 				grid-template-columns: repeat(4, 1fr);
 				justify-items: center;
 				align-items: center;
+				height: 100%;
 				img{
 					width: auto;
-					height: 1.2em;
+					height: 1.8em;
 					vertical-align: middle;
+					cursor: pointer;
 				}
 			}
 			h3, h4, h5{

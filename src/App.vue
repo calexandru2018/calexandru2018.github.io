@@ -127,7 +127,8 @@
 		display: grid;
 	}
 	.card-base-layout div:nth-child(2){
-		background-color: snow;
+		// background-color: rgba(255,255,255,0.6);
+		background-color: rgb(255, 255, 255);
 		color: #2F394D;
 	}
 	.card-base-layout .card-header{
@@ -138,15 +139,17 @@
 		box-shadow: inset 0px 13px 0px -5px rgb(80, 146, 156);
 		position: fixed;
 		width: 90%;
+		z-index: 10;
 	}
 	.portfolio-container{
 		overflow-y: auto;
 	}
 	.portfolio-content-container{
-		display: grid;
-		grid-template-rows: 1fr 1fr 5fr;
+		display: flex;
+		flex-direction: column;
+		// grid-template-rows: 1fr 1fr 5fr;
 		padding: 0 1.5em;
-		margin: 4em 0;
+		margin-top: 4em;
 	}
 	.hide-component-btn{
 		width: 100%;
@@ -190,7 +193,7 @@
 	.link-external{
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-image: url("./assets/img/utility/link-external.svg");
+		background-image: url("./assets/img/utility/maps-and-flags.svg");
 	}
 	.right {
 		transform: rotate(-45deg);
