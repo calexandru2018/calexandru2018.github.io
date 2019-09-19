@@ -38,6 +38,9 @@
 <style lang="scss" scoped>
 $default-text-color: rgb(255,255,255);
 $h2-shdw: rgb(255,255,255);
+$font-header-size: 1.79em;
+$font-p-size: 1.3em;
+$font-lang-size: 1em;
 
 	.top-nav{
 		color: $default-text-color;
@@ -45,20 +48,20 @@ $h2-shdw: rgb(255,255,255);
 		margin: 10px 25px 0 25px;
 		text-align: left;
 		h2{
-			font-size: 1.79em;
+			font-size: $font-header-size;
 			margin: 1em 0 0 0;
 			box-shadow: 0px 5px 0px -1px $h2-shdw;
 		}
 		p{
 			font-family: "Inria Sans Bold";
 			margin: 0.7em 0 0 0;
-			font-size: 1.3em;
+			font-size: $font-p-size;
 		}
 		.under-menu{
 			display: grid;
     		grid-template-columns: 1.5fr 0.4fr 2.5fr;
 			.lang-select{
-			font-size: 1em;
+			font-size: $font-lang-size;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -67,20 +70,49 @@ $h2-shdw: rgb(255,255,255);
 			.external-links{
 				display: flex;
     			justify-content: space-between;
+				outline: none;
 				img{
 					width: 1.5em;
 					transition: filter ease-out 0.1s;
 					&:hover{
 						filter: drop-shadow(0px 0px 3px $h2-shdw);
 					}
+					&:active{
+						outline: none;
+						background: transparent;
+						filter: drop-shadow(0px 0px 3px black);
+						transform: scale(0.97);
+					}
 				}
 			}
 		}
 	}
-
+	@media only screen
+	and (min-width : 411px)
+	and (min-height: 731px) {
+		.top-nav{
+			h2{
+				font-size: $font-header-size + 0.3em;
+			}
+		}
+	}
+	@media only screen
+	and (min-width : 411px)
+	and (min-height: 823px) {
+		.top-nav{
+			h2{
+				font-size: $font-header-size + .3em !important;
+			}
+		}
+	}
 	@media only screen
 	and (min-width : 375px)
 	and (min-height: 800px) {
+		.top-nav{
+			h2{
+				font-size: $font-header-size + 0.1em;
+			}
+		}
 		.external-links{
 			img{
 				width: 2em !important;

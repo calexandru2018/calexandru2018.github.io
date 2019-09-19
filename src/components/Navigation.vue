@@ -109,6 +109,7 @@ $chng-btn-size: 3.5em;
 		transition: all 0.6s;
     	position: relative;
 		align-self: center;
+		outline: none;
 		img{
 			width: $chng-btn-size - 1;
 			height: $chng-btn-size - 1;
@@ -154,7 +155,7 @@ $chng-btn-size: 3.5em;
 	and (min-width : 375px)
 	and (min-height: 800px) {
 		nav{
-			margin: -3em 25px 0 25px;
+			margin: -2em 25px 0 25px;
 			.nav-btn{
 				font-size: 1.2rem;
 				height: 3.5em;
