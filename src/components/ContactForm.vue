@@ -22,8 +22,7 @@ $btn-bckgd-clr: rgb(255,255,255);
 			border-radius: 5px;
 			border: 2px solid $def-border-clr;
 			outline: none;
-			padding: 10% 10%;
-			// box-shadow: inset 0px 0px 6px -1px #EEE1B3;
+			padding: 9% 9%;
 			color: unset;
 			transition: all ease-in-out 0.2s;
 			&:active, &:hover{

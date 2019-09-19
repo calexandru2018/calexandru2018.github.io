@@ -6,12 +6,12 @@
 			</button>
 		</div>
 		<div class="portfolio-container"  v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
-			<h1 class="card-header">Portfolio</h1>
+			<h1 class="card-header">Projects</h1>
 			<div class="portfolio-grid">
 				<div class="portfolio-item">
 					<img class="cover-img" src="../assets/img/projects/screen-prtf.svg" alt="">
 					<div class="item-header">
-						<h3>Portfolio</h3>
+						<h3>Web Portfolio</h3>
 						<div class="item-links">
 							<span></span>
 							<a href="https://github.com/calexandru2018/portfolio" target="_blank">

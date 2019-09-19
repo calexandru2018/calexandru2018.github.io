@@ -160,26 +160,6 @@ $component-secondary-color: rgb(80, 146, 156);
 		padding: 0.7em;
 		margin-left: -.4em;
 		color:$secondary-text-color;
-		.links{
-			background-repeat: no-repeat;
-			background-position: center center;
-			border:none;
-			width: 2em;
-		}
-		.link-github{
-		background-image: url("./assets/img/utility/mark-github.svg");
-		}
-		.link-eye-open{
-			background-image: url("./assets/img/utility/eye.svg");
-		}
-		.link-eye-closed{
-			background-image: url("./assets/img/utility/eye-closed.svg");
-		}
-		.link-external{
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-image: url("./assets/img/utility/maps-and-flags.svg");
-		}
 	}
 	.right {
 		transform: rotate(-45deg);

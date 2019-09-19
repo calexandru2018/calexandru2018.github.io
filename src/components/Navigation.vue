@@ -65,6 +65,7 @@
 $default-text-color: rgb(255,255,255);
 $btn-def-border-color: rgb(255,255,255);
 $btn-hover-text-color:rgba(100,100,100,0.9);
+$chng-btn-size: 3.5em;
 
 	nav{
 		display: grid;
@@ -100,8 +101,8 @@ $btn-hover-text-color:rgba(100,100,100,0.9);
 		}
 	}
 	.change-hand-btn{
-		width: 3.5em;
-    	height: 3.5em;
+		width: $chng-btn-size;
+    	height: $chng-btn-size;
 		background-color: $btn-def-border-color;
 		border: none;
 		border-radius: 30px;
@@ -109,9 +110,9 @@ $btn-hover-text-color:rgba(100,100,100,0.9);
     	position: relative;
 		align-self: center;
 		img{
+			width: $chng-btn-size - 1;
+			height: $chng-btn-size - 1;
 			vertical-align: middle;
-			width: 25px;
-			height: 25px;
 			vertical-align: middle;
 		}
 	}
