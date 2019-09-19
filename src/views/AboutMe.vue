@@ -39,8 +39,10 @@
 </script>
 
 <style lang="scss" scoped>
-	p{
-		line-height: 0.6cm;
-		text-align: justify;
+	.portfolio-content-container{
+		p{
+			line-height: 0.6cm;
+			text-align: justify;
+		}
 	}
 </style>

@@ -67,33 +67,33 @@
 		grid-template-rows: repeat(4, 1fr);
 		align-items: start;
 		margin: -1em 25px 0 25px;
-	}
-	nav .nav-btn{
-		width: 50%;
-		height: 1.5em;
-		background-color: transparent;
-		border: 2.5px solid white;
-		border-radius: 2px;
-		padding: 25px;
-		line-height: 0;
-		color: white;
-		font-weight: bold;
-		text-transform: uppercase;
-		transition: all ease-in-out 0.45s;
-		cursor: pointer;
-    	position: relative;
-	}
-	.nav-btn:first-child{
-		transition: all ease-in-out 0.7s;
-	}
-	.nav-btn:nth-child(3){
-		transition: all ease-in-out 0.2s;
-	}
-	nav .nav-btn:hover{
-		color: rgba(100,100,100,0.9);
-		background-color: white;
-		border:none;
-		border: 2.5px solid white;
+		.nav-btn{
+			width: 50%;
+			height: 1.5em;
+			background-color: transparent;
+			border: 2.5px solid white;
+			border-radius: 2px;
+			padding: 25px;
+			line-height: 0;
+			color: white;
+			font-weight: bold;
+			text-transform: uppercase;
+			transition: all ease-in-out 0.45s;
+			cursor: pointer;
+			position: relative;
+			&:first-child{
+				transition: all ease-in-out 0.7s;
+			}
+			&:nth-child(3){
+				transition: all ease-in-out 0.2s;
+			}
+			&:hover{
+				color: rgba(100,100,100,0.9);
+				background-color: white;
+				border:none;
+				border: 2.5px solid white;
+			}
+		}
 	}
 	.change-hand-btn{
 		width: 3.5em;
@@ -104,12 +104,12 @@
 		transition: all 0.6s;
     	position: relative;
 		align-self: center;
-	}
-	.change-hand-btn img{
-		vertical-align: middle;
-		width: 25px;
-		height: 25px;
-		vertical-align: middle;
+		img{
+			vertical-align: middle;
+			width: 25px;
+			height: 25px;
+			vertical-align: middle;
+		}
 	}
 	.nav-btn-slide-right{//initial stage; using in left hande mode
 		left: 50%;

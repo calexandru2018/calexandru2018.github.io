@@ -184,19 +184,19 @@
 			a{
 				cursor: pointer;
 			}
-		}
-	}
-	.tech-skills-list{
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		text-align: left;
-		font-size: 0.8em;
-		grid-row-gap: 0.7em;
-		margin: 0.5em 0;
-    	padding-left: 1em;
-		.list-item{
-			position: relative;
-			left: -5px;
+			.tech-skills-list{
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				text-align: left;
+				font-size: 0.8em;
+				grid-row-gap: 0.7em;
+				margin: 0.5em 0;
+				padding-left: 1em;
+				.list-item{
+					position: relative;
+					left: -5px;
+				}
+			}
 		}
 	}
 	

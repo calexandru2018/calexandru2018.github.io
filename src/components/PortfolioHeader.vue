@@ -14,18 +14,18 @@
 		max-width: 100%;
 		margin: 10px 25px 0 25px;
 		text-align: left;
-	}
-	h2{
-		font-size: 1.79em;
-		margin: 1em 0 0 0;
-		box-shadow: 0px 5px 0px -1px rgb(255,255,255)
-	}
-	p{
-		font-family: "Inria Sans Bold";
-		margin: 0.7em 0;
-		font-size: 1.2em;
-	}
-	.lang-select{
-		font-size: 1em;
+		h2{
+			font-size: 1.79em;
+			margin: 1em 0 0 0;
+			box-shadow: 0px 5px 0px -1px rgb(255,255,255)
+		}
+		p{
+			font-family: "Inria Sans Bold";
+			margin: 0.7em 0;
+			font-size: 1.2em;
+		}
+		.lang-select{
+			font-size: 1em;
+		}
 	}
 </style>

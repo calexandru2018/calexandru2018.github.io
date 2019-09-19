@@ -125,48 +125,46 @@
 	}
 	.card-base-layout{
 		display: grid;
-	}
-	.card-base-layout div:nth-child(2){
-		// background-color: rgba(255,255,255,0.6);
-		background-color: rgb(255, 255, 255);
-		color: #2F394D;
-	}
-	.card-base-layout .card-header{
-		background-color: rgb(60, 126, 136);
-		margin: auto;
-		padding: 0.6em 0 0.1em 0;
-		color: rgb(255,255,255);
-		box-shadow: inset 0px 13px 0px -5px rgb(80, 146, 156);
-		position: fixed;
-		width: 90%;
-		z-index: 10;
-	}
-	.portfolio-container{
-		overflow-y: auto;
-	}
-	.portfolio-content-container{
-		display: flex;
-		flex-direction: column;
-		// grid-template-rows: 1fr 1fr 5fr;
-		padding: 0 1.5em;
-		margin-top: 4em;
-	}
-	.hide-component-btn{
-		width: 100%;
-    	height: 100%;
-		background-color: rgb(60, 126, 136);
-		border: none;
-		color: white;
-		padding: 0;
-		cursor: pointer;
-		transition: background-color ease-in 0.1s;
-		// box-shadow: inset 13px 13px 0px -5px rgb(80, 146, 156);
-	}
-	.hide-component-btn-shadow-left{
-		box-shadow: inset 13px 13px 0px -5px rgb(80, 146, 156);
-	}
-	.hide-component-btn-shadow-right{
-		box-shadow: inset -13px 13px 0px -5px rgb(80, 146, 156);
+		& div:nth-child(2){
+			background-color: rgb(255, 255, 255);
+			color: #2F394D;
+			.card-header{
+				background-color: rgb(60, 126, 136);
+				margin: auto;
+				padding: 0.6em 0 0.1em 0;
+				color: rgb(255,255,255);
+				box-shadow: inset 0px 13px 0px -5px rgb(80, 146, 156);
+				position: fixed;
+				width: 90%;
+				z-index: 10;
+			}
+		}
+		.portfolio-container{
+			overflow-y: auto;
+		}
+		.portfolio-content-container{
+			display: flex;
+			flex-direction: column;
+			padding: 0 1.5em;
+			margin-top: 4em;
+		}
+		.hide-component-btn{
+			width: 100%;
+			height: 100%;
+			background-color: rgb(60, 126, 136);
+			border: none;
+			color: white;
+			padding: 0;
+			cursor: pointer;
+			transition: background-color ease-in 0.1s;
+			// box-shadow: inset 13px 13px 0px -5px rgb(80, 146, 156);
+		}
+		.hide-component-btn-shadow-left{
+			box-shadow: inset 13px 13px 0px -5px rgb(80, 146, 156);
+		}
+		.hide-component-btn-shadow-right{
+			box-shadow: inset -13px 13px 0px -5px rgb(80, 146, 156);
+		}
 	}
 	i{
 		border: solid;
@@ -174,26 +172,26 @@
 		display: inline-block;
 		padding: 0.7em;
 		margin-left: -.6em;
-	}
-	i.links{
-		background-repeat: no-repeat;
-		background-position: center center;
-		border:none;
-		width: 2em;
-	}
-	.link-github{
-	background-image: url("./assets/img/utility/mark-github.svg");
-	}
-	.link-eye-open{
-		background-image: url("./assets/img/utility/eye.svg");
-	}
-	.link-eye-closed{
-		background-image: url("./assets/img/utility/eye-closed.svg");
-	}
-	.link-external{
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-image: url("./assets/img/utility/maps-and-flags.svg");
+		.links{
+			background-repeat: no-repeat;
+			background-position: center center;
+			border:none;
+			width: 2em;
+		}
+		.link-github{
+		background-image: url("./assets/img/utility/mark-github.svg");
+		}
+		.link-eye-open{
+			background-image: url("./assets/img/utility/eye.svg");
+		}
+		.link-eye-closed{
+			background-image: url("./assets/img/utility/eye-closed.svg");
+		}
+		.link-external{
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-image: url("./assets/img/utility/maps-and-flags.svg");
+		}
 	}
 	.right {
 		transform: rotate(-45deg);

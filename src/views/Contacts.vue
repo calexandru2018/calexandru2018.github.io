@@ -31,13 +31,15 @@
 </script>
 
 <style lang="scss" scoped>
-	p{
-		text-align: justify;
-		line-height: 0.6cm;
-	}
-	a{
-		font-weight: bold;
-		text-decoration: none;
-		color: unset;
+	.portfolio-container{
+		p{
+			text-align: justify;
+			line-height: 0.6cm;
+		}
+		a{
+			font-weight: bold;
+			text-decoration: none;
+			color: unset;
+		}
 	}
 </style>
