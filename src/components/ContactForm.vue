@@ -15,19 +15,30 @@
 			width: 80%;
 			height: 200px;
 			resize: vertical;
-			border-radius: 15px;
-			border: none;
+			border-radius: 5px;
+			border: 2px solid rgb(80, 146, 156);
+			outline: none;
 			padding: 10% 10%;
-			box-shadow: inset 0px 0px 6px -1px #EEE1B3;
+			// box-shadow: inset 0px 0px 6px -1px #EEE1B3;
 			color: unset;
+			transition: all ease-in-out 0.2s;
+			&:active, &:hover{
+				border-color: orange;
+				outline: none;
+			}
 		}
 		input{
 			resize: vertical;
-			border-radius: 10px;
-			border: none;
+			border-radius: 5px;
+			border: 2px solid rgb(80, 146, 156);
+			outline: none;
 			padding: 10px 20px;
-			box-shadow: inset 0px 0px 6px -1px #EEE1B3;
 			color: unset;
+			transition: all ease-in-out 0.2s;
+			&:active, &:hover{
+				border-color: orange;
+				outline: none;
+			}
 		}
 		button{
 			width: fit-content;
@@ -37,15 +48,14 @@
 			border-radius: 5px;
 			color: unset;
 			font-weight: bold;
-			border: none;
+			border: 2px solid rgb(80, 146, 156);
+			outline: none;
 			text-transform: uppercase;
-			box-shadow: inset 0px 0px 6px -1px #EEE1B3;
-			transition: transform ease-in-out 0.1s;
-		}
-		button:active{
-			// background-color: transparent;
-			animation: scaling ease-out 0.1s forwards;
-			// transform: scale(0)
+			transition: all ease-in-out 0.2s;
+			&:active, &:hover{
+				border-color: orange;
+				outline: none;
+			}
 		}
 	}
 </style>
