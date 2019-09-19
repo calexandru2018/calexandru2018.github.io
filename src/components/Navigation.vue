@@ -62,6 +62,10 @@
 </script>
 
 <style lang="scss" scoped>
+$default-text-color: rgb(255,255,255);
+$btn-def-border-color: rgb(255,255,255);
+$btn-hover-text-color:rgba(100,100,100,0.9);
+
 	nav{
 		display: grid;
 		grid-template-rows: repeat(4, 1fr);
@@ -71,11 +75,11 @@
 			width: 50%;
 			height: 1.5em;
 			background-color: transparent;
-			border: 2.5px solid white;
+			border: 2.5px solid $btn-def-border-color;
 			border-radius: 2px;
 			padding: 25px;
 			line-height: 0;
-			color: white;
+			color: $default-text-color;
 			font-weight: bold;
 			text-transform: uppercase;
 			transition: all ease-in-out 0.45s;
@@ -88,17 +92,17 @@
 				transition: all ease-in-out 0.2s;
 			}
 			&:hover{
-				color: rgba(100,100,100,0.9);
-				background-color: white;
+				color: $btn-hover-text-color;
+				background-color: $btn-def-border-color;
 				border:none;
-				border: 2.5px solid white;
+				border: 2.5px solid $btn-def-border-color;
 			}
 		}
 	}
 	.change-hand-btn{
 		width: 3.5em;
     	height: 3.5em;
-		background-color: white;
+		background-color: $btn-def-border-color;
 		border: none;
 		border-radius: 30px;
 		transition: all 0.6s;

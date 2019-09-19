@@ -124,21 +124,20 @@
 </script>
 
 <style lang="scss" scoped>
+$item-shdw-color: rgb(0,0,0);
+$secondary-text-color: rgb(47,57,77);
+
 	.portfolio-grid{
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-row-gap: 2em;
-		// margin: 1em 0;
-		// margin: 4em 0;
 		padding: 4em 0;
 		.portfolio-item{
 			display: grid;
 			grid-template-rows: repeat(5, auto);
 			padding: 1em 1.5em;
-			// margin: 0 1em;
 			border-radius: 5px;
-			// background-color: rgb(255,255,255);
-			box-shadow: 1px 1px 10px -6px black;
+			box-shadow: 1px 1px 10px -6px $item-shdw-color;
 			.cover-img{
 				width: 100%;
 			}
@@ -147,7 +146,7 @@
 				grid-template-columns: 1fr 1fr;
 				align-items: center;
 				margin: 1em 0;
-				box-shadow: 0px 4px 3px -3px #2F394D;
+				box-shadow: 0px 4px 3px -3px $secondary-text-color;
 			}
 			.item-header > *:first-child{
 				justify-items: start;

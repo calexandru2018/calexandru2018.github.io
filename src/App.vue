@@ -93,6 +93,13 @@
 </script>
 
 <style lang="scss">
+$default-text-color: rgb(255,255,255);
+$secondary-text-color: rgb(47,57,77);
+$accent-color: whrgb(255,255,255);
+$card-base-background: rgb(255,255,255);
+$component-main-color: rgb(60, 126, 136);
+$component-secondary-color: rgb(80, 146, 156);
+
 /* eslint-disable */
 	html, body{
 		height: 100vh;
@@ -106,7 +113,7 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
-		color: white;
+		color: $default-text-color;
 		background-image: url('./assets/img/custom/tim-mossholder-4P5DMXQXzRI-unsplash.jpg');
 		background-position: center;
 		background-size: cover;
@@ -115,8 +122,6 @@
 		display: grid;
     	grid-template-rows: 0.5fr 1fr;
 	}
-</style>
-<style lang="scss">
 	.component{
 		height: 100vh;
 		width: 100vw;
@@ -126,14 +131,14 @@
 	.card-base-layout{
 		display: grid;
 		& div:nth-child(2){
-			background-color: rgb(255, 255, 255);
-			color: #2F394D;
+			background-color: $card-base-background;
+			color: $secondary-text-color;
 			.card-header{
-				background-color: rgb(60, 126, 136);
+				background-color: $component-main-color;
 				margin: auto;
 				padding: 0.6em 0 0.1em 0;
-				color: rgb(255,255,255);
-				box-shadow: inset 0px 13px 0px -5px rgb(80, 146, 156);
+				color: $default-text-color;
+				box-shadow: inset 0px 13px 0px -5px $component-secondary-color;
 				position: fixed;
 				width: 90%;
 				z-index: 10;
@@ -151,19 +156,18 @@
 		.hide-component-btn{
 			width: 100%;
 			height: 100%;
-			background-color: rgb(60, 126, 136);
+			background-color: $component-main-color;
 			border: none;
-			color: white;
+			color: $default-text-color;
 			padding: 0;
 			cursor: pointer;
 			transition: background-color ease-in 0.1s;
-			// box-shadow: inset 13px 13px 0px -5px rgb(80, 146, 156);
 		}
 		.hide-component-btn-shadow-left{
-			box-shadow: inset 13px 13px 0px -5px rgb(80, 146, 156);
+			box-shadow: inset 13px 13px 0px -5px $component-secondary-color;
 		}
 		.hide-component-btn-shadow-right{
-			box-shadow: inset -13px 13px 0px -5px rgb(80, 146, 156);
+			box-shadow: inset -13px 13px 0px -5px $component-secondary-color;
 		}
 	}
 	i{

@@ -9,15 +9,18 @@
 </template>
 
 <style lang="scss" scoped>
+$default-text-color: rgb(255,255,255);
+$h2-shdw: rgb(255,255,255);
+
 	.top-nav{
-		color: white;
+		color: $default-text-color;
 		max-width: 100%;
 		margin: 10px 25px 0 25px;
 		text-align: left;
 		h2{
 			font-size: 1.79em;
 			margin: 1em 0 0 0;
-			box-shadow: 0px 5px 0px -1px rgb(255,255,255)
+			box-shadow: 0px 5px 0px -1px $h2-shdw;
 		}
 		p{
 			font-family: "Inria Sans Bold";
