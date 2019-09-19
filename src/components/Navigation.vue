@@ -1,6 +1,6 @@
 <template>
 	<nav>
-		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-portfolio')">
+		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-projects')">
 			<span>
 				Portfolio
 			</span>
@@ -28,10 +28,10 @@
 	export default {
 		data() {
 			return{
-				left_hand_use: false,
+				left_hand_use: true,
 				arrow_orientation: 'arrow-right.svg',
 				nav_btn_margin: '0 auto 0 0',
-				nav_btn_slide: 'nav-btn-slide-left',
+				nav_btn_slide: 'nav-btn-slide-left', //default
 				change_hand_btn: 'change-hand-btn-slide-right',
 			}
 		},
@@ -42,16 +42,16 @@
 			changeUseHand(){
 				if(this.left_hand_use == true){
 					this.left_hand_use = false;
-					this.arrow_orientation = 'arrow-right.svg';
-					this.nav_btn_slide = 'nav-btn-slide-left';
-					this.change_hand_btn = 'change-hand-btn-slide-right';
-				}else{
-					this.left_hand_use = true;
 					this.arrow_orientation = 'arrow-left.svg';
 					this.nav_btn_slide = 'nav-btn-slide-right';
 					this.change_hand_btn = 'change-hand-btn-slide-left';
+				}else{
+					this.left_hand_use = true;
+					
+					this.arrow_orientation = 'arrow-right.svg';
+					this.nav_btn_slide = 'nav-btn-slide-left';
+					this.change_hand_btn = 'change-hand-btn-slide-right';
 				}
-
 				eventBus.$emit('left-hand-use', this.left_hand_use);
 			},
 		},

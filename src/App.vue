@@ -3,14 +3,16 @@
 	<app-portfolio-header></app-portfolio-header>
 	<app-navigation></app-navigation>
 	<transition
-		v-bind:enter-active-class="updated_slide_enter"
-  		v-bind:leave-active-class="updated_slide_leave"
+		v-bind:enter-active-class="slide_enter"
+  		v-bind:leave-active-class="slide_leave"
 		v-if="class_visible == true">
 		<keep-alive>
 			<component 
 				v-bind:is = "component_to_show"
 				v-bind:card_base_layout="card_base_layout"
-				v-bind:hide_comp_btn_shadow="hide_comp_btn_shadow"></component>
+				v-bind:hide_comp_btn_shadow="hide_comp_btn_shadow"
+				v-bind:left_hand_use="left_hand_use"
+			></component>
 		</keep-alive>
 	</transition>
   </div>
@@ -20,7 +22,7 @@
 	import { eventBus } from './main.js';
 	import PortfolioHeader from "@/components/PortfolioHeader.vue";
 	import Navigation from "@/components/Navigation.vue";
-	import Portfolio from "@/views/Portfolio.vue";
+	import Projects from "@/views/Projects.vue";
 	import AboutMe from "@/views/AboutMe.vue";
 	import Contacts from "@/views/Contacts.vue";	
 
@@ -37,58 +39,40 @@
 					grid_positioning: 'grid-column-star: 2; grid-column-end:3',
 					grid_width: 'grid-template-columns: 10% 90%'
 				}
-				
-
 			}
 		},
 		components:{
 			'app-navigation': Navigation,
-			'app-portfolio': Portfolio,
+			'app-projects': Projects,
 			'app-about-me': AboutMe,
 			'app-contacts': Contacts,
 			'app-portfolio-header': PortfolioHeader
 		},
 		created(){
 			eventBus.$on('component-to-show', (component, show) => {
-				this.component_to_show = component
-				this.class_visible = show
+				this.component_to_show = component;
+				this.class_visible = show;
 			});
 			eventBus.$on('show-component', (booleanVal) => {
 				this.class_visible = booleanVal
 			});
 			eventBus.$on('left-hand-use', (booleanVal) => {
-				this.left_hand_use = booleanVal
-				console.log(this.slide_enter);
-				
-				if(booleanVal == true){
+				this.left_hand_use = booleanVal;
+				if(booleanVal == false){
 					this.slide_enter = 'slide-enter-active_right_hand';
 					this.slide_leave = 'slide-leave-active_right_hand';
 					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-right';
-					// this.hide_comp_btn_order = 'grid-column-star: 2; grid-column-end:3';
 					this.card_base_layout.grid_positioning = 'grid-column-star: 1; grid-column-end:2';
 					this.card_base_layout.grid_width = 'grid-template-columns: 90% 10%';
 				}else{
 					this.slide_enter = 'slide-enter-active_left_hand';
 					this.slide_leave = 'slide-leave-active_left_hand';
 					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-left';
-					// this.hide_comp_btn_order = 'grid-column-star: 1; grid-column-end:2';
 					this.card_base_layout.grid_positioning = 'grid-column-star: 2; grid-column-end:3';
 					this.card_base_layout.grid_width = 'grid-template-columns: 10% 90%';
 				}
 			});
 		},
-		computed: {
-			updated_left_hand_use() {				
-				return this.left_hand_use;
-
-			},
-			updated_slide_enter(){
-				return this.slide_enter;
-			},
-			updated_slide_leave(){
-				return this.slide_leave;
-			}
-		}
 	}
 </script>
 
@@ -97,7 +81,7 @@ $default-text-color: rgb(255,255,255);
 $secondary-text-color: rgb(47,57,77);
 $accent-color: whrgb(255,255,255);
 $card-base-background: rgb(255,255,255);
-$component-main-color: rgb(60, 126, 136);
+$component-main-color: rgb(255, 255, 255);
 $component-secondary-color: rgb(80, 146, 156);
 
 /* eslint-disable */
@@ -137,9 +121,9 @@ $component-secondary-color: rgb(80, 146, 156);
 				background-color: $component-main-color;
 				margin: auto;
 				padding: 0.6em 0 0.1em 0;
-				color: $default-text-color;
-				box-shadow: inset 0px 13px 0px -5px $component-secondary-color;
-				position: fixed;
+				// color: $default-text-color;
+				// box-shadow: inset 0px 13px 0px -5px $component-secondary-color;
+				// position: fixed;
 				width: 90%;
 				z-index: 10;
 			}
@@ -151,7 +135,6 @@ $component-secondary-color: rgb(80, 146, 156);
 			display: flex;
 			flex-direction: column;
 			padding: 0 1.5em;
-			margin-top: 4em;
 		}
 		.hide-component-btn{
 			width: 100%;
@@ -175,7 +158,8 @@ $component-secondary-color: rgb(80, 146, 156);
 		border-width: 0 3px 3px 0;
 		display: inline-block;
 		padding: 0.7em;
-		margin-left: -.6em;
+		margin-left: -.4em;
+		color:$secondary-text-color;
 		.links{
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -211,50 +195,60 @@ $component-secondary-color: rgb(80, 146, 156);
 	}
 </style>
 <style lang="scss" scoped>
+$animation-duration: 0.35s;
+
 	//START Animations
 	.slide-enter-active_left_hand{
-		animation: slide-in-left .4s ease-in-out forwards;
+		animation: slide-in-left $animation-duration ease-in forwards;
 	}
 	.slide-leave-active_left_hand{
-		animation: slide-out-left .3s ease-out forwards;
+		animation: slide-out-left $animation-duration ease-out forwards;
 	}
 	.slide-enter-active_right_hand{
-		animation: slide-in-right .4s ease-in-out forwards;
+		animation: slide-in-right $animation-duration ease-in forwards;
 	}
 	.slide-leave-active_right_hand{
-		animation: slide-out-right .3s ease-out forwards;
+		animation: slide-out-right $animation-duration ease-out forwards;
 	}
 	@keyframes slide-in-left{
 		from{
-			transform: translateX(150%)
+			transform: translateX(150%) scale(0);
+			opacity: 0.0;
 		}
 		to{
-			transform: translateX(0%)
+			transform: translateX(0%) scale(1);
+			opacity: 1.0;
 		}
 	}
 	@keyframes slide-out-left{
 		from{
-			transform: translateX(0%)
+			transform: translateX(0%) scale(1);
+			opacity: 1.0;
 		}
 		to{
-			transform: translateX(150%)
+			transform: translateX(150%) scale(0);
+			opacity: 0.0;
 		}
 	}
 
 	@keyframes slide-in-right{
 		from{
-			transform: translateX(-150%)
+			transform: translateX(-150%) scale(0);
+			opacity: 0.0;
 		}
 		to{
-			transform: translateX(0%)
+			transform: translateX(0%) scale(1);
+			opacity: 1.0;
 		}
 	}
 	@keyframes slide-out-right{
 		from{
-			transform: translateX(0%)
+			transform: translateX(0%) scale(1);
+			opacity: 1.0;
 		}
 		to{
-			transform: translateX(-150%)
+			transform: translateX(-150%) scale(0);
+			opacity: 0.0;
 		}
 	}
 	// END Animation
