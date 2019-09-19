@@ -121,9 +121,6 @@ $component-secondary-color: rgb(80, 146, 156);
 				background-color: $component-main-color;
 				margin: auto;
 				padding: 0.6em 0 0.1em 0;
-				// color: $default-text-color;
-				// box-shadow: inset 0px 13px 0px -5px $component-secondary-color;
-				// position: fixed;
 				width: 90%;
 				z-index: 10;
 			}
@@ -232,4 +229,20 @@ $animation-duration: 0.35s;
 		}
 	}
 	// END Animation
+
+	// MEDIA QUERIES START
+	@media only screen
+	and (min-width : 375px) {
+		#app{
+			font-size: 1.2rem;
+		}
+	}
+	@media only screen
+	and (min-width : 414px) {
+		#app{
+			font-size: 1.4rem;
+		}
+	}
+
+	// MEDIA QUERIES END
 </style>

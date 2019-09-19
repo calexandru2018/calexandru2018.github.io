@@ -129,4 +129,44 @@ $chng-btn-size: 3.5em;
 	.change-hand-btn-slide-left{//alt stage; using in right hande mode
 		left: 0;
 	}
+
+	@media only screen
+	and (min-width : 375px) {
+		.nav-btn{
+			font-size: 1em;
+		}
+	}
+	@media only screen
+	and (min-width : 414px) {
+		.nav-btn{
+			font-size: 1.2rem;
+		}
+		.change-hand-btn{
+			height: $chng-btn-size + 0.5em;
+			width:  $chng-btn-size + 0.5em;
+			img{
+				height: $chng-btn-size;
+				width:  $chng-btn-size;
+			}
+		}
+	}
+	@media only screen
+	and (min-width : 375px)
+	and (min-height: 800px) {
+		nav{
+			margin: -3em 25px 0 25px;
+			.nav-btn{
+				font-size: 1.2rem;
+				height: 3.5em;
+			}
+			.change-hand-btn{
+			height: $chng-btn-size + 1em;
+			width:  $chng-btn-size + 1em;
+				img{
+					height: $chng-btn-size;
+					width:  $chng-btn-size;
+				}
+			}
+		}
+	}
 </style>

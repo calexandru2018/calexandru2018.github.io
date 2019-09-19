@@ -18,11 +18,11 @@
 			</div>
 			<div></div>
 			<div class="external-links">
-				<!-- <a class="stackoverflow" href="">
-					<img src="../assets/img/utility/so-icon.png" alt="">
-				</a> -->
 				<a class="github" href="https://github.com/calexandru2018" target="_blank">
 					<img src="../assets/img/utility/github.svg" alt="">
+				</a>
+				<a class="stackoverflow" href="https://stackoverflow.com/users/2547630/calexandru" target="_blank">
+					<img src="../assets/img/utility/stack-overflow.svg" alt="">
 				</a>
 				<a class="linkedin" href="https://www.linkedin.com/in/calexandru2018/" target="_blank">
 					<img src="../assets/img/utility/linkedin.svg" alt="">
@@ -56,7 +56,7 @@ $h2-shdw: rgb(255,255,255);
 		}
 		.under-menu{
 			display: grid;
-    		grid-template-columns: 1.2fr 0.5fr 1.7fr;
+    		grid-template-columns: 1.5fr 0.4fr 2.5fr;
 			.lang-select{
 			font-size: 1em;
 			display: flex;
@@ -68,8 +68,22 @@ $h2-shdw: rgb(255,255,255);
 				display: flex;
     			justify-content: space-between;
 				img{
-					width: 2em;
+					width: 1.5em;
+					transition: filter ease-out 0.1s;
+					&:hover{
+						filter: drop-shadow(0px 0px 3px $h2-shdw);
+					}
 				}
+			}
+		}
+	}
+
+	@media only screen
+	and (min-width : 375px)
+	and (min-height: 800px) {
+		.external-links{
+			img{
+				width: 2em !important;
 			}
 		}
 	}
