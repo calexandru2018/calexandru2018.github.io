@@ -88,6 +88,37 @@ $font-lang-size: 1em;
 		}
 	}
 	@media only screen
+	and (min-width : 375px){
+		.top-nav{
+			h2{
+				font-size: $font-header-size - 0.04em;
+			}
+		}
+	}
+	@media only screen
+	and (min-width : 414px){
+		.top-nav{
+			h2{
+				font-size: $font-header-size - 0.18em !important;
+			}
+		}
+	}
+	@media only screen
+	and (min-width : 375px)
+	and (min-height: 800px) {
+		.top-nav{
+			h2{
+				font-size: $font-header-size - 0.015em;
+			}
+		}
+		.external-links{
+			img{
+				width: 2em !important;
+			}
+		}
+	}
+	
+	@media only screen
 	and (min-width : 411px)
 	and (min-height: 731px) {
 		.top-nav{
@@ -105,18 +136,5 @@ $font-lang-size: 1em;
 			}
 		}
 	}
-	@media only screen
-	and (min-width : 375px)
-	and (min-height: 800px) {
-		.top-nav{
-			h2{
-				font-size: $font-header-size + 0.1em;
-			}
-		}
-		.external-links{
-			img{
-				width: 2em !important;
-			}
-		}
-	}
+	
 </style>
