@@ -231,16 +231,9 @@ $animation-duration: 0.35s;
 	// END Animation
 
 	// MEDIA QUERIES START
-	@media only screen
-	and (min-width : 375px) {
+	@media (min-width: 768px) { 
 		#app{
-			font-size: 1.2rem;
-		}
-	}
-	@media only screen
-	and (min-width : 414px) {
-		#app{
-			font-size: 1.4rem;
+			padding: 0em 2.5em !important;
 		}
 	}
 

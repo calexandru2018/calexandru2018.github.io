@@ -66,6 +66,7 @@ $default-text-color: rgb(255,255,255);
 $btn-def-border-color: rgb(255,255,255);
 $btn-hover-text-color:rgba(100,100,100,0.9);
 $chng-btn-size: 3.5em;
+$nav-btn-width: 50%;
 
 	nav{
 		display: grid;
@@ -73,11 +74,11 @@ $chng-btn-size: 3.5em;
 		align-items: start;
 		margin: -1em 25px 0 25px;
 		.nav-btn{
-			width: 50%;
+			width: $nav-btn-width;
 			height: 1.5em;
 			background-color: transparent;
 			border: 2.5px solid $btn-def-border-color;
-			border-radius: 2px;
+			border-radius: 5px;
 			padding: 25px;
 			line-height: 0;
 			color: $default-text-color;
@@ -105,7 +106,7 @@ $chng-btn-size: 3.5em;
     	height: $chng-btn-size;
 		background-color: $btn-def-border-color;
 		border: none;
-		border-radius: 30px;
+		border-radius: 100px;
 		transition: all 0.6s;
     	position: relative;
 		align-self: center;
@@ -131,43 +132,72 @@ $chng-btn-size: 3.5em;
 		left: 0;
 	}
 
-	@media only screen
-	and (min-width : 375px) {
+	@media (min-width: 375px) {
 		.nav-btn{
 			font-size: 1em;
 		}
 	}
-	@media only screen
-	and (min-width : 414px) {
-		.nav-btn{
-			font-size: 1.2rem;
-		}
-		.change-hand-btn{
-			height: $chng-btn-size + 0.5em;
-			width:  $chng-btn-size + 0.5em;
-			img{
-				height: $chng-btn-size;
-				width:  $chng-btn-size;
-			}
+	@media (min-width: 375px) and (min-height: 750px){
+		nav{
+			margin: -2.5em 25px 0 25px !important;
 		}
 	}
-	@media only screen
-	and (min-width : 375px)
-	and (min-height: 800px) {
+	// @media (min-width: 568px) and (min-height: 320px) {
+	// 	.nav-btn{
+	// 		font-size: 1.1rem;
+	// 	}
+	// 	.change-hand-btn{
+	// 		height: $chng-btn-size + 0.5em;
+	// 		width:  $chng-btn-size + 0.5em;
+	// 		img{
+	// 			height: $chng-btn-size;
+	// 			width:  $chng-btn-size;
+	// 		}
+	// 	}
+	// } 
+	@media (min-width: 576px) { 
+		
+	}
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
 		nav{
-			margin: -2em 25px 0 25px;
+    		margin: -3em 25px 0 25px;
 			.nav-btn{
-				font-size: 1.2rem;
-				height: 3.5em;
+				font-size: 1.3rem;
+				width: $nav-btn-width - 10% !important;
+				height: 4em !important;
 			}
 			.change-hand-btn{
-			height: $chng-btn-size + 1em;
-			width:  $chng-btn-size + 1em;
+				width:  $chng-btn-size + 3em;
+				height: $chng-btn-size + 3em;
 				img{
-					height: $chng-btn-size;
-					width:  $chng-btn-size;
+					width:  $chng-btn-size + 1.5em;
+					height: $chng-btn-size + 1.5em;
 				}
 			}
 		}
+	}
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+		nav{
+    		margin: -3em 25px 0 25px;
+			.nav-btn{
+				font-size: 1.5rem;
+				width: $nav-btn-width - 10% !important;
+				height: 4.5em !important;
+			}
+			.change-hand-btn{
+				width:  $chng-btn-size + 3.5em;
+				height: $chng-btn-size + 3.5em;
+				img{
+					width:  $chng-btn-size + 2em;
+					height: $chng-btn-size + 2em;
+				}
+			}
+		}
+	}
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) { 
+
 	}
 </style>
