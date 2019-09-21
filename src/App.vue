@@ -37,7 +37,6 @@
 				hide_comp_btn_shadow: 'hide-component-btn-shadow-left',
 				card_base_layout: {
 					grid_positioning: 'grid-column-star: 2; grid-column-end:3',
-					grid_width: 'grid-template-columns: 10% 90%'
 				}
 			}
 		},
@@ -63,13 +62,11 @@
 					this.slide_leave = 'slide-leave-active_right_hand';
 					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-right';
 					this.card_base_layout.grid_positioning = 'grid-column-star: 1; grid-column-end:2';
-					this.card_base_layout.grid_width = 'grid-template-columns: 90% 10%';
 				}else{
 					this.slide_enter = 'slide-enter-active_left_hand';
 					this.slide_leave = 'slide-leave-active_left_hand';
 					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-left';
 					this.card_base_layout.grid_positioning = 'grid-column-star: 2; grid-column-end:3';
-					this.card_base_layout.grid_width = 'grid-template-columns: 10% 90%';
 				}
 			});
 		},
@@ -114,6 +111,7 @@ $component-secondary-color: rgb(80, 146, 156);
 	}
 	.card-base-layout{
 		display: grid;
+		grid-template-columns: 10% 90%;
 		& div:nth-child(2){
 			background-color: $card-base-background;
 			color: $secondary-text-color;
@@ -125,10 +123,10 @@ $component-secondary-color: rgb(80, 146, 156);
 				z-index: 10;
 			}
 		}
-		.portfolio-container{
+		.projects-container{
 			overflow-y: auto;
 		}
-		.portfolio-content-container{
+		.projects-content-container{
 			display: flex;
 			flex-direction: column;
 			padding: 0 1.5em;
@@ -170,6 +168,85 @@ $component-secondary-color: rgb(80, 146, 156);
 	.down {
 		transform: rotate(45deg);
 	}
+
+	// 	// MEDIA QUERIES START
+	@media (min-width: 768px) { 
+		#app{
+			padding: 0em 2.5em !important;
+			.component{
+				left: 0;
+			}
+		}
+	}
+	@media (min-width: 992px) {
+		#app{
+			padding: 0em 6em !important;
+		}
+	}
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1024px) { 
+		#app{
+			padding: 0em 10% !important;
+			.component{
+				width: 80vw;
+				height: 75vh;
+				left:0;
+				top:10%;
+				margin: 0 10%;
+			}
+			.card-base-layout{
+				.hide-component-btn{
+					border-top-left-radius: 10px;
+					border-bottom-left-radius: 10px;
+				}
+				grid-template-columns: 5% 95%;
+				& div:nth-child(2){
+					border-top-right-radius: 10px;
+					border-bottom-right-radius: 10px;
+					.card-header{
+						padding: 1em 0 0.1em 0;
+						font-size: 3em;
+					}
+				}
+			}
+		}
+		i{
+			padding: 0.5em;
+		}
+	}
+	@media (min-width: 1024px) and (min-height: 992px) { 
+		
+	}
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) { 
+		#app{
+			padding: 0em 5% !important;
+			.card-base-layout{
+				grid-template-columns: 2% 98%;
+				& div:nth-child(2){
+					.card-header{
+						padding: 35px 0 0 0;
+						font-size: 70px;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: 2048px) { 
+		#app{
+			padding: 0em 10% !important;
+			// .card-base-layout{
+			// 	grid-template-columns: 2% 98%;
+			// 	& div:nth-child(2){
+			// 		.card-header{
+			// 			padding: 35px 0 0 0;
+			// 			font-size: 70px;
+			// 		}
+			// 	}
+			// }
+		}
+	}
+	// MEDIA QUERIES END
 </style>
 <style lang="scss" scoped>
 $animation-duration: 0.35s;
@@ -229,13 +306,4 @@ $animation-duration: 0.35s;
 		}
 	}
 	// END Animation
-
-	// MEDIA QUERIES START
-	@media (min-width: 768px) { 
-		#app{
-			padding: 0em 2.5em !important;
-		}
-	}
-
-	// MEDIA QUERIES END
 </style>

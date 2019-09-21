@@ -1,14 +1,14 @@
 <template>
-	<div class="component card-base-layout" v-bind:style="card_base_layout.grid_width">
+	<div class="component card-base-layout">
 		<div>
 			<button class="hide-component-btn" v-bind:class="hide_comp_btn_shadow" @click="hideComponent">
 				<i v-bind:class="left_hand_use == true ? 'right':'left'"></i>
 			</button>
 		</div>
-		<div class="portfolio-container"  v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
+		<div class="projects-container"  v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
 			<h1 class="card-header">Projects</h1>
-			<div class="portfolio-grid">
-				<div class="portfolio-item">
+			<div class="projects-grid">
+				<div class="projects-item">
 					<img class="cover-img" src="../assets/img/projects/screen-prtf.svg" alt="">
 					<div class="item-header">
 						<h3>Web Portfolio</h3>
@@ -42,7 +42,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="portfolio-item">
+				<div class="projects-item">
 					<img class="cover-img" src="../assets/img/projects/screen-lk.svg" alt="">
 					<div class="item-header">
 						<h3>Lk Properties</h3>
@@ -74,7 +74,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="portfolio-item">
+				<div class="projects-item">
 					<img class="cover-img" src="../assets/img/projects/screen-bom2.svg" alt="">
 					<div class="item-header">
 						<h3>Bom&sup2;</h3>
@@ -129,12 +129,13 @@
 $item-shdw-color: rgb(0,0,0);
 $secondary-text-color: rgb(47,57,77);
 
-	.portfolio-grid{
+
+	.projects-grid{
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-row-gap: 2em;
 		padding: 1em 0;
-		.portfolio-item{
+		.projects-item{
 			display: grid;
 			grid-template-rows: repeat(5, auto);
 			padding: 1em 1.5em;
@@ -197,6 +198,25 @@ $secondary-text-color: rgb(47,57,77);
 					position: relative;
 					left: -5px;
 				}
+			}
+		}
+	}
+	@media (min-width: 1024px) { 
+		.projects-grid{
+			// display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 1em;
+			.projects-item{
+				margin: 1em;
+			}
+		}
+	}
+	@media (min-width: 1200px) { 
+		.projects-grid{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			.projects-item{
+				margin: 1.5em;
 			}
 		}
 	}

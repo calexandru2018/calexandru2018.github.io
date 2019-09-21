@@ -1,6 +1,6 @@
 <template>
 	<div class="top-nav">
-		<h2 class="regular">Alexandru Cheltuitor</h2>
+		<h2 class="page-tile">Alexandru Cheltuitor</h2>
 		<p>Web Portfolio</p>
 		<div class="under-menu">
 			<div class="lang-select">
@@ -49,7 +49,7 @@ $font-lang-size: 1em;
 		text-align: left;
 		h2{
 			font-size: $font-header-size;
-			// margin: 1em 0 0 0;
+			margin: 1.5em 0 0.5em 0;
 			box-shadow: 0px 5px 0px -1px $h2-shdw;
 		}
 		p{
@@ -70,15 +70,16 @@ $font-lang-size: 1em;
 			.external-links{
 				display: flex;
     			justify-content: space-between;
-				outline: none;
+				outline: none !important;
 				img{
 					width: 1.8em;
 					transition: filter ease-out 0.1s;
 					&:hover{
 						filter: drop-shadow(0px 0px 3px $h2-shdw);
+						outline: none !important;
 					}
 					&:active{
-						outline: none;
+						outline: none !important;
 						background: transparent;
 						filter: drop-shadow(0px 0px 3px black);
 						transform: scale(0.97);
@@ -89,6 +90,9 @@ $font-lang-size: 1em;
 	}
 
 	@media (min-width: 375px) {
+		h2{
+			font-size: $font-header-size + 0.4em !important;
+		}
 		.under-menu{
     		grid-template-columns: 1.5fr 1fr 3fr !important;
 			.external-links img{
@@ -96,9 +100,19 @@ $font-lang-size: 1em;
 				}
 		}
 	}
-	@media (min-width: 568px) and (min-height: 320px) {
-		
-	} 
+	@media (min-width: 375px) and (min-height: 750px){
+		h2{
+			font-size: $font-header-size + 0.45em !important;
+		}
+		.under-menu{
+    		grid-template-columns: 1.5fr 0.5fr 3.2fr !important;
+			.external-links{ 
+				img{
+					width: 2.2em  !important;
+				}
+			}
+		}
+	}
 	@media (min-width: 576px) { 
 		
 	}
@@ -106,7 +120,8 @@ $font-lang-size: 1em;
 	@media (min-width: 768px) { 
 		.top-nav{
 			h2{
-				font-size: $font-header-size + 1em !important;
+				font-size: $font-header-size + 1.8em !important;
+				margin: 0.8em 0 0.5em 0;
 			}
 			p{
 				font-size: $font-p-size + 0.5em;
@@ -124,7 +139,7 @@ $font-lang-size: 1em;
 		}
 	}
 	/* Large devices (desktops, 992px and up) */
-	@media (min-width: 992px) {
+	@media only screen and (min-width: 992px) {
 		.top-nav{
 			h2{
 				font-size: $font-header-size + 1.5em !important;
@@ -144,9 +159,125 @@ $font-lang-size: 1em;
 			
 		}
 	}
-	/* Extra large devices (large desktops, 1200px and up) */
-	@media (min-width: 1200px) { 
-
+	/* Large devices (desktops, 992px and up) */
+	@media only screen and (min-width: 992px) and (min-height: 720px) {
+		.top-nav{
+			h2{
+				font-size: $font-header-size + 1.5em !important;
+				margin: 0.8em 0 0.5em 0;
+			}
+			p{
+				font-size: $font-p-size + 1em !important;
+			}
+			.lang-select{
+				font-size: $font-lang-size + 0.5em !important;
+			}
+			.under-menu{
+				grid-template-columns: 1.5fr 3fr 2.5fr !important;
+				.external-links img{
+					width: 2.5em  !important;
+				}
+			}
+			
+		}
+	}
+	@media (min-width: 1024px) and (min-height: 992px) and (max-height: 1024px) { 
+		.top-nav{
+			h2{
+				font-size: $font-header-size + 2em !important;
+				margin: 1.5em 0 0.5em 0;
+			}
+			p{
+				font-size: $font-p-size + 1.2em !important;
+			}
+			.lang-select{
+				font-size: $font-lang-size + 0.7em !important;
+			}
+			.under-menu{
+				grid-template-columns: 1.5fr 3fr 3fr !important;
+				.external-links img{
+					width: 3.3em  !important;
+				}
+			}
+			
+		}
+	}
+	// @media (min-width: 1200px) and (max-height: 1024px) { 
+	// 	.top-nav{
+	// 		.under-menu{
+	// 			grid-template-columns: 1fr 5fr 4fr !important;
+	// 			.external-links img{
+	// 				width: 3.5em  !important;
+	// 			}
+	// 		}
+			
+	// 	}
+	// }
+	// /* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) and (min-height: 1200px){ 
+		.top-nav{
+			h2{
+				font-size: $font-header-size + 2.5em !important;
+				padding: 0;
+				margin: 1.2em 0 0.5em 0;
+			}
+			p{
+				font-size: $font-p-size + 1.5em !important;
+			}
+			.lang-select{
+				font-size: $font-lang-size + 0.5em !important;
+			}
+			.under-menu{
+				grid-template-columns: 1fr 7fr 2fr !important;
+				.external-links img{
+					width: 3.5em  !important;
+				}
+			}
+			
+		}
+	}
+	@media (min-width: 2048px) { 
+		.top-nav{
+			h2{
+				font-size: $font-header-size + 4em !important;
+				padding: 0;
+				margin: 1.5em 0 0.5em 0;
+			}
+			p{
+				font-size: $font-p-size + 2em !important;
+			}
+			.lang-select{
+				font-size: $font-lang-size + 1em !important;
+			}
+			.under-menu{
+				grid-template-columns: 1fr 6fr 3fr !important;
+				.external-links img{
+					width: 4em  !important;
+				}
+			}
+			
+		}
+	}
+	@media (min-width: 3840px) { 
+		.top-nav{
+			h2{
+				font-size: $font-header-size + 6em !important;
+				padding: 0;
+				margin: 1.5em 0 0.5em 0;
+			}
+			p{
+				font-size: $font-p-size + 3em !important;
+			}
+			.lang-select{
+				font-size: $font-lang-size + 2em !important;
+			}
+			.under-menu{
+				grid-template-columns: 1fr 6fr 3fr !important;
+				.external-links img{
+					width: 6em  !important;
+				}
+			}
+		}
 	}
 	
 </style>
