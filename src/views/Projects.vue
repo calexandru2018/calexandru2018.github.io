@@ -29,16 +29,48 @@
 					<h5>Worked with the following technologies:</h5>
 					<ul class="tech-skills-list">
 						<li>
+							<span class="list-item">VueJS</span>
+						</li>
+						<li>
+							<span class="list-item">SCSS</span>
+						</li>
+						<li>
+							<span class="list-item">Webpack</span>
+						</li>
+					</ul>
+				</div>
+				<div class="projects-item">
+					<img class="cover-img" src="../assets/img/projects/screen-bom2.svg" alt="">
+					<div class="item-header">
+						<h3>Bom&sup2;</h3>
+						<div class="item-links">
+							<span></span>
+							<img src="../assets/img/utility/eye-closed.svg" alt="">
+							<span></span>
+							<a href="https://bomaoquadrado.pt/" target="_blank">
+								<img src="../assets/img/utility/domain.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet illum veritatis excepturi? Sapiente vero, inventore maiores explicabo fugiat ut qui ipsam magni dignissimos at nam dolor voluptates quo nesciunt facilis?
+					</p>
+					<h5>Worked with the following technologies:</h5>
+					<ul class="tech-skills-list">
+						<li>
 							<span class="list-item">PHP</span>
 						</li>
 						<li>
-							<span class="list-item">JS</span>
+							<span class="list-item">JS5/6</span>
 						</li>
 						<li>
 							<span class="list-item">HTML/CSS</span>
 						</li>
 						<li>
-							<span class="list-item">Bootstrap</span>
+							<span class="list-item">Webpack</span>
+						</li>
+						<li>
+							<span class="list-item">Instagram API</span>
 						</li>
 					</ul>
 				</div>
@@ -67,6 +99,9 @@
 							<span class="list-item">JS</span>
 						</li>
 						<li>
+							<span class="list-item">jQuery</span>
+						</li>
+						<li>
 							<span class="list-item">HTML/CSS</span>
 						</li>
 						<li>
@@ -75,9 +110,9 @@
 					</ul>
 				</div>
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/screen-bom2.svg" alt="">
+					<img class="cover-img" src="../assets/img/projects/vartan-b.svg" alt="">
 					<div class="item-header">
-						<h3>Bom&sup2;</h3>
+						<h3>Värtan IK - B</h3>
 						<div class="item-links">
 							<span></span>
 							<img src="../assets/img/utility/eye-closed.svg" alt="">
@@ -102,7 +137,7 @@
 							<span class="list-item">HTML/CSS</span>
 						</li>
 						<li>
-							<span class="list-item">Webpack</span>
+							<span class="list-item">jQuery</span>
 						</li>
 					</ul>
 				</div>
