@@ -5,9 +5,9 @@
 				<i v-bind:class="left_hand_use == true ? 'right':'left'"></i>
 			</button>
 		</div>
-		<div class="portfolio-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
+		<div class="projects-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
 			<h1 class="card-header">About me</h1>
-			<div class="portfolio-content-container">
+			<div class="projects-content-container">
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
 				</p>
@@ -41,7 +41,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.portfolio-content-container{
+	.projects-content-container{
 		p{
 			line-height: 0.6cm;
 			text-align: justify;

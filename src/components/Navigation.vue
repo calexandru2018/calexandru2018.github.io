@@ -154,7 +154,7 @@ $nav-btn-transition: 0.15s;
 
 	@media (min-width: 375px) {
 		.nav-btn{
-			font-size: 1em;
+			font-size: 0.9em;
 		}
 		.change-hand-btn-slide-right{//initial stage; using in left hande mode
 			left: 85%;
@@ -163,6 +163,11 @@ $nav-btn-transition: 0.15s;
 	@media (min-width: 375px) and (min-height: 750px){
 		nav{
 			margin: -1.5em 25px 0 25px !important;
+			.nav-btn{
+				font-size: 1em;
+				// width: $nav-btn-width - 5% !important;
+				// height: 3.5em !important;
+			}
 		}
 	}
 	@media (min-width: 576px) { 
