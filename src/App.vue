@@ -112,7 +112,7 @@ $component-secondary-color: rgb(80, 146, 156);
 	.card-base-layout{
 		display: grid;
 		grid-template-columns: 10% 90%;
-		& div:nth-child(2){
+		& > div:nth-child(2){
 			background-color: $card-base-background;
 			color: $secondary-text-color;
 			.card-header{
@@ -134,12 +134,20 @@ $component-secondary-color: rgb(80, 146, 156);
 		.hide-component-btn{
 			width: 100%;
 			height: 100%;
-			background-color: $component-main-color;
+			// background-color: $component-main-color;
+			background-color: rgb(240, 248, 248);
 			border: none;
 			color: $default-text-color;
 			padding: 0;
 			cursor: pointer;
-			transition: background-color ease-in 0.1s;
+			transition: background-color ease-in-out 0.2s;
+			&:hover, &:active{
+				color:white;
+				background-color: $component-secondary-color;
+				i{
+					color:white;
+				}
+			}	
 		}
 		.hide-component-btn-shadow-left{
 			box-shadow: inset 13px 13px 0px -5px $component-secondary-color;
@@ -154,7 +162,8 @@ $component-secondary-color: rgb(80, 146, 156);
 		display: inline-block;
 		padding: 0.7em;
 		margin-left: -.4em;
-		color:$secondary-text-color;
+		// color:$secondary-text-color;
+		color:$component-secondary-color;
 	}
 	.right {
 		transform: rotate(-45deg);
@@ -188,10 +197,10 @@ $component-secondary-color: rgb(80, 146, 156);
 		#app{
 			padding: 0em 10% !important;
 			.component{
-				width: 80vw;
+				width: 65vw;
 				height: 75vh;
-				left:0;
-				top:10%;
+				left: 20vw;
+				top: 10%;
 				margin: 0 10%;
 			}
 			.card-base-layout{

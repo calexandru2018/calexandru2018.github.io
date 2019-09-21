@@ -4,17 +4,11 @@
 		<p>Web Portfolio</p>
 		<div class="under-menu">
 			<div class="lang-select">
-				<div>
-					EN
-				</div>
+				<div>EN</div>
 				<div>&#124;</div>
-				<div>
-					SV
-				</div>
+				<div>SV</div>
 				<div>&#124;</div>
-				<div>
-					PT
-				</div>
+				<div>PT</div>
 			</div>
 			<div></div>
 			<div class="external-links">
