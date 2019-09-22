@@ -99,7 +99,7 @@ $component-secondary-color: rgb(80, 146, 156);
 		text-align: center;
 		color: $default-text-color;
 		background-image: url('./assets/img/custom/tim-mossholder-4P5DMXQXzRI-unsplash.jpg');
-		background-position: center;
+		background-position: top;
 		background-size: cover;
 		height: inherit;
 		overflow: hidden;
@@ -116,10 +116,12 @@ $component-secondary-color: rgb(80, 146, 156);
 		display: grid;
 		// grid-template-columns: 10% 90%;
 		& > div:nth-child(2){
-			background-color: $card-base-background;
+			// background-color: $card-base-background;
+			background-color: rgb(240, 248, 248);
 			color: $secondary-text-color;
 			.card-header{
-				background-color: $component-main-color;
+				// background-color: $component-main-color;
+				background-color: rgb(240, 248, 248);
 				margin: auto;
 				padding: 0.6em 0 0.1em 0;
 				width: 90%;

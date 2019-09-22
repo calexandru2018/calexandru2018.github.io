@@ -26,7 +26,7 @@
 				</h2>
 				<p>
 					I am an language agnostic developer. Although I have mostly programmed on the webstack, though it did not stop me from learning other languages and frameworks and thus broadning my knowldege. 
-					I have worked on some projects that required that the both the front and the back-end to be developed.
+					I´ve worked on some projects that required that both the front and back-end to be developed.
 				</p>
 				<p>
 					Do you want to get in touch ? You can either fill out the from or click on <a href="mailto:calexandru2018@pm.me" target="_top">calexandru2018@pm.me</a>.
@@ -171,29 +171,31 @@ $left-btn-pos-trans: 100%;
 		grid-row-end: 4;
 		// background-color: rgba(255,255,255, 0.5);
 		&>div{
-			mix-blend-mode: screen;
+			// mix-blend-mode: screen;
 			padding: 1em 5em;
 			border-radius: 2px;
-			background-color: rgb(255,255,255)
+			background-color: rgb(255,255,255);
+			color: rgb(80, 146, 156);
 		}
 		h1,h2,h3,h4,h5,h6{
 			// margin: 1em auto 0.5em auto;
 			text-align: left !important;
-			mix-blend-mode: difference;
+			// mix-blend-mode: difference;
 		}
 		p{
 			// margin: 1em 3em 0.5em 2em;
 			line-height: 1.2em;
 			text-align: justify;
-			mix-blend-mode: difference;
+			// mix-blend-mode: difference;
 			a{
 				// font-weight: bold;
 				text-decoration: none;
-				// color: rgb(192, 153, 103);
-				color: rgb(255, 255, 0);
+				color: rgb(192, 153, 103);
+				// color: rgb(255, 255, 0);
 				transition: color ease 0.5s;
 				&:hover{
-					color: rgb(154, 205, 50);
+					// color: rgb(154, 205, 50);
+					color: rgb(135, 206, 250);
 				}
 			}
 		}
@@ -311,6 +313,7 @@ $left-btn-pos-trans: 100%;
 			left: $left-btn-pos-trans -  ($nav-btn-width - 15%);
 		}
 	}
+	//1440 x 821
 	@media (min-width: 992px) and (min-height: 1024px){ 
 		nav{
 			margin: -6em 25px 0 25px !important;
