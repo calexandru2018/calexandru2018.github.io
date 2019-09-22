@@ -1,5 +1,5 @@
 <template>
-	<div class="component card-base-layout">
+	<div class="component card-base-layout" v-bind:class="card_base_layout.grid_layout_class">
 		<div>
 			<button class="hide-component-btn" v-bind:class="hide_comp_btn_shadow" @click="hideComponent">
 				<i v-bind:class="left_hand_use == true ? 'right':'left'"></i>

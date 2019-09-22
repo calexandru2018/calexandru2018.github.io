@@ -36,6 +36,7 @@
 				slide_leave: 'slide-leave-active_left_hand',
 				hide_comp_btn_shadow: 'hide-component-btn-shadow-left',
 				card_base_layout: {
+					grid_layout_class: 'card-base-layout-left',
 					grid_positioning: 'grid-column-star: 2; grid-column-end:3',
 				}
 			}
@@ -61,12 +62,14 @@
 					this.slide_enter = 'slide-enter-active_right_hand';
 					this.slide_leave = 'slide-leave-active_right_hand';
 					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-right';
-					this.card_base_layout.grid_positioning = 'grid-column-star: 1; grid-column-end:2';
+					this.card_base_layout.grid_layout_class = 'card-base-layout-right';
+					this.card_base_layout.grid_positioning = 'grid-column-star: 1; grid-column-end: 2';
 				}else{
 					this.slide_enter = 'slide-enter-active_left_hand';
 					this.slide_leave = 'slide-leave-active_left_hand';
 					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-left';
-					this.card_base_layout.grid_positioning = 'grid-column-star: 2; grid-column-end:3';
+					this.card_base_layout.grid_layout_class = 'card-base-layout-right';
+					this.card_base_layout.grid_positioning = 'grid-column-star: 2; grid-column-end: 3';
 				}
 			});
 		},
@@ -111,7 +114,7 @@ $component-secondary-color: rgb(80, 146, 156);
 	}
 	.card-base-layout{
 		display: grid;
-		grid-template-columns: 10% 90%;
+		// grid-template-columns: 10% 90%;
 		& > div:nth-child(2){
 			background-color: $card-base-background;
 			color: $secondary-text-color;
@@ -162,7 +165,6 @@ $component-secondary-color: rgb(80, 146, 156);
 		display: inline-block;
 		padding: 0.7em;
 		margin-left: -.4em;
-		// color:$secondary-text-color;
 		color:$component-secondary-color;
 	}
 	.right {
@@ -177,6 +179,13 @@ $component-secondary-color: rgb(80, 146, 156);
 	.down {
 		transform: rotate(45deg);
 	}
+	.card-base-layout-left{
+		grid-template-columns: 10% 90% !important;
+	}
+	.card-base-layout-right{
+		grid-template-columns: 90% 10% !important;
+	}
+	
 
 	// 	// MEDIA QUERIES START
 	@media (min-width: 768px) { 
@@ -241,7 +250,23 @@ $component-secondary-color: rgb(80, 146, 156);
 			}
 		}
 	}
+	// 2k resolutions 2048 x 1080
 	@media (min-width: 2048px) { 
+		#app{
+			padding: 0em 10% !important;
+			// .card-base-layout{
+			// 	grid-template-columns: 2% 98%;
+			// 	& div:nth-child(2){
+			// 		.card-header{
+			// 			padding: 35px 0 0 0;
+			// 			font-size: 70px;
+			// 		}
+			// 	}
+			// }
+		}
+	}
+	// 4k resolutions 3840 x 2160
+	@media (min-width: 3840px) { 
 		#app{
 			padding: 0em 10% !important;
 			// .card-base-layout{

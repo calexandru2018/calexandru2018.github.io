@@ -132,54 +132,10 @@ $font-lang-size: 1em;
 			
 		}
 	}
-	/* Large devices (desktops, 992px and up) */
-	@media only screen and (min-width: 992px) {
-		.top-nav{
-			h2{
-				font-size: $font-header-size + 1.5em !important;
-			}
-			p{
-				font-size: $font-p-size + 1em !important;
-			}
-			.lang-select{
-				font-size: $font-lang-size + 1em !important;
-			}
-			.under-menu{
-				grid-template-columns: 1.5fr 1.5fr 3.5fr !important;
-				.external-links img{
-					width: 4.5em  !important;
-				}
-			}
-			
-		}
-	}
-	/* Large devices (desktops, 992px and up) */
-	@media only screen and (min-width: 992px) and (min-height: 720px) {
-		.top-nav{
-			h2{
-				font-size: $font-header-size + 1.5em !important;
-				margin: 0.8em 0 0.5em 0;
-			}
-			p{
-				font-size: $font-p-size + 1em !important;
-			}
-			.lang-select{
-				font-size: $font-lang-size + 0.5em !important;
-			}
-			.under-menu{
-				grid-template-columns: 1.5fr 3fr 2.5fr !important;
-				.external-links img{
-					width: 2.5em  !important;
-				}
-			}
-			
-		}
-	}
 	@media (min-width: 1024px) and (min-height: 992px) and (max-height: 1024px) { 
 		.top-nav{
 			h2{
 				font-size: $font-header-size + 2em !important;
-				margin: 1.5em 0 0.5em 0;
 			}
 			p{
 				font-size: $font-p-size + 1.2em !important;
@@ -188,7 +144,7 @@ $font-lang-size: 1em;
 				font-size: $font-lang-size + 0.7em !important;
 			}
 			.under-menu{
-				grid-template-columns: 1.5fr 3fr 3fr !important;
+				grid-template-columns: 2fr 4fr 4fr !important;
 				.external-links img{
 					width: 3.3em  !important;
 				}
@@ -196,19 +152,8 @@ $font-lang-size: 1em;
 			
 		}
 	}
-	// @media (min-width: 1200px) and (max-height: 1024px) { 
-	// 	.top-nav{
-	// 		.under-menu{
-	// 			grid-template-columns: 1fr 5fr 4fr !important;
-	// 			.external-links img{
-	// 				width: 3.5em  !important;
-	// 			}
-	// 		}
-			
-	// 	}
-	// }
 	// /* Extra large devices (large desktops, 1200px and up) */
-	@media (min-width: 1200px) and (min-height: 1200px){ 
+	@media (min-width: 1300px){ 
 		.top-nav{
 			h2{
 				font-size: $font-header-size + 2.5em !important;
@@ -222,7 +167,7 @@ $font-lang-size: 1em;
 				font-size: $font-lang-size + 0.5em !important;
 			}
 			.under-menu{
-				grid-template-columns: 1fr 7fr 2fr !important;
+				grid-template-columns: 1fr 6fr 3fr !important;
 				.external-links img{
 					width: 3.5em  !important;
 				}
@@ -230,6 +175,7 @@ $font-lang-size: 1em;
 			
 		}
 	}
+	// 2k resolutions 2048 x 1080
 	@media (min-width: 2048px) { 
 		.top-nav{
 			h2{
@@ -252,6 +198,7 @@ $font-lang-size: 1em;
 			
 		}
 	}
+	// 4k resolutions 3840 x 2160
 	@media (min-width: 3840px) { 
 		.top-nav{
 			h2{

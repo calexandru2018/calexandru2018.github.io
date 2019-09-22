@@ -19,6 +19,15 @@
 		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
 			<img src="../assets/img/utility/arrow-left.svg" alt="">
 		</button> 
+		<div class=about-me-lg>
+			<!-- <h1>text about me</h1> -->
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste maiores debitis, optio cupiditate molestias modi alias fugiat recusandae facilis numquam eum animi sit amet odit hic deserunt vel distinctio. Magni!
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste maiores debitis, optio cupiditate molestias modi alias fugiat recusandae facilis numquam eum animi sit amet odit hic deserunt vel distinctio. Magni!
+			</p>
+		</div>
 	</nav>
 </template>
 
@@ -68,6 +77,7 @@ $btn-hover-text-color:rgba(100,100,100,0.9);
 $chng-btn-size: 3.5em;
 $nav-btn-width: 50%;
 $nav-btn-transition: 0.15s;
+$left-btn-pos-trans: 100%; 
 
 	nav{
 		display: grid;
@@ -116,6 +126,27 @@ $nav-btn-transition: 0.15s;
 			}
 		}
 	}
+	.about-me-lg{
+		font-family: "Inria Sans Bold";
+		font-weight: bold;
+		text-align: justify;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 4;
+		// background-color: rgba(255,255,255, 0.5);
+		h1{
+			margin: 1em auto 0.5em auto;
+			text-align: center;
+		}
+		p{
+			margin: 1em 3em 0.5em 2em;
+			line-height: 1.2em;
+		}
+	}
 	.change-hand-btn{
 		width: $chng-btn-size;
     	height: $chng-btn-size;
@@ -135,7 +166,7 @@ $nav-btn-transition: 0.15s;
 		}
 	}
 	.nav-btn-slide-right{//initial stage; using in left hande mode
-		left: 50%;
+		left: $left-btn-pos-trans - 50%;
 		outline: none !important;
 	}
 	.nav-btn-slide-left{//alt stage; using in right hande mode
@@ -152,6 +183,11 @@ $nav-btn-transition: 0.15s;
 		outline: none !important;
 	}
 
+	@media (max-width: 374px) {
+		.about-me-lg{
+			display: none;
+		}
+	}
 	@media (min-width: 375px) {
 		.nav-btn{
 			font-size: 0.9em;
@@ -159,27 +195,36 @@ $nav-btn-transition: 0.15s;
 		.change-hand-btn-slide-right{//initial stage; using in left hande mode
 			left: 85%;
 		}
+		.about-me-lg{
+			display: none;
+		}
 	}
 	@media (min-width: 375px) and (min-height: 750px){
 		nav{
 			margin: -1.5em 25px 0 25px !important;
+			.about-me-lg{
+				display: none;
+			}
 			.nav-btn{
 				font-size: 1em;
-				// width: $nav-btn-width - 5% !important;
-				// height: 3.5em !important;
 			}
 		}
 	}
 	@media (min-width: 576px) { 
-		
+		.about-me-lg{
+			display: none;
+		}
 	}
 	/* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
 		nav{
     		margin: -3em 25px 0 25px;
+			.about-me-lg{
+				display: none;
+			}
 			.nav-btn{
-				font-size: 1.3rem;
-				width: $nav-btn-width - 5% !important;
+				font-size: 1rem;
+				width: $nav-btn-width - 10% !important;
 				height: 3.5em !important;
 			}
 			.change-hand-btn{
@@ -190,99 +235,80 @@ $nav-btn-transition: 0.15s;
 					height: $chng-btn-size + 1em;
 				}
 			}
+		}
+		.nav-btn-slide-right{//initial stage; using in left hande mode
+			left: $left-btn-pos-trans -  ($nav-btn-width - 10%);
 		}
 		.change-hand-btn-slide-right{//initial stage; using in left hande mode
 			left: 88%;
 		}
 	}
-	/* Large devices (desktops, 992px and up) */
-	@media (min-width: 992px) {
+	@media (min-width: 992px) and (min-height: 720px){ 
 		nav{
-    		margin: 1em 25px 0 25px !important;
-			.nav-btn{
-				font-size: 1.3rem;
-				width: $nav-btn-width - 10% !important;
-				height: 3.5em !important;
+    		margin: 2em 25px 0 25px !important;
+			.about-me-lg{
+				display: none;
 			}
-			.change-hand-btn{
-				width:  $chng-btn-size + 1.5em;
-				height: $chng-btn-size + 1.5em;
-				img{
-					width:  $chng-btn-size + 1em;
-					height: $chng-btn-size + 1em;
-				}
-			}
-		}
-		.nav-btn-slide-right{//initial stage; using in left hande mode
-			left: 60%;
-		}
-	}
-	@media (min-width: 1024px) and (min-height: 720px) { 
-		.change-hand-btn{
-				width:  $chng-btn-size + 1em !important;
-				height: $chng-btn-size + 1em !important;
-				img{
-					width:  $chng-btn-size + 0.2em !important;
-					height: $chng-btn-size + 0.2em !important;
-				}
-			}
-		.change-hand-btn-slide-right{//initial stage; using in left hande mode
-			left: 90%;
-		}
-	}
-	@media only screen and (min-width: 992px) and (min-height: 720px) {
-		nav{
-    		margin: 0em 25px 0 25px !important;
 			.nav-btn{
 				font-size: 1rem;
-				width: $nav-btn-width - 17% !important;
-				height: 3.8em !important;
-			}
-			.change-hand-btn{
-				width:  $chng-btn-size + 2em;
-				height: $chng-btn-size + 2em;
-				img{
-					width:  $chng-btn-size + 1em;
-					height: $chng-btn-size + 1em;
-				}
+				width: $nav-btn-width - 15% !important;
+				height: 3.5em !important;
 			}
 		}
 		.nav-btn-slide-right{//initial stage; using in left hande mode
-			left: 60%;
+			left: $left-btn-pos-trans -  ($nav-btn-width - 15%);
 		}
 	}
-	@media (min-width: 1024px) and (min-height: 992px) { 
-		.change-hand-btn{
-				width:  $chng-btn-size + 1.5em !important;
-				height: $chng-btn-size + 1.5em !important;
-				img{
-					width:  $chng-btn-size + 0.2em !important;
-					height: $chng-btn-size + 0.2em !important;
-				}
+	@media (min-width: 992px) and (min-height: 1024px){ 
+		nav{
+			margin: -6em 25px 0 25px !important;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: repeat(4, 1fr);
+			.about-me-lg{
+				display: flex !important;
 			}
-		.change-hand-btn-slide-right{//initial stage; using in left hande mode
-			left: 92%;
+			.nav-btn{
+				// align-self: center;
+				font-size: 1.3rem;
+				width: $nav-btn-width - 0% !important;
+				height: 4em !important;
+			}
+			.change-hand-btn{
+				display: none; 
+			}
 		}
 	}
-	@media (min-width: 1200px) and (max-height: 1024px) { 
-		// nav{
-		// 	margin: 50px 25px 0 25px !important;
-		// 	.nav-btn{
-		// 		font-size: 1.3rem !important;
-		// 		width: $nav-btn-width - 25% !important;
-		// 		height: 3.5em !important;
-		// 	}
-		// 	.change-hand-btn{
-		// 		display: none; 
-		// 	}
-		// }
-	}
-	/* Extra large devices (large desktops, 1200px and up) */
-	@media (min-width: 1200px) { 
+	@media (min-width: 1300px) { 
 		nav{
 			margin: 50px 25px 0 25px !important;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: repeat(4, 1fr);
+			.about-me-lg{
+				display: flex !important;
+				height: 100%;
+				font-size: 1.2em;
+			}
 			.nav-btn{
 				font-size: 1.3rem !important;
+				width: $nav-btn-width - 0% !important;
+				height: 3.5em !important;
+			}
+			.change-hand-btn{
+				display: none; 
+			}
+		}
+	}
+	// 2k resolutions 2048 x 1080
+	@media (min-width: 2048px) { 
+		nav{
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: repeat(4, 1fr);
+			.about-me-lg{
+				display: flex !important;
+				height: 100%;
+			}
+			.nav-btn{
+				font-size: 1.5rem !important;
 				width: $nav-btn-width - 25% !important;
 				height: 3.5em !important;
 			}
@@ -291,22 +317,15 @@ $nav-btn-transition: 0.15s;
 			}
 		}
 	}
-	@media (min-width: 2048px) { 
-		nav{
-			// margin: 50px 25px 0 25px !important;
-			.nav-btn{
-				font-size: 1.3rem !important;
-				width: $nav-btn-width - 25% !important;
-				height: 5em !important;
-			}
-			.change-hand-btn{
-				display: none; 
-			}
-		}
-	}
+	// 4k resolutions 3840 x 2160
 	@media (min-width: 3840px) { 
 		nav{
-			// margin: 50px 25px 0 25px !important;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: repeat(4, 1fr);
+			.about-me-lg{
+				display: flex !important;
+				height: 100%;
+			}
 			.nav-btn{
 				font-size: 1.7rem !important;
 				width: $nav-btn-width - 30% !important;
