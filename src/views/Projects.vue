@@ -246,10 +246,30 @@ $secondary-text-color: rgb(47,57,77);
 			}
 		}
 	}
-	@media (min-width: 1200px) { 
+	@media (min-width: 1300px) { 
 		.projects-grid{
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
+			.projects-item{
+				margin: 1.5em;
+			}
+		}
+	}
+	// 2k resolutions 2048 x 1080
+	@media (min-width: 2048px) { 
+		.projects-grid{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			.projects-item{
+				margin: 1.5em;
+			}
+		}
+	}
+	// 4k resolutions 3840 x 2160
+	@media (min-width: 3840px) { 
+		.projects-grid{
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
 			.projects-item{
 				margin: 1.5em;
 			}

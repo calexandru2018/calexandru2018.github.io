@@ -20,13 +20,18 @@
 			<img src="../assets/img/utility/arrow-left.svg" alt="">
 		</button> 
 		<div class=about-me-lg>
-			<!-- <h1>text about me</h1> -->
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste maiores debitis, optio cupiditate molestias modi alias fugiat recusandae facilis numquam eum animi sit amet odit hic deserunt vel distinctio. Magni!
-			</p>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste maiores debitis, optio cupiditate molestias modi alias fugiat recusandae facilis numquam eum animi sit amet odit hic deserunt vel distinctio. Magni!
-			</p>
+			<div>
+				<h2>
+					Welcome to portfolio, my name is Alexandru and I am a <u>software developper</u>.
+				</h2>
+				<p>
+					I am an language agnostic developer. Although I have mostly programmed on the webstack, though it did not stop me from learning other languages and frameworks and thus broadning my knowldege. 
+					I have worked on some projects that required that the both the front and the back-end to be developed.
+				</p>
+				<p>
+					Do you want to get in touch ? You can either fill out the from or click on <a href="mailto:calexandru2018@pm.me" target="_top">calexandru2018@pm.me</a>.
+				</p>
+			</div>
 		</div>
 	</nav>
 </template>
@@ -78,7 +83,7 @@ $chng-btn-size: 3.5em;
 $nav-btn-width: 50%;
 $nav-btn-transition: 0.15s;
 $left-btn-pos-trans: 100%; 
-
+	
 	nav{
 		display: grid;
 		grid-template-rows: repeat(4, 1fr);
@@ -132,7 +137,7 @@ $left-btn-pos-trans: 100%;
 			div{
 				transition: all 0.4s ease;
 				background: linear-gradient(to right, rgb(255, 255, 255) 49%, rgba(0, 0, 0, 0) 49%);
-				background-size: 200% 110%;
+				background-size: 205% 110%;
 				background-position: left;
 				width: 100%;
 				height: 100%;
@@ -156,7 +161,7 @@ $left-btn-pos-trans: 100%;
 	.about-me-lg{
 		font-family: "Inria Sans Bold";
 		font-weight: bold;
-		text-align: justify;
+		background-color: transparent;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -165,14 +170,34 @@ $left-btn-pos-trans: 100%;
 		grid-row-start: 1;
 		grid-row-end: 4;
 		// background-color: rgba(255,255,255, 0.5);
-		h1{
-			margin: 1em auto 0.5em auto;
-			text-align: center;
+		&>div{
+			mix-blend-mode: screen;
+			padding: 1em 5em;
+			border-radius: 2px;
+			background-color: rgb(255,255,255)
+		}
+		h1,h2,h3,h4,h5,h6{
+			// margin: 1em auto 0.5em auto;
+			text-align: left !important;
+			mix-blend-mode: difference;
 		}
 		p{
-			margin: 1em 3em 0.5em 2em;
+			// margin: 1em 3em 0.5em 2em;
 			line-height: 1.2em;
+			text-align: justify;
+			mix-blend-mode: difference;
+			a{
+				// font-weight: bold;
+				text-decoration: none;
+				// color: rgb(192, 153, 103);
+				color: rgb(255, 255, 0);
+				transition: color ease 0.5s;
+				&:hover{
+					color: rgb(154, 205, 50);
+				}
+			}
 		}
+
 	}
 	.change-hand-btn{
 		width: $chng-btn-size;

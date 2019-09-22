@@ -217,7 +217,7 @@ $component-secondary-color: rgb(80, 146, 156);
 					border-top-left-radius: 10px;
 					border-bottom-left-radius: 10px;
 				}
-				grid-template-columns: 5% 95%;
+				
 				& div:nth-child(2){
 					border-top-right-radius: 10px;
 					border-bottom-right-radius: 10px;
@@ -227,13 +227,13 @@ $component-secondary-color: rgb(80, 146, 156);
 					}
 				}
 			}
+			.card-base-layout-left{
+				grid-template-columns: 3% 97% !important;
+			}
 		}
 		i{
 			padding: 0.5em;
 		}
-	}
-	@media (min-width: 1024px) and (min-height: 992px) { 
-		
 	}
 	/* Extra large devices (large desktops, 1200px and up) */
 	@media (min-width: 1200px) { 
@@ -254,15 +254,17 @@ $component-secondary-color: rgb(80, 146, 156);
 	@media (min-width: 2048px) { 
 		#app{
 			padding: 0em 10% !important;
-			// .card-base-layout{
-			// 	grid-template-columns: 2% 98%;
-			// 	& div:nth-child(2){
-			// 		.card-header{
-			// 			padding: 35px 0 0 0;
-			// 			font-size: 70px;
-			// 		}
-			// 	}
-			// }
+			.card-base-layout{
+				& div:nth-child(2){
+					.card-header{
+						padding: 35px 0 0 0;
+						font-size: 70px;
+					}
+				}
+			}
+			.card-base-layout-left{
+				grid-template-columns: 2% 98% !important;
+			}
 		}
 	}
 	// 4k resolutions 3840 x 2160
