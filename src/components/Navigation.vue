@@ -1,19 +1,15 @@
 <template>
 	<nav>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-projects')">
-			<div class="background-stripe">
-				<div>Projects</div>
+			<div>
+				Projects
 			</div>
 		</button>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-about-me')">
-			<div class="background-stripe">
-				<div>About Me</div>
-			</div>
+			<div>About Me</div>
 		</button>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-contacts')">
-			<div class="background-stripe">
-				<div>Contact</div>
-			</div>
+			<div>Contact</div>
 		</button>
 
 		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
@@ -86,17 +82,15 @@ $left-btn-pos-trans: 100%;
 		margin: -0.5em 25px 0 25px;
 		.nav-btn{
 			width: $nav-btn-width;
-			height: 1.5em;
+			height: 2.5em;
 			background-color: transparent;
 			border: 2.5px solid $btn-def-border-color;
 			border-radius: 5px;
 			padding: 0;
 			overflow: hidden;
-			// line-height: 0;
 			color: $default-text-color;
 			font-weight: bold;
 			text-transform: uppercase;
-			// transition: color 2s ease-in-out, background-color 2s ease-in-out, border 2s ease-in-out;
 			cursor: pointer;
 			position: relative;
 			&:first-child{
@@ -122,20 +116,23 @@ $left-btn-pos-trans: 100%;
 			}
 			&:hover{
 				color: $btn-hover-text-color;
-				background-color: $btn-def-border-color;
 				border: 2.5px solid $btn-def-border-color;
+				div{
+					background-position:left bottom;
+				}
 			}
-			.background-stripe{
-				height: 100%;
+			div{
+				transition: all 0.25s ease;
+				background: linear-gradient(to left, rgba(0, 0, 0, 0) 45%, rgb(255, 255, 255) 45%);
+				background-size: 200% 100%;
+				background-position:right bottom;
 				width: 100%;
-				background-color: salmon;
-				transform: rotate(45deg);
-			}
-			.background-stripe div{
 				height: 100%;
-				width: 100%;
-				padding-top: 1em;
-				transform: rotate(-45deg);
+				padding: 0;
+				padding: 0.5em 0;
+				margin: 0;
+				line-height: 2em;
+				mix-blend-mode: hard-light;
 			}
 		}
 	}
