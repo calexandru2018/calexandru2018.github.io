@@ -2,14 +2,18 @@
 	<nav>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-projects')">
 			<div>
-				Projects
+				<p>Projects</p>
 			</div>
 		</button>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-about-me')">
-			<div>About Me</div>
+			<div>
+				<p>About Me</p>
+			</div>
 		</button>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-contacts')">
-			<div>Contact</div>
+			<div>
+				<p>Contact</p>	
+			</div>
 		</button>
 
 		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
@@ -84,7 +88,8 @@ $left-btn-pos-trans: 100%;
 			width: $nav-btn-width;
 			height: 2.5em;
 			background-color: transparent;
-			border: 2.5px solid $btn-def-border-color;
+			// border: 1.5px solid $btn-def-border-color;
+			border: none;
 			border-radius: 5px;
 			padding: 0;
 			overflow: hidden;
@@ -116,15 +121,17 @@ $left-btn-pos-trans: 100%;
 			}
 			&:hover{
 				color: $btn-hover-text-color;
-				border: 2.5px solid $btn-def-border-color;
+				// border: 1.5px solid $btn-def-border-color;
+				border: none;
 				div{
 					background-position:left bottom;
+					margin: 0;
 				}
 			}
 			div{
-				transition: all 0.25s ease;
-				background: linear-gradient(to left, rgba(0, 0, 0, 0) 45%, rgb(255, 255, 255) 45%);
-				background-size: 200% 100%;
+				transition: all 0.5s ease;
+				background: linear-gradient(to top left, rgb(255, 255, 255) 55%, rgba(0, 0, 0, 0) 56%);
+				background-size: 200% 102%;
 				background-position:right bottom;
 				width: 100%;
 				height: 100%;
@@ -132,7 +139,15 @@ $left-btn-pos-trans: 100%;
 				padding: 0.5em 0;
 				margin: 0;
 				line-height: 2em;
-				mix-blend-mode: hard-light;
+				mix-blend-mode: screen;
+				color: white;
+				p{
+					mix-blend-mode: difference;
+					color: white;
+					padding: 0;
+					margin: 0;
+					color: $default-text-color;
+				}
 			}
 		}
 	}
