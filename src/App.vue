@@ -196,11 +196,32 @@ $component-secondary-color: rgb(80, 146, 156);
 			.component{
 				left: 0;
 			}
+			.card-base-layout {
+				.projects-content-container{
+					margin: 1em 5em;
+				}
+			}
 		}
+		.contact-form{
+			text-area{
+				width: 90% !important;
+				padding: 5% 5%  !important;
+			}
+		}
+
 	}
 	@media (min-width: 992px) {
 		#app{
 			padding: 0em 6em !important;
+			.card-base-layout {
+				.projects-content-container{
+					margin: 1em 5em;
+					text-area{
+						width: 96%;
+						padding: 2% 2%;
+					}
+				}
+			}
 		}
 	}
 	/* Extra large devices (large desktops, 1200px and up) */

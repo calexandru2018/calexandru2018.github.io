@@ -61,4 +61,13 @@ $btn-bckgd-clr: rgb(255,255,255);
 			}
 		}
 	}
+	@media (min-width: 768px) { 
+		.contact-form{
+			text-area{
+				width: 90% !important;
+				padding: 5% 5%  !important;
+			}
+		}
+
+	}
 </style>
