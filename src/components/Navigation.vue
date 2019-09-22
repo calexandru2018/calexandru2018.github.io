@@ -90,7 +90,7 @@ $left-btn-pos-trans: 100%;
 			background-color: transparent;
 			// border: 1.5px solid $btn-def-border-color;
 			border: none;
-			border-radius: 5px;
+			border-radius: 2px;
 			padding: 0;
 			overflow: hidden;
 			color: $default-text-color;
@@ -120,25 +120,27 @@ $left-btn-pos-trans: 100%;
 					left ease-in-out 0.2s;
 			}
 			&:hover{
-				color: $btn-hover-text-color;
+				// color: $btn-hover-text-color;
 				// border: 1.5px solid $btn-def-border-color;
 				border: none;
 				div{
-					background-position:left bottom;
+					// background-position:left bottom;
+					background-position:50%;
 					margin: 0;
 				}
 			}
 			div{
-				transition: all 0.5s ease;
-				background: linear-gradient(to top left, rgb(255, 255, 255) 55%, rgba(0, 0, 0, 0) 56%);
-				background-size: 200% 102%;
-				background-position:right bottom;
+				transition: all 0.4s ease;
+				background: linear-gradient(to right, rgb(255, 255, 255) 49%, rgba(0, 0, 0, 0) 49%);
+				background-size: 200% 110%;
+				background-position: left;
 				width: 100%;
 				height: 100%;
-				padding: 0;
-				padding: 0.5em 0;
 				margin: 0;
-				line-height: 2em;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
 				mix-blend-mode: screen;
 				color: white;
 				p{

@@ -68,7 +68,7 @@
 					this.slide_enter = 'slide-enter-active_left_hand';
 					this.slide_leave = 'slide-leave-active_left_hand';
 					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-left';
-					this.card_base_layout.grid_layout_class = 'card-base-layout-right';
+					this.card_base_layout.grid_layout_class = 'card-base-layout-left';
 					this.card_base_layout.grid_positioning = 'grid-column-star: 2; grid-column-end: 3';
 				}
 			});
