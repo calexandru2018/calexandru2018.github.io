@@ -1,19 +1,19 @@
 <template>
 	<nav>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-projects')">
-			<span>
-				Projects
-			</span>
+			<div class="background-stripe">
+				<div>Projects</div>
+			</div>
 		</button>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-about-me')">
-			<span>
-				About Me
-			</span>
+			<div class="background-stripe">
+				<div>About Me</div>
+			</div>
 		</button>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-contacts')">
-			<span>
-				Contact
-			</span>
+			<div class="background-stripe">
+				<div>Contact</div>
+			</div>
 		</button>
 
 		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
@@ -90,8 +90,9 @@ $left-btn-pos-trans: 100%;
 			background-color: transparent;
 			border: 2.5px solid $btn-def-border-color;
 			border-radius: 5px;
-			padding: 25px;
-			line-height: 0;
+			padding: 0;
+			overflow: hidden;
+			// line-height: 0;
 			color: $default-text-color;
 			font-weight: bold;
 			text-transform: uppercase;
@@ -123,6 +124,18 @@ $left-btn-pos-trans: 100%;
 				color: $btn-hover-text-color;
 				background-color: $btn-def-border-color;
 				border: 2.5px solid $btn-def-border-color;
+			}
+			.background-stripe{
+				height: 100%;
+				width: 100%;
+				background-color: salmon;
+				transform: rotate(45deg);
+			}
+			.background-stripe div{
+				height: 100%;
+				width: 100%;
+				padding-top: 1em;
+				transform: rotate(-45deg);
 			}
 		}
 	}
