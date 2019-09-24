@@ -4,11 +4,11 @@
 		<p>{{ $t("sub_title") }}</p>
 		<div class="under-menu">
 			<div class="lang-select">
-				<div class="lang" @click="$root.$i18n.locale = 'en'">EN</div>
+				<div class="lang" @click="$root.$i18n.locale = 'en'" :class="$root.$i18n.locale == 'en' ? 'highlight':''">EN</div>
 				<div>&#124;</div>
-				<div class="lang" @click="$root.$i18n.locale = 'sv'">SV</div>
+				<div class="lang" @click="$root.$i18n.locale = 'sv'" :class="$root.$i18n.locale == 'sv' ? 'highlight':''">SV</div>
 				<div>&#124;</div>
-				<div class="lang" @click="$root.$i18n.locale = 'pt'">PT</div>
+				<div class="lang" @click="$root.$i18n.locale = 'pt'" :class="$root.$i18n.locale == 'pt' ? 'highlight':''">PT</div>
 			</div>
 			<div></div>
 			<div class="external-links">
@@ -77,6 +77,13 @@ $font-lang-size: 1em;
 							0px 0px 2px white, 
 							0px 0px 2px white;
 					}
+				}
+				.highlight{
+					text-shadow: 
+						0px 0px 2px white, 
+						0px 0px 2px white, 
+						0px 0px 2px white, 
+						0px 0px 2px white;
 				}
 			}
 			.external-links{
