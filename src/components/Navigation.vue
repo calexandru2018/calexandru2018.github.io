@@ -2,17 +2,17 @@
 	<nav>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-projects')">
 			<div>
-				<p>Projects</p>
+				<p>{{ $t("main_navigation_btns.projects") }}</p>
 			</div>
 		</button>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-about-me')">
 			<div>
-				<p>About Me</p>
+				<p>{{ $t("main_navigation_btns.about_me") }}</p>
 			</div>
 		</button>
 		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-contacts')">
 			<div>
-				<p>Contact</p>	
+				<p>{{ $t("main_navigation_btns.contact") }}</p>	
 			</div>
 		</button>
 
@@ -21,16 +21,9 @@
 		</button> 
 		<div class=about-me-lg>
 			<div>
-				<h2>
-					Welcome to portfolio, my name is Alexandru and I am a <u>software developper</u>.
-				</h2>
-				<p>
-					I am an language agnostic developer. Although I have mostly programmed on the webstack, though it did not stop me from learning other languages and frameworks and thus broadning my knowldege. 
-					I´ve worked on some projects that required that both the front and back-end to be developed.
-				</p>
-				<p>
-					Do you want to get in touch ? You can either fill out the from or click on <a href="mailto:calexandru2018@pm.me" target="_top">calexandru2018@pm.me</a>.
-				</p>
+				<h2 v-html="$t('landing_page.short_desc')"></h2>
+				<p v-html="$t('landing_page.long_desc')"></p>
+				<p v-html="$t('landing_page.contact_desc')"></p>
 			</div>
 		</div>
 	</nav>

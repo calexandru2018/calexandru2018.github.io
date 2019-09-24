@@ -1,14 +1,14 @@
 <template>
 	<div class="top-nav">
 		<h2 class="page-tile">Alexandru Cheltuitor</h2>
-		<p>Web Portfolio</p>
+		<p>{{ $t("sub_title") }}</p>
 		<div class="under-menu">
 			<div class="lang-select">
-				<div>EN</div>
+				<div class="lang" @click="$root.$i18n.locale = 'en'">EN</div>
 				<div>&#124;</div>
-				<div>SV</div>
+				<div class="lang" @click="$root.$i18n.locale = 'sv'">SV</div>
 				<div>&#124;</div>
-				<div>PT</div>
+				<div class="lang" @click="$root.$i18n.locale = 'pt'">PT</div>
 			</div>
 			<div></div>
 			<div class="external-links">
@@ -28,6 +28,12 @@
 		</div>
 	</div>
 </template>
+
+<script>
+	export default {
+		
+	}
+</script>
 
 <style lang="scss" scoped>
 $default-text-color: rgb(255,255,255);
@@ -55,11 +61,23 @@ $font-lang-size: 1em;
 			display: grid;
     		grid-template-columns: 1.5fr 0.4fr 2.5fr;
 			.lang-select{
-			font-size: $font-lang-size;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
+				font-size: $font-lang-size;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				cursor: default;
+				.lang{
+					cursor:pointer;
+					transition: text-shadow ease 0.2s;
+					&:hover{
+						text-shadow: 
+							0px 0px 2px white, 
+							0px 0px 2px white, 
+							0px 0px 2px white, 
+							0px 0px 2px white;
+					}
+				}
 			}
 			.external-links{
 				display: flex;

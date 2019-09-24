@@ -1,0 +1,53 @@
+{
+	"sub_title": "Web Portfólio",
+	"landing_page":{
+		"short_desc": "Bem-vindo ao portfólio, o meu nome é Alexandru e sou <u> desenvolvedor de software </u>.",
+		"long_desc": "Sou um desenvolvedor angóstico. Embora eu tenha programado principalmente em webstack, ele não me impediu de aprender outras linguagens e estruturas e, assim, ampliar meu conhecimento.\nTrabalhei em alguns projetos que exigiam o desenvolvimento de front-end e back-end.",
+		"contact_desc": "Deseja entrar em contato? Você pode preencher o formulário ou clicar em <a href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
+	},
+	"main_navigation_btns": {
+		"projects": "Projectos",
+		"about_me": "Sobre mim",
+		"contact": "Contacto"
+	},
+	"projects":{
+		"menu_title": "Projectos",
+		"skills_text": "Trabalhei com as seguintes línguas e ferramentas:",
+		"portfolio":{
+			"title": "Web Portfólio",
+			"desc": "O projeto a seguir é o meu portfólio da web. Desde que terminei um curso na udemy sobre o VueJS, decidi que estava na hora de usar bem esse conhecimento. É a primeira vez que uso VueJs em larga escala e também é a primeira vez que realmente utilizo um pré-compilador de css (usei em um projeto anterior, mas apenas para minificar, uglificar e criar blocos). Eu aprendi a usar o SASS / SCSS (o que eu sempre quis fazer) e realmente entrei rapidamente. Usei a ferramenta Vue CLI 3 para começar a trabalhar rapidamente com um projeto, para evitar a sobrecarga de configurar um projeto a partir do zero, é realmente muito mais eficaz começar com um código padrão. <u> Este projeto foi desenvolvido durante 2019, nenhuma lógica de negócios foi implementada, além da função PHP Mailer. </u>",
+			"skills": ["PHP Mail","VueJS","SCSS","Webpack", "Vue i18N", "Git"]
+		},
+		"bom2":{
+			"title": "Bom2",
+			"desc": "Este foi outro projeto que desenvolvi para um cliente em Portugal. O seu negócio principal é um food-truck, que viaja por todo o país vendendo waffles e creps. Eles queriam uma página da web que pudesse, de alguma forma, fortalecer sua presença on-line. Os principais objetivos eram informar o cliente sobre os locais anteriores, atuais e futuros, para que eles pudessem encontrá-los facilmente. Eu tive a ideia de um calendário, no qual eles pudessem inserir as datas de origem e também as coordenadas exatas (longitude e latitude), permitindo que o usuário final clicasse no evento e recebesse uma sugestão direta de rota. localização exata (API do Google Maps). Também consegui trabalhar um pouco com a API do Instagram, apesar de ser difícil, pois o token expira com frequência. Para resolver isso, crio um botão / função especial que permite ao cliente gerar um novo token sempre que o antigo expirar. A maior parte do código é feita no ES6 (funções de seta e API de busca); usei o Babel em conjunto com o Webpack para transpilar o código para js mais antigos. <u> Este projeto foi desenvolvido no final de 2018 e no início de 2019, com front e back-end. O front-end foi desenvolvido apenas como uma versão móvel. </u>",
+			"skills": ["PHP","PHP Mail","JS5/6","HTML/CSS","Webpack","Instagram API", "Google Maps API","Git"]
+		},
+		"lkproperties":{
+			"title": "Lk Properties",
+			"desc": "Esse foi um projeto que desenvolvi para um cliente, que queria publicar imóveis para compra, aluguel e venda. Tive de realizar várias entrevistas com o cliente para reunir todos os requisitos necessários para o projeto. Principalmente, o cliente também queria um back-end para que pudesse inserir todas as informações de forma independente, para que isso fosse realizado, eu projetei o banco de dados de forma que pudesse acomodar vários idiomas. O cliente também expressou a necessidade de uma funcionalidade \"criar conta\" para os utilizadores finais; eu avisei que poderíamos priorizar outras áreas, pois os usuários finais poderiam facilmente entrar em contato com o cliente. O cliente está localizado em Portugal. <u> Este projeto foi desenvolvido em 2018 durante alguns meses e possui front-end e back-end, o que é bastante complexo. </u>",
+			"skills": ["PHP","PHP Mail","JS/jQuery","HTML/CSS","Bootstrap","Git"]
+		},
+		"vartan":{
+			"title": "Värtan IK - B",
+			"desc": "Este foi um projeto de hobby que desenvolvi, durante o tempo em que jogava futebol para um time de futebol. Nem todo mundo em nossa equipe tinha uma conta no Facebook para ingressar em um grupo do Facebook e deixar o restante da equipe se eles estavam participando da sessão de treinamento ou não. Eu tive a idéia de criar uma página da Web simples para que todos os membros Como a equipe poderia ter uma maneira de marcar sua presença, isso por sua vez nos ajudou (treinadores) a planejar melhor nossas sessões de treinamento. <u> Este projeto foi desenvolvido em 2014, possui front-end e back-end. </u>",
+			"skills": ["PHP","JS","HTML/CSS","jQuery"]
+		}
+	},
+	"about_me":{
+		"menu_title": "Sobre mim",
+		"p1": "Test",
+		"p2": "Test2",
+		"p3": "Test3",
+		"p4": "Test4"
+	},
+	"contact": {
+		"menu_title": "Contacto",
+		"menu_text": "Pode-me enviar um email através de <a href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a> ou prenchendo o seguinte formulário:",
+		"contact_form":{
+			"confirm_sent": "Enviado",
+			"error_sent": "Error ao enviar",
+			"send_btn": "Enviar"
+		}
+	}
+}

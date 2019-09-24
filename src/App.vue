@@ -38,7 +38,8 @@
 				card_base_layout: {
 					grid_layout_class: 'card-base-layout-left',
 					grid_positioning: 'grid-column-star: 2; grid-column-end:3',
-				}
+				},
+				default_lang: 'en',
 			}
 		},
 		components:{

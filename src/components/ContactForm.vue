@@ -2,7 +2,7 @@
 	<div class="contact-form">
 		<textarea name="message" id=""></textarea>
 		<input type="email" placeholder="email">
-		<button>Send</button>
+		<button>{{ $t("contact.contact_form.send_btn") }}</button>
 	</div>
 </template>
 

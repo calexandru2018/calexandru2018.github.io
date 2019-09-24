@@ -6,12 +6,12 @@
 			</button>
 		</div>
 		<div class="projects-container"  v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
-			<h1 class="card-header">Projects</h1>
+			<h1 class="card-header">{{ $t("projects.menu_title") }}</h1>
 			<div class="projects-grid">
 				<div class="projects-item">
 					<img class="cover-img" src="../assets/img/projects/screen-prtf.svg" alt="">
 					<div class="item-header">
-						<h3>Web Portfolio</h3>
+						<h3 v-html="$t('projects.portfolio.title')"></h3>
 						<div class="item-links">
 							<span></span>
 							<a href="https://github.com/calexandru2018/portfolio" target="_blank">
@@ -23,37 +23,18 @@
 							</a>
 						</div>
 					</div>
-					<p>
-						The following project, is my web portfolio. Since I had finished a course on udemy about VueJS, I decided that it was about time that I put that knowledge to good use.
-						This is the time first that I use VueJs on a large scale and it is also the first time that I really use a css pre-compiler (I used in a previous project, but only to minify, uglify and create chunks).
-						I learned how to use SASS/SCSS (which I always wanted to do), and really got into it quickly.
-						I used the Vue CLI 3 tool to quickly start working with a project, so that I can avoid the overhead of setting up a project from scratch,
-						it is really much more effective to start with a boilerplate code.
-						<u>This project was developed during during 2019, no business logic was implemented, apart from the PHP Mailer function.</u>
-					</p>
-					<h5>Worked with the following languages and tools:</h5>
+					<p v-html="$t('projects.portfolio.desc')"></p>
+					<h5>{{ $t("projects.skills_text") }}</h5>
 					<ul class="tech-skills-list">
-						<li>
-							<span class="list-item">PHP Mail</span>
-						</li>
-						<li>
-							<span class="list-item">VueJS</span>
-						</li>
-						<li>
-							<span class="list-item">SCSS</span>
-						</li>
-						<li>
-							<span class="list-item">Webpack</span>
-						</li>
-						<li>
-							<span class="list-item">Git</span>
+						<li v-for="(i) in portolio_skills" :key="i">
+							<span class="list-item">{{i}}</span>
 						</li>
 					</ul>
 				</div>
 				<div class="projects-item">
 					<img class="cover-img" src="../assets/img/projects/screen-bom2.svg" alt="">
 					<div class="item-header">
-						<h3>Bom&sup2;</h3>
+						<h3 v-html="$t('projects.bom2.title')"></h3>
 						<div class="item-links">
 							<span></span>
 							<img src="../assets/img/utility/eye-closed.svg" alt="">
@@ -63,43 +44,11 @@
 							</a>
 						</div>
 					</div>
-					<p>
-						This was another project that I developed for a customer in Portugal. Their main business is a food-truck,
-						which they travel throughout Portugal selling their waffles and creps. 
-						They wanted a webpage that could somehow make their on-line presence stronger. 
-						The main goals was to somehow let customer know about the previous, actual and future locations, so that they could easily find them.
-						I came up with the idea of a calendar, which they could insert the from-to dates and also the exact coordenates (longitute and latitude),
-						enabling this way the end-user to click on the event and get a direct route suggestion to their exact location (Google Maps API). 
-						I also managed to work a bit with the Instagram API, though it proved to be difficult since the token expire often. 
-						To resolve this, I create a special button/function that allows the customer to generate a new token whenever the old one expires. 
-						Most of the code is done in ES6 (arrow functions and fetch API), I used Babel in conjuction with Webpack to transpile code to older js.
-						<u>This project was developed during late 2018 and begining of 2019, has both front and back-end. Front-end was developed only as a mobile version.</u>
-					</p>
-					<h5>Worked with the following languages and tools:</h5>
+					<p v-html="$t('projects.bom2.desc')"></p>
+					<h5>{{ $t("projects.skills_text") }}</h5>
 					<ul class="tech-skills-list">
-						<li>
-							<span class="list-item">PHP</span>
-						</li>
-						<li>
-							<span class="list-item">PHP Mail</span>
-						</li>
-						<li>
-							<span class="list-item">JS5/6</span>
-						</li>
-						<li>
-							<span class="list-item">HTML/CSS</span>
-						</li>
-						<li>
-							<span class="list-item">Webpack</span>
-						</li>
-						<li>
-							<span class="list-item">Instagram API</span>
-						</li>
-						<li>
-							<span class="list-item">Google Maps API</span>
-						</li>
-						<li>
-							<span class="list-item">Git</span>
+						<li v-for="(i) in bom2_skills" :key="i">
+							<span class="list-item">{{i}}</span>
 						</li>
 					</ul>
 				</div>
@@ -107,7 +56,7 @@
 				<div class="projects-item">
 					<img class="cover-img" src="../assets/img/projects/screen-lk.svg" alt="">
 					<div class="item-header">
-						<h3>Lk Properties</h3>
+						<h3 v-html="$t('projects.lkproperties.title')"></h3>
 						<div class="item-links">
 							<span></span>
 							<img src="../assets/img/utility/eye-closed.svg" alt="">
@@ -117,30 +66,11 @@
 							</a>
 						</div>
 					</div>
-					<p>
-						This was a projec that I developped for a customer, that wanted to be able to post real-estate for buy, rent and sale.
-						I had to conduct multiple interviews with the customer so that I could gather all the necessary requirments for the project.
-						Primarly the customer wanted also a back-end so that it could insert all information independentrly, for this to be accomplished,
-						i designed the database in such way that it could accomodate multiple languages. The customer also expressed the need of a "create account" 
-						functionality for the end-users, I advised that that we could perhaprs prioritize other areas instead, since the end-users could easily contact
-						the customer. The customer is located in Portugal. <u>This project was developed in 2018 during a couple of months, has both front and back-end which is rather complex.</u>
-					</p>
-					<h5>Worked with the following languages and tools:</h5>
+					<p v-html="$t('projects.lkproperties.desc')"></p>
+					<h5>{{ $t("projects.skills_text") }}</h5>
 					<ul class="tech-skills-list">
-						<li>
-							<span class="list-item">PHP & PHP Mail</span>
-						</li>
-						<li>
-							<span class="list-item">JS/jQuery</span>
-						</li>
-						<li>
-							<span class="list-item">HTML/CSS</span>
-						</li>
-						<li>
-							<span class="list-item">Bootstrap</span>
-						</li>
-						<li>
-							<span class="list-item">Git</span>
+						<li v-for="(i) in lkproperties_skills" :key="i">
+							<span class="list-item">{{i}}</span>
 						</li>
 					</ul>
 				</div>
@@ -148,7 +78,7 @@
 				<div class="projects-item">
 					<img class="cover-img" src="../assets/img/projects/vartan-b.svg" alt="">
 					<div class="item-header">
-						<h3>Värtan IK - B</h3>
+						<h3 v-html="$t('projects.vartan.title')"></h3>
 						<div class="item-links">
 							<span></span>
 							<img src="../assets/img/utility/eye.svg" alt="">
@@ -158,27 +88,11 @@
 							</a>
 						</div>
 					</div>
-					<p>
-						This was a hobby project that I developed, during the time I played football for a  football team. 
-						Not everybody in our team had a facebook account to join a facebook group and to let the rest of the team team if they were attending the training session or not.
-						I came up with the idea of making a simple webpage so that every member of our team could have a way to mark their attendance, 
-						this in turn helped us (trainers) to 
-						better plan our training sessions.
-						<u>This project was developed in 2014, has both front and back-end.</u>
-					</p>
-					<h5>Worked with the following languages and tools:</h5>
+					<p v-html="$t('projects.vartan.desc')"></p>
+					<h5>{{ $t("projects.skills_text") }}</h5>
 					<ul class="tech-skills-list">
-						<li>
-							<span class="list-item">PHP</span>
-						</li>
-						<li>
-							<span class="list-item">JS</span>
-						</li>
-						<li>
-							<span class="list-item">HTML/CSS</span>
-						</li>
-						<li>
-							<span class="list-item">jQuery</span>
+						<li v-for="(i) in vartan_skills" :key="i">
+							<span class="list-item">{{i}}</span>
 						</li>
 					</ul>
 				</div>
@@ -197,6 +111,17 @@
 			hideComponent(){
 				eventBus.$emit('show-component', false);
 			}
+		},
+		data(){
+			return{
+				portolio_skills: this.$i18n.t('projects.portfolio.skills'),
+				bom2_skills: this.$i18n.t('projects.bom2.skills'),
+				lkproperties_skills: this.$i18n.t('projects.lkproperties.skills'),
+				vartan_skills: this.$i18n.t('projects.vartan.skills'),
+			}
+		},
+		computed:{
+			
 		}
 	}
 </script>

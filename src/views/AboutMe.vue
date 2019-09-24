@@ -6,20 +6,20 @@
 			</button>
 		</div>
 		<div class="projects-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
-			<h1 class="card-header">About me</h1>
+			<h1 class="card-header">{{ $t("about_me.menu_title") }}	</h1>
 			<div class="projects-content-container">
 				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
+					{{ $t("about_me.p1") }}	
 				</p>
 				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
+					{{ $t("about_me.p2") }}	
 				</p>
 				<div class="no-display-m">
 					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
+						{{ $t("about_me.p3") }}	
 					</p>
 					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum animi quibusdam modi officia minima? Officiis et maiores est eligendi dolor ea, vel repellendus nisi numquam, ratione labore id molestias. At.
+						{{ $t("about_me.p4") }}	
 					</p>
 				</div>
 			</div>

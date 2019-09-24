@@ -6,9 +6,9 @@
 			</button>
 		</div>
 		<div class="projects-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
-			<h1 class="card-header">Contacts</h1>
+			<h1 class="card-header">{{ $t("contact.menu_title") }}</h1>
 			<div class="projects-content-container">
-				<p>You can either email me at <a href="mailto:calexandru2018@pm.me" target="_top">calexandru2018@pm.me</a> or fill the contact form:</p>
+				<p v-html="$t('contact.menu_text')"></p>
 				<app-contact-form></app-contact-form>
 			</div>
 		</div>
@@ -37,11 +37,12 @@
 		p{
 			text-align: justify;
 			line-height: 0.6cm;
+			a{
+				font-weight: bold;
+				text-decoration: none;
+				color: pink;
+			}
 		}
-		a{
-			font-weight: bold;
-			text-decoration: none;
-			color: unset;
-		}
+		
 	}
 </style>
