@@ -1,22 +1,22 @@
 <template>
 	<nav>
-		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-projects')">
-			<div>
+		<button class="nav-btn" :class="nav_btn_slide"  @click="changeComponent('app-projects'); check()">
+			<div :class="(component_to_show == 'app-projects' & class_visible == true)  ? 'keep_highlight':''">
 				<p>{{ $t("main_navigation_btns.projects") }}</p>
 			</div>
 		</button>
-		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-about-me')">
-			<div>
+		<button class="nav-btn" :class="nav_btn_slide"  @click="changeComponent('app-about-me'); check()">
+			<div :class="(component_to_show == 'app-about-me' & class_visible == true) ? 'keep_highlight':''">
 				<p>{{ $t("main_navigation_btns.about_me") }}</p>
 			</div>
 		</button>
-		<button class="nav-btn" v-bind:class="nav_btn_slide"  @click="changeComponent('app-contacts')">
-			<div>
+		<button class="nav-btn" :class="nav_btn_slide"  @click="changeComponent('app-contacts'); check()">
+			<div :class="(component_to_show ==  'app-contacts' & class_visible == true)  ? 'keep_highlight':''">
 				<p>{{ $t("main_navigation_btns.contact") }}</p>	
 			</div>
 		</button>
 
-		<button v-bind:class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
+		<button :class="'change-hand-btn ' + change_hand_btn" @click="changeUseHand">
 			<img src="../assets/img/utility/arrow-left.svg" alt="">
 		</button> 
 		<div class=about-me-lg>
@@ -33,6 +33,8 @@
 	import { eventBus } from '../main';
 
 	export default {
+		name: "naviga__",
+		props:['component_to_show','class_visible'],
 		data() {
 			return{
 				left_hand_use: true,
@@ -61,6 +63,9 @@
 				}
 				eventBus.$emit('left-hand-use', this.left_hand_use);
 			},
+			check(){
+				console.log(this.component_to_show)
+			}
 		},
 		created(){
 			console.log(`Created_____Display left handed ${this.left_hand_use} and ${this.arrow_orientation}`);
@@ -86,9 +91,7 @@ $left-btn-pos-trans: 100%;
 			width: $nav-btn-width;
 			height: 2.5em;
 			background-color: transparent;
-			// border: 1.5px solid $btn-def-border-color;
 			border: none;
-			border-radius: 2px;
 			padding: 0;
 			overflow: hidden;
 			color: $default-text-color;
@@ -126,6 +129,9 @@ $left-btn-pos-trans: 100%;
 					background-position:50%;
 					margin: 0;
 				}
+			}
+			.keep_highlight{
+				background-position:50% !important;
 			}
 			div{
 				transition: all 0.4s ease;

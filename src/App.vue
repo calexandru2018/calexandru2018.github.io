@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 	<app-portfolio-header></app-portfolio-header>
-	<app-navigation></app-navigation>
+	<app-navigation v-bind:component_to_show="component_to_show" v-bind:class_visible="class_visible"></app-navigation>
 	<transition
 		v-bind:enter-active-class="slide_enter"
   		v-bind:leave-active-class="slide_leave"
