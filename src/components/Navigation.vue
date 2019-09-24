@@ -73,6 +73,20 @@
 	}
 </script>
 
+<style lang="scss">
+	.landing-email-link{
+		// font-weight: bold;
+		text-decoration: none;
+		color: rgb(192, 153, 103);
+		// color: rgb(255, 255, 0);
+		transition: color ease 0.5s;
+		&:hover{
+			// color: rgb(154, 205, 50);
+			color: rgb(135, 206, 250);
+		}
+	}
+</style>
+
 <style lang="scss" scoped>
 $default-text-color: rgb(255,255,255);
 $btn-def-border-color: rgb(255,255,255);
@@ -81,7 +95,6 @@ $chng-btn-size: 3.5em;
 $nav-btn-width: 50%;
 $nav-btn-transition: 0.15s;
 $left-btn-pos-trans: 100%; 
-	
 	nav{
 		display: grid;
 		grid-template-rows: repeat(4, 1fr);
@@ -186,19 +199,7 @@ $left-btn-pos-trans: 100%;
 			line-height: 1.2em;
 			text-align: justify;
 			// mix-blend-mode: difference;
-			a{
-				// font-weight: bold;
-				text-decoration: none;
-				color: rgb(192, 153, 103);
-				// color: rgb(255, 255, 0);
-				transition: color ease 0.5s;
-				&:hover{
-					// color: rgb(154, 205, 50);
-					color: rgb(135, 206, 250);
-				}
-			}
 		}
-
 	}
 	.change-hand-btn{
 		width: $chng-btn-size;

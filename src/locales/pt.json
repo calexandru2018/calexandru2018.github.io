@@ -1,9 +1,9 @@
 {
 	"sub_title": "Web Portfólio",
 	"landing_page":{
-		"short_desc": "Bem-vindo ao portfólio, o meu nome é Alexandru e sou <u> desenvolvedor de software </u>.",
-		"long_desc": "Sou um desenvolvedor angóstico. Embora eu tenha programado principalmente em webstack, ele não me impediu de aprender outras linguagens e estruturas e, assim, ampliar meu conhecimento.\nTrabalhei em alguns projetos que exigiam o desenvolvimento de front-end e back-end.",
-		"contact_desc": "Deseja entrar em contato? Você pode preencher o formulário ou clicar em <a href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
+		"short_desc": "Bem-vindo ao portfólio, chamo-me Alexandru e sou um <u>desenvolvedor de software</u>.",
+		"long_desc": "Sou um desenvolvedor angóstico de linguagens de programacão. Embora eu tenha programado principalmente na webstack, nada me impede de aprender outras linguagens e tecnologias para que assim possa aumentar o meu conhecimento conhecimento geral.\nTrabalhei em alguns projetos que exigiam o desenvolvimento tanto de front-end como back-end.",
+		"contact_desc": "Deseja entrar em contato comigo? Poderá preencher o formulário ou simplesmente enviar um email para: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
 	},
 	"main_navigation_btns": {
 		"projects": "Projectos",
@@ -43,7 +43,7 @@
 	},
 	"contact": {
 		"menu_title": "Contacto",
-		"menu_text": "Pode-me enviar um email através de <a href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a> ou prenchendo o seguinte formulário:",
+		"menu_text": "Pode-me enviar um email através de  <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a> ou prenchendo o seguinte formulário:",
 		"contact_form":{
 			"confirm_sent": "Enviado",
 			"error_sent": "Error ao enviar",

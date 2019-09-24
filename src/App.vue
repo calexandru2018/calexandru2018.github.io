@@ -84,7 +84,6 @@ $accent-color: whrgb(255,255,255);
 $card-base-background: rgb(255,255,255);
 $component-main-color: rgb(255, 255, 255);
 $component-secondary-color: rgb(80, 146, 156);
-
 /* eslint-disable */
 	html, body{
 		height: 100vh;

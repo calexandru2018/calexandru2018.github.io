@@ -1,9 +1,9 @@
 {
 	"sub_title": "Web Portfölj",
 	"landing_page":{
-		"short_desc": "Välkommen till min portfölj, jag heter Alexandru och är en <u> mjuckvaru utveklare </u>.",
-		"long_desc": "Jag är en språkagnostisk utvecklare. Även om jag mestadels har programmerat på webbstacken, men det hindrade mig inte från att lära mig andra språk och ramverk och därmed bredda min kunskap.\nJag har arbetat med några projekt som krävde att både front och back-end skulle utvecklas.",
-		"contact_desc": "Vill du komma i kontakt? Du kan antingen fylla i från eller klicka på <a href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
+		"short_desc": "Hej och välkommen till min web portfölj, jag heter Alexandru och är en <u>mjukvaruutvecklare</u>.",
+		"long_desc": "Jag är en språkagnostisk utvecklare. Även om jag i mestadels har programmerat på webbstacken, det hindrade mig inte från att lära mig andra språk och ramverk och därmed bredda min kunskap.\nJag har arbetat med några projekt som krävde att både front och back-end skulle utvecklas.",
+		"contact_desc": "Vill du komma i kontakt med mig? Du kan antingen fylla i formuläret eller nå mig på: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
 	},
 	"main_navigation_btns": {
 		"projects": "Projekt",
@@ -43,7 +43,7 @@
 	},
 	"contact": {
 		"menu_title": "Kontakt",
-		"menu_text": "Du kan antingen nå mig på <a href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a> or eller fyll i följande formulär:",
+		"menu_text": "Du kan antingen nå mig på <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a> or eller fyll i följande formulär:",
 		"contact_form":{
 			"confirm_sent": "Skickat",
 			"error_sent": "Kunde ej skicka",
