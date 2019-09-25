@@ -15,7 +15,10 @@ Vue.config.productionTip = false;
 new Vue({
 	router,
 	i18n,
-	render: h => h(App)
+	render: h => h(App),
+	created(){
+		document.title = "Web Portfolio";
+	}
 }).$mount("#app");
 
 
