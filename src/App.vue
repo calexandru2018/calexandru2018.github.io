@@ -25,6 +25,7 @@
 	import Projects from "@/views/Projects.vue";
 	import AboutMe from "@/views/AboutMe.vue";
 	import Contacts from "@/views/Contacts.vue";	
+	import PDFView from "@/views/CV.vue";	
 
 	export default {
 		data(){
@@ -47,7 +48,8 @@
 			'app-projects': Projects,
 			'app-about-me': AboutMe,
 			'app-contacts': Contacts,
-			'app-portfolio-header': PortfolioHeader
+			'app-portfolio-header': PortfolioHeader,
+			'app-pdfview': PDFView
 		},
 		created(){
 			eventBus.$on('component-to-show', (component, show) => {
@@ -85,6 +87,9 @@ $card-base-background: rgb(255,255,255);
 $component-main-color: rgb(255, 255, 255);
 $component-secondary-color: rgb(80, 146, 156);
 /* eslint-disable */
+.page{ //Used in CV to show it aligned to center
+	margin: 0 auto !important;
+}	
 	html, body{
 		height: 100vh;
 		padding: 0;

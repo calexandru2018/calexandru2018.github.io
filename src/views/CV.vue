@@ -6,13 +6,8 @@
 			</button>
 		</div>
 		<div class="projects-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
-			<!-- <h1 class="card-header">{{ $t("contact.menu_title") }}</h1>
-			<div class="projects-content-container">
-				<p v-html="$t('contact.menu_text')"></p>
-				<app-contact-form></app-contact-form>
-			</div> -->
 			<h1>CV</h1>
-			<app-pdfviewer />
+			<app-pdfviewer> </app-pdfviewer>
 		</div>
 	</div>
 </template>
@@ -33,17 +28,3 @@
 		}
 	}
 </script>
-
-<style lang="scss" scoped>
-	// .projects-container{
-	// 	p{
-	// 		text-align: justify;
-	// 		line-height: 0.6cm;
-	// 		a{
-	// 			font-weight: bold;
-	// 			text-decoration: none;
-	// 			color: pink;
-	// 		}
-	// 	}
-	// }
-</style>

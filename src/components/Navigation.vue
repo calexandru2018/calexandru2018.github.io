@@ -10,8 +10,13 @@
 				<p>{{ $t("main_navigation_btns.about_me") }}</p>
 			</div>
 		</button>
-		<button class="nav-btn" :class="nav_btn_slide"  @click="changeComponent('app-contacts'); check()">
+		<!-- <button class="nav-btn" :class="nav_btn_slide"  @click="changeComponent('app-contacts'); check()">
 			<div :class="(component_to_show ==  'app-contacts' & class_visible == true)  ? 'keep_highlight':''">
+				<p>{{ $t("main_navigation_btns.contact") }}</p>	
+			</div>
+		</button> -->
+		<button class="nav-btn" :class="nav_btn_slide"  @click="changeComponent('app-pdfview'); check()">
+			<div :class="(component_to_show ==  'app-pdfview' & class_visible == true)  ? 'keep_highlight':''">
 				<p>{{ $t("main_navigation_btns.contact") }}</p>	
 			</div>
 		</button>
