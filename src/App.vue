@@ -22,10 +22,10 @@
 	import { eventBus } from './main.js';
 	import PortfolioHeader from "@/components/PortfolioHeader.vue";
 	import Navigation from "@/components/Navigation.vue";
+	import PDFView from "@/components/PDFViewer.vue";	
 	import Projects from "@/views/Projects.vue";
 	import AboutMe from "@/views/AboutMe.vue";
 	import Contacts from "@/views/Contacts.vue";	
-	import PDFView from "@/views/CV.vue";	
 
 	export default {
 		data(){
@@ -103,7 +103,7 @@ $component-secondary-color: rgb(80, 146, 156);
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: $default-text-color;
-		background-image: url('./assets/img/custom/tim-mossholder-4P5DMXQXzRI-unsplash.jpg');
+		background-image: url('~/img/background/bg.jpg');
 		background-position: top;
 		background-size: cover;
 		height: inherit;

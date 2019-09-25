@@ -9,7 +9,7 @@
 			<h1 class="card-header">{{ $t("projects.menu_title") }}</h1>
 			<div class="projects-grid">
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/screen-prtf.svg" alt="">
+					<img class="cover-img" src="../assets/img/projects/screen-prtf.png" alt="">
 					<div class="item-header">
 						<h3 v-html="$t('projects.portfolio.title')"></h3>
 						<div class="item-links">
@@ -32,7 +32,7 @@
 					</ul>
 				</div>
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/screen-bom2.svg" alt="">
+					<img class="cover-img" src="../assets/img/projects/screen-bom2.png" alt="">
 					<div class="item-header">
 						<h3 v-html="$t('projects.bom2.title')"></h3>
 						<div class="item-links">
@@ -54,7 +54,7 @@
 				</div>
 				<!-- lk Properties -->
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/screen-lk.svg" alt="">
+					<img class="cover-img" src="../assets/img/projects/screen-lk.png" alt="">
 					<div class="item-header">
 						<h3 v-html="$t('projects.lkproperties.title')"></h3>
 						<div class="item-links">
@@ -76,7 +76,7 @@
 				</div>
 				<!-- project vartan-ik -->
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/vartan-b.svg" alt="">
+					<img class="cover-img" src="../assets/img/projects/vartan-b.png" alt="">
 					<div class="item-header">
 						<h3 v-html="$t('projects.vartan.title')"></h3>
 						<div class="item-links">
