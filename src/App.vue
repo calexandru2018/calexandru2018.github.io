@@ -22,6 +22,7 @@
 	import { eventBus } from './main.js';
 	import PortfolioHeader from "@/components/PortfolioHeader.vue";
 	import Navigation from "@/components/Navigation.vue";
+	import PDFView from "@/components/PDFViewer.vue";	
 	import Projects from "@/views/Projects.vue";
 	import AboutMe from "@/views/AboutMe.vue";
 	import Contacts from "@/views/Contacts.vue";	
@@ -47,7 +48,8 @@
 			'app-projects': Projects,
 			'app-about-me': AboutMe,
 			'app-contacts': Contacts,
-			'app-portfolio-header': PortfolioHeader
+			'app-portfolio-header': PortfolioHeader,
+			'app-pdfview': PDFView
 		},
 		created(){
 			eventBus.$on('component-to-show', (component, show) => {
@@ -85,6 +87,9 @@ $card-base-background: rgb(255,255,255);
 $component-main-color: rgb(255, 255, 255);
 $component-secondary-color: rgb(80, 146, 156);
 /* eslint-disable */
+.page{ //Used in CV to show it aligned to center
+	margin: 0 auto !important;
+}	
 	html, body{
 		height: 100vh;
 		padding: 0;
@@ -98,7 +103,7 @@ $component-secondary-color: rgb(80, 146, 156);
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: $default-text-color;
-		background-image: url('./assets/img/custom/tim-mossholder-4P5DMXQXzRI-unsplash.jpg');
+		background-image: url('~/img/background/bg.jpg');
 		background-position: top;
 		background-size: cover;
 		height: inherit;
