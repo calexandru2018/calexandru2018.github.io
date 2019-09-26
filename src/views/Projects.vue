@@ -9,18 +9,20 @@
 			<h1 class="card-header">{{ $t("projects.menu_title") }}</h1>
 			<div class="projects-grid">
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/screen-prtf.png" alt="">
-					<div class="item-header">
-						<h3 v-html="$t('projects.portfolio.title')"></h3>
-						<div class="item-links">
-							<span></span>
-							<a href="https://github.com/calexandru2018/portfolio" target="_blank">
-								<img src="../assets/img/utility/eye.svg" alt="">
-							</a>
-							<span></span>
-							<a href="https://calexandru.com/" target="_blank">
-								<img src="../assets/img/utility/domain.svg" alt="">
-							</a>
+					<div>
+						<img class="cover-img" src="../assets/img/projects/screen-prtf.png" alt="">
+						<div class="item-header">
+							<h3 v-html="$t('projects.portfolio.title')"></h3>
+							<div class="item-links">
+								<span></span>
+								<a href="https://github.com/calexandru2018/portfolio" target="_blank">
+									<img src="../assets/img/utility/eye.svg" alt="">
+								</a>
+								<span></span>
+								<a href="https://calexandru.com/" target="_blank">
+									<img src="../assets/img/utility/domain.svg" alt="">
+								</a>
+							</div>
 						</div>
 					</div>
 					<p v-html="$t('projects.portfolio.desc')"></p>

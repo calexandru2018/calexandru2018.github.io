@@ -9,7 +9,7 @@
 			<h1 class="card-header">{{ $t("about_me.menu_title") }}	</h1>
 			<div class="projects-content-container">
 				<div>
-					<div class="no-display-m">
+					<div class="about-me-lg">
 						<p>
 							{{ $t("about_me.p1") }}	
 						</p>
@@ -92,4 +92,36 @@
 			font-size: 1.1em;
 		}
 	}
+	//1440 x 821
+	@media (min-width: 992px) and (min-height: 1024px){ 
+		.about-me-lg{
+			display: none;
+		}
+	}
+	@media (min-width: 1920px){
+		.skill-list{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			.prog-langs-icons{
+				justify-content: flex-start !important;
+			}
+		}
+	}
+	// @media (min-width: 1300px) { 
+	// 	.about-me-lg{
+	// 		display: none;
+	// 	}
+	// }
+	// // 2k resolutions 2048 x 1080
+	// @media (min-width: 2048px) { 
+	// 	// .about-me-lg{
+	// 	// 	display: none;
+	// 	// }
+	// }
+	// // 4k resolutions 3840 x 2160
+	// @media (min-width: 3840px) { 
+	// 	.about-me-lg{
+	// 		display: none;
+	// 	}
+	// }
 </style>
