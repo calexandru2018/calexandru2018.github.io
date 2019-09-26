@@ -21,6 +21,9 @@
 					<p>
 						{{ $t("about_me.p4") }}	
 					</p>
+					<p>
+						{{ $t("about_me.p5") }}	
+					</p>
 				</div>
 			</div>
 		</div>
@@ -43,8 +46,9 @@
 <style lang="scss" scoped>
 	.projects-content-container{
 		p{
-			line-height: 0.6cm;
+			line-height: 0.8cm;
 			text-align: justify;
+			font-size: 1.5em;
 		}
 	}
 </style>
