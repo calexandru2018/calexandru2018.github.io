@@ -9,7 +9,7 @@
 			<h1 class="card-header">{{ $t("projects.menu_title") }}</h1>
 			<div class="projects-grid">
 				<div class="projects-item">
-					<div>
+					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/screen-prtf.png" alt="">
 						<div class="item-header">
 							<h3 v-html="$t('projects.portfolio.title')"></h3>
@@ -25,82 +25,103 @@
 							</div>
 						</div>
 					</div>
-					<p v-html="$t('projects.portfolio.desc')"></p>
-					<h5>{{ $t("projects.skills_text") }}</h5>
-					<ul class="tech-skills-list">
-						<li v-for="(i) in portolio_skills" :key="i">
-							<span class="list-item">{{i}}</span>
-						</li>
-					</ul>
+					<div class="card-middle">
+						<p v-html="$t('projects.portfolio.desc')"></p>
+					</div>
+					<div class="card-bottom">
+						<h5>{{ $t("projects.skills_text") }}</h5>
+						<ul class="tech-skills-list">
+							<li v-for="(i) in portolio_skills" :key="i">
+								<span class="list-item">{{i}}</span>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/screen-bom2.png" alt="">
-					<div class="item-header">
-						<h3 v-html="$t('projects.bom2.title')"></h3>
-						<div class="item-links">
-							<span></span>
-							<img src="../assets/img/utility/eye-closed.svg" alt="">
-							<span></span>
-							<a href="https://bomaoquadrado.pt/" target="_blank">
-								<img src="../assets/img/utility/domain.svg" alt="">
-							</a>
+					<div class="card-top">
+						<img class="cover-img" src="../assets/img/projects/screen-bom2.png" alt="">
+						<div class="item-header">
+							<h3 v-html="$t('projects.bom2.title')"></h3>
+							<div class="item-links">
+								<span></span>
+								<img src="../assets/img/utility/eye-closed.svg" alt="">
+								<span></span>
+								<a href="https://bomaoquadrado.pt/" target="_blank">
+									<img src="../assets/img/utility/domain.svg" alt="">
+								</a>
+							</div>
 						</div>
 					</div>
-					<p v-html="$t('projects.bom2.desc')"></p>
-					<h5>{{ $t("projects.skills_text") }}</h5>
-					<ul class="tech-skills-list">
-						<li v-for="(i) in bom2_skills" :key="i">
-							<span class="list-item">{{i}}</span>
-						</li>
-					</ul>
+					<div class="card-middle">
+						<p v-html="$t('projects.bom2.desc')"></p>
+					</div>
+					<div class="card-bottom">
+						<h5>{{ $t("projects.skills_text") }}</h5>
+						<ul class="tech-skills-list">
+							<li v-for="(i) in bom2_skills" :key="i">
+								<span class="list-item">{{i}}</span>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<!-- lk Properties -->
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/screen-lk.png" alt="">
-					<div class="item-header">
-						<h3 v-html="$t('projects.lkproperties.title')"></h3>
-						<div class="item-links">
-							<span></span>
-							<img src="../assets/img/utility/eye-closed.svg" alt="">
-							<span></span>
-							<a href="https://lk-properties.pt/" target="_blank">
-								<img src="../assets/img/utility/domain.svg" alt="">
-							</a>
+					<div class="card-top">
+						<img class="cover-img" src="../assets/img/projects/screen-lk.png" alt="">
+						<div class="item-header">
+							<h3 v-html="$t('projects.lkproperties.title')"></h3>
+							<div class="item-links">
+								<span></span>
+								<img src="../assets/img/utility/eye-closed.svg" alt="">
+								<span></span>
+								<a href="https://lk-properties.pt/" target="_blank">
+									<img src="../assets/img/utility/domain.svg" alt="">
+								</a>
+							</div>
 						</div>
 					</div>
-					<p v-html="$t('projects.lkproperties.desc')"></p>
-					<h5>{{ $t("projects.skills_text") }}</h5>
-					<ul class="tech-skills-list">
-						<li v-for="(i) in lkproperties_skills" :key="i">
-							<span class="list-item">{{i}}</span>
-						</li>
-					</ul>
+					<div class="card-middle">
+						<p v-html="$t('projects.lkproperties.desc')"></p>
+					</div>
+					<div class="card-bottom">
+						<h5>{{ $t("projects.skills_text") }}</h5>
+						<ul class="tech-skills-list">
+							<li v-for="(i) in lkproperties_skills" :key="i">
+								<span class="list-item">{{i}}</span>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<!-- project vartan-ik -->
 				<div class="projects-item">
-					<img class="cover-img" src="../assets/img/projects/vartan-b.png" alt="">
-					<div class="item-header">
-						<h3 v-html="$t('projects.vartan.title')"></h3>
-						<div class="item-links">
-							<span></span>
-							<img src="../assets/img/utility/eye.svg" alt="">
-							<span></span>
-							<a href="http://vartan-b.dx.am/" target="_blank">
-								<img src="../assets/img/utility/domain.svg" alt="">
-							</a>
+					<div class="card-top">
+						<img class="cover-img" src="../assets/img/projects/vartan-b.png" alt="">
+						<div class="item-header">
+							<h3 v-html="$t('projects.vartan.title')"></h3>
+							<div class="item-links">
+								<span></span>
+								<img src="../assets/img/utility/eye.svg" alt="">
+								<span></span>
+								<a href="http://vartan-b.dx.am/" target="_blank">
+									<img src="../assets/img/utility/domain.svg" alt="">
+								</a>
+							</div>
 						</div>
 					</div>
-					<p v-html="$t('projects.vartan.desc')"></p>
-					<h5>{{ $t("projects.skills_text") }}</h5>
-					<ul class="tech-skills-list">
-						<li v-for="(i) in vartan_skills" :key="i">
-							<span class="list-item">{{i}}</span>
-						</li>
-					</ul>
+					<div class="card-middle">
+						<p v-html="$t('projects.vartan.desc')"></p>
+					</div>
+					<div class="card-bottom">
+						<h5>{{ $t("projects.skills_text") }}</h5>
+						<ul class="tech-skills-list">
+							<li v-for="(i) in vartan_skills" :key="i">
+								<span class="list-item">{{i}}</span>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-		
 	</div>
 </template>
 
@@ -122,9 +143,6 @@
 				vartan_skills: this.$i18n.t('projects.vartan.skills'),
 			}
 		},
-		computed:{
-			
-		}
 	}
 </script>
 
@@ -133,14 +151,16 @@ $item-shdw-color: rgb(0,0,0);
 $secondary-text-color: rgb(47,57,77);
 
 
+
 	.projects-grid{
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-auto-rows: 1fr;
 		grid-row-gap: 2em;
 		padding: 1em 0;
 		.projects-item{
 			display: grid;
-			grid-template-rows: repeat(5, auto);
+			grid-template-rows: repeat(3, auto);
 			padding: 1em 1.5em;
 			border-radius: 5px;
 			box-shadow: 1px 1px 10px -6px $item-shdw-color;
@@ -174,6 +194,9 @@ $secondary-text-color: rgb(47,57,77);
 					cursor: pointer;
 				}
 			}
+			.card-bottom{
+				align-self: center;
+			}
 			h3, h4, h5{
 				margin: 0.5em 0;
 			}
@@ -204,9 +227,35 @@ $secondary-text-color: rgb(47,57,77);
 			}
 		}
 	}
+	@media (min-width: 576px) { 
+
+	}
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
+		.projects-grid{
+			display: grid;
+			grid-template-columns: 1fr 1fr !important;
+			.projects-item{
+				margin: 1em;
+				// .card-top{
+				// 	height: 17em;
+				// }
+			}
+		}
+	}
+	@media (min-width: 992px) and (min-height: 720px){ 
+		// .card-top{
+		// 	height: 15em !important;
+		// }
+	}
+	//1440 x 821
+	// @media (min-width: 992px) and (min-height: 1024px){ 
+	// 		.card-top{
+	// 		height: 12em !important;
+	// 	}
+	// }
 	@media (min-width: 1024px) { 
 		.projects-grid{
-			// display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 1em;
 			.projects-item{
@@ -217,9 +266,13 @@ $secondary-text-color: rgb(47,57,77);
 	@media (min-width: 1300px) { 
 		.projects-grid{
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr !important;
 			.projects-item{
 				margin: 1.5em;
+    			font-size: 1.15em;
+				p{
+					line-height: 1.3em;
+				}
 			}
 		}
 	}
@@ -227,9 +280,13 @@ $secondary-text-color: rgb(47,57,77);
 	@media (min-width: 2048px) { 
 		.projects-grid{
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(3, 1fr) !important;
 			.projects-item{
 				margin: 1.5em;
+				font-size: 1.30em;
+				p{
+					line-height: 1.4em !important;
+				}
 			}
 		}
 	}
@@ -237,9 +294,13 @@ $secondary-text-color: rgb(47,57,77);
 	@media (min-width: 3840px) { 
 		.projects-grid{
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(5, 1fr) !important;
 			.projects-item{
 				margin: 1.5em;
+				font-size: 1.6em;
+				p{
+					line-height: 1.4em !important;
+				}
 			}
 		}
 	}
