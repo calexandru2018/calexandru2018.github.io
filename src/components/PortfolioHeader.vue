@@ -13,16 +13,16 @@
 			<div></div>
 			<div class="external-links">
 				<a class="github" href="https://github.com/calexandru2018" target="_blank">
-					<img src="../assets/img/utility/github.svg" alt="">
+					<img src="../assets/img/social/github.svg" alt="">
 				</a>
 				<a class="stackoverflow" href="https://stackoverflow.com/users/2547630/calexandru" target="_blank">
-					<img src="../assets/img/utility/stack-overflow.svg" alt="">
+					<img src="../assets/img/social/stack-overflow.svg" alt="">
 				</a>
 				<a class="linkedin" href="https://www.linkedin.com/in/calexandru2018/" target="_blank">
-					<img src="../assets/img/utility/linkedin.svg" alt="">
+					<img src="../assets/img/social/linkedin.svg" alt="">
 				</a>
 				<a class="twitter" href="https://twitter.com/calexandru2018" target="_blank">
-					<img src="../assets/img/utility/twitter.svg" alt="">
+					<img src="../assets/img/social/twitter.svg" alt="">
 				</a>
 			</div>
 		</div>

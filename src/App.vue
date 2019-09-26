@@ -139,7 +139,7 @@ $component-secondary-color: rgb(80, 146, 156);
 		.projects-content-container{
 			display: flex;
 			flex-direction: column;
-			padding: 0 1.5em;
+			padding: 0 1.5em 1.5em 1.5em;
 		}
 		.hide-component-btn{
 			width: 100%;

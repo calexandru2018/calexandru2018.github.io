@@ -8,22 +8,47 @@
 		<div class="projects-container" v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
 			<h1 class="card-header">{{ $t("about_me.menu_title") }}	</h1>
 			<div class="projects-content-container">
-				<p>
-					{{ $t("about_me.p1") }}	
-				</p>
-				<p>
-					{{ $t("about_me.p2") }}	
-				</p>
-				<div class="no-display-m">
+				<div>
+					<div class="no-display-m">
+						<p>
+							{{ $t("about_me.p1") }}	
+						</p>
+					</div>
+					<p>
+						{{ $t("about_me.p2") }}	
+					</p>
 					<p>
 						{{ $t("about_me.p3") }}	
 					</p>
-					<p>
-						{{ $t("about_me.p4") }}	
-					</p>
-					<p>
-						{{ $t("about_me.p5") }}	
-					</p>
+				</div>
+				<div class="skill-list">
+					<div>
+						<p>
+							{{ $t("about_me.p4") }}	
+						</p>
+						<div class="prog-langs-icons">
+							<img src="../assets/img/lang/html-5.svg" alt="">
+							<img src="../assets/img/lang/css-3.svg" alt="">
+							<img src="../assets/img/lang/js.svg" alt="">
+							<img src="../assets/img/lang/php.svg" alt="">
+							<img src="../assets/img/lang/python.svg" alt="">
+						</div>
+					</div>
+					<div>
+						<p>
+							{{ $t("about_me.p5") }}	
+						</p>
+						<div class="prog-langs-icons">
+							<img src="../assets/img/tools/bootstrap.svg" alt="">
+							<img src="../assets/img/tools/jquery.svg" alt="">
+							<img src="../assets/img/tools/node.svg" alt="">
+							<img src="../assets/img/tools/npm.svg" alt="">
+							<img src="../assets/img/tools/webpack.svg" alt="">
+							<img src="../assets/img/tools/sass.svg" alt="">
+							<img src="../assets/img/tools/vue.png" alt="">
+							<img src="../assets/img/tools/git.svg" alt="">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -45,10 +70,26 @@
 
 <style lang="scss" scoped>
 	.projects-content-container{
+		.skill-list{
+			p{
+				margin-top: 1.2em;
+				margin-bottom: 0.2em;
+			}
+			.prog-langs-icons {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				img{
+					width: 2.5em;
+					margin: 0.2em 0.2em;
+				}
+			}
+		}
 		p{
-			line-height: 0.8cm;
+			line-height: 0.6cm;
 			text-align: justify;
-			font-size: 1.5em;
+			font-size: 1.1em;
 		}
 	}
 </style>
