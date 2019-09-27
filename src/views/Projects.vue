@@ -25,7 +25,7 @@
 							</div>
 						</div>
 					</div>
-					<button @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
+					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
 					<div class="card-middle" v-if="projects_expander.portfolio">
 						<p v-html="$t('projects.portfolio.desc')"></p>
 					</div>
@@ -37,7 +37,7 @@
 							</li>
 						</ul>
 					</div>
-					<button @click="minimize('portfolio')" v-if="projects_expander.portfolio">Close</button>
+					<button class="btn-read-more" @click="minimize('portfolio')" v-if="projects_expander.portfolio">Close</button>
 				</div>
 				<div class="projects-item fit-height">
 					<div class="card-top">
@@ -54,7 +54,7 @@
 							</div>
 						</div>
 					</div>
-					<button @click="expand('bom2')" v-if="!projects_expander.bom2">Read about</button>
+					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2">Read about</button>
 					<div class="card-middle" v-if="projects_expander.bom2">
 						<p v-html="$t('projects.bom2.desc')"></p>
 					</div>
@@ -66,7 +66,7 @@
 							</li>
 						</ul>
 					</div>
-					<button @click="minimize('bom2')" v-if="projects_expander.bom2">Close</button>
+					<button class="btn-read-more" @click="minimize('bom2')" v-if="projects_expander.bom2">Close</button>
 				</div>
 				<!-- lk Properties -->
 				<div class="projects-item fit-height">
@@ -84,7 +84,7 @@
 							</div>
 						</div>
 					</div>
-					<button @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">Read about</button>
+					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">Read about</button>
 					<div class="card-middle" v-if="projects_expander.lkproperties">
 						<p v-html="$t('projects.lkproperties.desc')"></p>
 					</div>
@@ -96,7 +96,7 @@
 							</li>
 						</ul>
 					</div>
-					<button @click="minimize('lkproperties')" v-if="projects_expander.lkproperties">Close</button>
+					<button class="btn-read-more" @click="minimize('lkproperties')" v-if="projects_expander.lkproperties">Close</button>
 				</div>
 				<!-- project vartan-ik -->
 				<div class="projects-item fit-height">
@@ -114,11 +114,11 @@
 							</div>
 						</div>
 					</div>
-					<button @click="expand('vartan', $event)">Read about</button>
-					<div class="card-middle" v-if="project_name_expand == 'vartan' & project_expand">
+					<button class="btn-read-more" @click="expand('vartan')" v-if="!projects_expander.vartan">Read about</button>
+					<div class="card-middle" v-if="projects_expander.vartan">
 						<p v-html="$t('projects.vartan.desc')"></p>
 					</div>
-					<div class="card-bottom" v-if="project_name_expand == 'vartan' & project_expand">
+					<div class="card-bottom" v-if="projects_expander.vartan">
 						<h5>{{ $t("projects.skills_text") }}</h5>
 						<ul class="tech-skills-list">
 							<li v-for="(i) in vartan_skills" :key="i">
@@ -126,6 +126,7 @@
 							</li>
 						</ul>
 					</div>
+					<button class="btn-read-more" @click="minimize('vartan')" v-if="projects_expander.vartan">Close</button>
 				</div>
 			</div>
 		</div>
@@ -196,6 +197,27 @@ $secondary-text-color: rgb(47,57,77);
 .fit-height{
 	// height: fit-content !important;
 	display: table !important;
+}
+.btn-read-more{
+	border: none;
+	outline: none;
+    padding: 1em 2em;
+    border-radius: 5px;
+    font-size: 0.8em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    // background-color: rgb(135, 206, 250);
+	background-image: linear-gradient(to bottom, rgb(135, 206, 250) 50%, rgb(255, 255, 255) 50%);
+	background-size: 100% 200%;
+	background-position:right top;
+	margin: 2em 0em;
+	cursor: pointer;
+	transition: background-size ease 0.3s, background-position ease 0.3s;
+	// width: (100vh / 4)+'px';
+	&:hover{
+		background-position: left bottom;
+		color: rgb(135, 206, 250);
+	}
 }
 
 	.projects-grid{
