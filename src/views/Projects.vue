@@ -26,18 +26,23 @@
 						</div>
 					</div>
 					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
-					<div class="card-middle" v-if="projects_expander.portfolio">
-						<p v-html="$t('projects.portfolio.desc')"></p>
-					</div>
-					<div class="card-bottom" v-if="projects_expander.portfolio">
-						<h5>{{ $t("projects.skills_text") }}</h5>
-						<ul class="tech-skills-list">
-							<li v-for="(i) in portolio_skills" :key="i">
-								<span class="list-item">{{i}}</span>
-							</li>
-						</ul>
-					</div>
-					<button class="btn-read-more" @click="minimize('portfolio')" v-if="projects_expander.portfolio">Close</button>
+					<button class="btn-read-more" @click="minimize('portfolio')" v-else>Close</button>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.portfolio">
+							<p v-html="$t('projects.portfolio.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom" v-if="projects_expander.portfolio">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in portolio_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
+					
 				</div>
 				<div class="projects-item fit-height">
 					<div class="card-top">
@@ -55,18 +60,22 @@
 						</div>
 					</div>
 					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2">Read about</button>
-					<div class="card-middle" v-if="projects_expander.bom2">
-						<p v-html="$t('projects.bom2.desc')"></p>
-					</div>
-					<div class="card-bottom" v-if="projects_expander.bom2">
-						<h5>{{ $t("projects.skills_text") }}</h5>
-						<ul class="tech-skills-list">
-							<li v-for="(i) in bom2_skills" :key="i">
-								<span class="list-item">{{i}}</span>
-							</li>
-						</ul>
-					</div>
-					<button class="btn-read-more" @click="minimize('bom2')" v-if="projects_expander.bom2">Close</button>
+					<button class="btn-read-more" @click="minimize('bom2')" v-else>Close</button>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.bom2">
+							<p v-html="$t('projects.bom2.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom" v-if="projects_expander.bom2">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in bom2_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
 				</div>
 				<!-- lk Properties -->
 				<div class="projects-item fit-height">
@@ -85,18 +94,22 @@
 						</div>
 					</div>
 					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">Read about</button>
-					<div class="card-middle" v-if="projects_expander.lkproperties">
-						<p v-html="$t('projects.lkproperties.desc')"></p>
-					</div>
-					<div class="card-bottom"  v-if="projects_expander.lkproperties">
-						<h5>{{ $t("projects.skills_text") }}</h5>
-						<ul class="tech-skills-list">
-							<li v-for="(i) in lkproperties_skills" :key="i">
-								<span class="list-item">{{i}}</span>
-							</li>
-						</ul>
-					</div>
-					<button class="btn-read-more" @click="minimize('lkproperties')" v-if="projects_expander.lkproperties">Close</button>
+					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>Close</button>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.lkproperties">
+							<p v-html="$t('projects.lkproperties.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom"  v-if="projects_expander.lkproperties">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in lkproperties_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
 				</div>
 				<!-- project vartan-ik -->
 				<div class="projects-item fit-height">
@@ -115,18 +128,22 @@
 						</div>
 					</div>
 					<button class="btn-read-more" @click="expand('vartan')" v-if="!projects_expander.vartan">Read about</button>
-					<div class="card-middle" v-if="projects_expander.vartan">
-						<p v-html="$t('projects.vartan.desc')"></p>
-					</div>
-					<div class="card-bottom" v-if="projects_expander.vartan">
-						<h5>{{ $t("projects.skills_text") }}</h5>
-						<ul class="tech-skills-list">
-							<li v-for="(i) in vartan_skills" :key="i">
-								<span class="list-item">{{i}}</span>
-							</li>
-						</ul>
-					</div>
 					<button class="btn-read-more" @click="minimize('vartan')" v-if="projects_expander.vartan">Close</button>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.vartan">
+							<p v-html="$t('projects.vartan.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom" v-if="projects_expander.vartan">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in vartan_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
 				</div>
 			</div>
 		</div>
@@ -193,6 +210,19 @@
 <style lang="scss" scoped>
 $item-shdw-color: rgb(0,0,0);
 $secondary-text-color: rgb(47,57,77);
+
+.slide-enter-active,
+.slide-leave-active {
+	overflow:hidden;
+	transition: opacity 0.5s, max-height 0.5s;
+	max-height: 230px;
+}
+.slide-enter,
+.slide-leave-to
+{
+  opacity: 0;
+  max-height: 0px;
+}
 
 	.projects-grid{
 		display: flex;
