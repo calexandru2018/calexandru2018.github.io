@@ -26,18 +26,23 @@
 						</div>
 					</div>
 					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
-					<div class="card-middle" v-if="projects_expander.portfolio">
-						<p v-html="$t('projects.portfolio.desc')"></p>
-					</div>
-					<div class="card-bottom" v-if="projects_expander.portfolio">
-						<h5>{{ $t("projects.skills_text") }}</h5>
-						<ul class="tech-skills-list">
-							<li v-for="(i) in portolio_skills" :key="i">
-								<span class="list-item">{{i}}</span>
-							</li>
-						</ul>
-					</div>
-					<button class="btn-read-more" @click="minimize('portfolio')" v-if="projects_expander.portfolio">Close</button>
+					<button class="btn-read-more" @click="minimize('portfolio')" v-else>Close</button>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.portfolio">
+							<p v-html="$t('projects.portfolio.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom" v-if="projects_expander.portfolio">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in portolio_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
+					
 				</div>
 				<div class="projects-item fit-height">
 					<div class="card-top">
@@ -55,18 +60,22 @@
 						</div>
 					</div>
 					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2">Read about</button>
-					<div class="card-middle" v-if="projects_expander.bom2">
-						<p v-html="$t('projects.bom2.desc')"></p>
-					</div>
-					<div class="card-bottom" v-if="projects_expander.bom2">
-						<h5>{{ $t("projects.skills_text") }}</h5>
-						<ul class="tech-skills-list">
-							<li v-for="(i) in bom2_skills" :key="i">
-								<span class="list-item">{{i}}</span>
-							</li>
-						</ul>
-					</div>
-					<button class="btn-read-more" @click="minimize('bom2')" v-if="projects_expander.bom2">Close</button>
+					<button class="btn-read-more" @click="minimize('bom2')" v-else>Close</button>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.bom2">
+							<p v-html="$t('projects.bom2.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom" v-if="projects_expander.bom2">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in bom2_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
 				</div>
 				<!-- lk Properties -->
 				<div class="projects-item fit-height">
@@ -85,18 +94,22 @@
 						</div>
 					</div>
 					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">Read about</button>
-					<div class="card-middle" v-if="projects_expander.lkproperties">
-						<p v-html="$t('projects.lkproperties.desc')"></p>
-					</div>
-					<div class="card-bottom"  v-if="projects_expander.lkproperties">
-						<h5>{{ $t("projects.skills_text") }}</h5>
-						<ul class="tech-skills-list">
-							<li v-for="(i) in lkproperties_skills" :key="i">
-								<span class="list-item">{{i}}</span>
-							</li>
-						</ul>
-					</div>
-					<button class="btn-read-more" @click="minimize('lkproperties')" v-if="projects_expander.lkproperties">Close</button>
+					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>Close</button>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.lkproperties">
+							<p v-html="$t('projects.lkproperties.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom"  v-if="projects_expander.lkproperties">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in lkproperties_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
 				</div>
 				<!-- project vartan-ik -->
 				<div class="projects-item fit-height">
@@ -115,18 +128,22 @@
 						</div>
 					</div>
 					<button class="btn-read-more" @click="expand('vartan')" v-if="!projects_expander.vartan">Read about</button>
-					<div class="card-middle" v-if="projects_expander.vartan">
-						<p v-html="$t('projects.vartan.desc')"></p>
-					</div>
-					<div class="card-bottom" v-if="projects_expander.vartan">
-						<h5>{{ $t("projects.skills_text") }}</h5>
-						<ul class="tech-skills-list">
-							<li v-for="(i) in vartan_skills" :key="i">
-								<span class="list-item">{{i}}</span>
-							</li>
-						</ul>
-					</div>
 					<button class="btn-read-more" @click="minimize('vartan')" v-if="projects_expander.vartan">Close</button>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.vartan">
+							<p v-html="$t('projects.vartan.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom" v-if="projects_expander.vartan">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in vartan_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
 				</div>
 			</div>
 		</div>
@@ -194,41 +211,28 @@
 $item-shdw-color: rgb(0,0,0);
 $secondary-text-color: rgb(47,57,77);
 
-.fit-height{
-	// height: fit-content !important;
-	display: table !important;
+.slide-enter-active,
+.slide-leave-active {
+	overflow:hidden;
+	transition: opacity 0.5s, max-height 0.5s;
+	max-height: 230px;
 }
-.btn-read-more{
-	border: none;
-	outline: none;
-    padding: 1em 2em;
-    border-radius: 5px;
-    font-size: 0.8em;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    // background-color: rgb(135, 206, 250);
-	background-image: linear-gradient(to bottom, rgb(135, 206, 250) 50%, rgb(255, 255, 255) 50%);
-	background-size: 100% 200%;
-	background-position:right top;
-	margin: 2em 0em;
-	cursor: pointer;
-	transition: background-size ease 0.3s, background-position ease 0.3s;
-	// width: (100vh / 4)+'px';
-	&:hover{
-		background-position: left bottom;
-		color: rgb(135, 206, 250);
-	}
+.slide-enter,
+.slide-leave-to
+{
+  opacity: 0;
+  max-height: 0px;
 }
 
 	.projects-grid{
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-auto-rows: 1fr;
-		grid-row-gap: 2em;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
 		padding: 1em 0;
 		.projects-item{
-			display: grid;
-			grid-template-rows: repeat(3, auto);
+			width: 100%;
+			display: table !important;
 			padding: 1em 1.5em;
 			border-radius: 5px;
 			box-shadow: 1px 1px 10px -6px $item-shdw-color;
@@ -262,8 +266,32 @@ $secondary-text-color: rgb(47,57,77);
 					cursor: pointer;
 				}
 			}
+			.card-middle{
+				margin: 2em 0;
+			}
 			.card-bottom{
 				align-self: center;
+			}
+			.btn-read-more{
+				border: none;
+				outline: none;
+				padding: 1em 2em;
+				border-radius: 5px;
+				font-size: 0.8em;
+				color: rgb(255, 255, 255);
+				font-weight: bold;
+				// background-color: rgb(135, 206, 250);
+				background-image: linear-gradient(to bottom, rgb(135, 206, 250) 50%, rgb(255, 255, 255) 50%);
+				background-size: 100% 203%;
+				background-position:right top;
+				margin: 2em 0em;
+				cursor: pointer;
+				transition: background-size ease 0.3s, background-position ease 0.3s;
+				// width: (100vh / 4)+'px';
+				&:hover{
+					background-position: left bottom;
+					color: rgb(135, 206, 250);
+				}
 			}
 			h3, h4, h5{
 				margin: 0.5em 0;
@@ -301,8 +329,6 @@ $secondary-text-color: rgb(47,57,77);
 	/* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
 		.projects-grid{
-			display: grid;
-			grid-template-columns: 1fr 1fr !important;
 			.projects-item{
 				margin: 1em;
 				// .card-top{
@@ -312,20 +338,12 @@ $secondary-text-color: rgb(47,57,77);
 		}
 	}
 	@media (min-width: 992px) and (min-height: 720px){ 
-		// .card-top{
-		// 	height: 15em !important;
-		// }
+		.projects-item{
+			width: 30% !important;
+		}
 	}
-	//1440 x 821
-	// @media (min-width: 992px) and (min-height: 1024px){ 
-	// 		.card-top{
-	// 		height: 12em !important;
-	// 	}
-	// }
 	@media (min-width: 1024px) { 
 		.projects-grid{
-			grid-template-columns: 1fr 1fr;
-			grid-column-gap: 1em;
 			.projects-item{
 				margin: 1em;
 			}
@@ -333,8 +351,7 @@ $secondary-text-color: rgb(47,57,77);
 	}
 	@media (min-width: 1300px) { 
 		.projects-grid{
-			display: grid;
-			grid-template-columns: 1fr 1fr !important;
+
 			.projects-item{
 				margin: 1.5em;
     			font-size: 1.15em;
@@ -347,9 +364,8 @@ $secondary-text-color: rgb(47,57,77);
 	// 2k resolutions 2048 x 1080
 	@media (min-width: 2048px) { 
 		.projects-grid{
-			display: grid;
-			grid-template-columns: repeat(3, 1fr) !important;
 			.projects-item{
+				width: 20% !important;
 				margin: 1.5em;
 				font-size: 1.30em;
 				p{
@@ -361,8 +377,6 @@ $secondary-text-color: rgb(47,57,77);
 	// 4k resolutions 3840 x 2160
 	@media (min-width: 3840px) { 
 		.projects-grid{
-			display: grid;
-			grid-template-columns: repeat(5, 1fr) !important;
 			.projects-item{
 				margin: 1.5em;
 				font-size: 1.6em;

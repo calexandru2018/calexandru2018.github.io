@@ -174,7 +174,7 @@ $left-btn-pos-trans: 100%;
 		font-family: "Inria Sans Bold";
 		font-weight: bold;
 		background-color: transparent;
-		display: flex;
+		display: none;
 		flex-direction: column;
 		width: 100%;
 		grid-column-start: 2;
@@ -238,9 +238,7 @@ $left-btn-pos-trans: 100%;
 	}
 
 	@media (max-width: 374px) {
-		.about-me-lg{
-			display: none;
-		}
+
 	}
 	@media (min-width: 375px) {
 		.nav-btn{
@@ -249,33 +247,25 @@ $left-btn-pos-trans: 100%;
 		.change-hand-btn-slide-right{//initial stage; using in left hande mode
 			left: 85%;
 		}
-		.about-me-lg{
-			display: none;
-		}
+
 	}
 	@media (min-width: 375px) and (min-height: 750px){
 		nav{
 			margin: -1.5em 25px 0 25px !important;
-			.about-me-lg{
-				display: none;
-			}
+
 			.nav-btn{
 				font-size: 1em;
 			}
 		}
 	}
 	@media (min-width: 576px) { 
-		.about-me-lg{
-			display: none;
-		}
+
 	}
 	/* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
 		nav{
     		margin: -3em 25px 0 25px;
-			.about-me-lg{
-				display: none;
-			}
+
 			.nav-btn{
 				font-size: 1rem;
 				width: $nav-btn-width - 10% !important;
@@ -301,13 +291,19 @@ $left-btn-pos-trans: 100%;
 		nav{
     		margin: 2em 25px 0 25px !important;
 			.about-me-lg{
-				display: none;
+				display: flex;
+				width: 70%;
+				justify-self: end;
+				font-size: 0.8em;
 			}
 			.nav-btn{
 				font-size: 1rem;
-				width: $nav-btn-width - 15% !important;
+				width: $nav-btn-width + 120% !important;
 				height: 3.5em !important;
 			}
+		}
+		.change-hand-btn{
+			display: none !important; 
 		}
 		.nav-btn-slide-right{//initial stage; using in left hande mode
 			left: $left-btn-pos-trans -  ($nav-btn-width - 15%);
@@ -320,16 +316,13 @@ $left-btn-pos-trans: 100%;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
-				display: flex !important;
+				width: 100% !important;
 			}
 			.nav-btn{
 				// align-self: center;
 				font-size: 1.3rem;
 				width: $nav-btn-width - 0% !important;
 				height: 4em !important;
-			}
-			.change-hand-btn{
-				display: none; 
 			}
 		}
 	}
@@ -339,17 +332,14 @@ $left-btn-pos-trans: 100%;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
-				display: flex !important;
 				height: 100%;
+				width: 100% !important;
 				font-size: 1.2em;
 			}
 			.nav-btn{
 				font-size: 1.3rem !important;
 				width: $nav-btn-width - 0% !important;
 				height: 3.5em !important;
-			}
-			.change-hand-btn{
-				display: none; 
 			}
 		}
 	}
@@ -358,17 +348,10 @@ $left-btn-pos-trans: 100%;
 		nav{
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
-			.about-me-lg{
-				display: flex !important;
-				height: 100%;
-			}
 			.nav-btn{
 				font-size: 1.5rem !important;
 				width: $nav-btn-width - 25% !important;
 				height: 3.5em !important;
-			}
-			.change-hand-btn{
-				display: none; 
 			}
 		}
 	}
@@ -378,16 +361,12 @@ $left-btn-pos-trans: 100%;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
-				display: flex !important;
-				height: 100%;
+				font-size: 1.8em !important;
 			}
 			.nav-btn{
 				font-size: 1.7rem !important;
 				width: $nav-btn-width - 30% !important;
 				height: 5.5em !important;
-			}
-			.change-hand-btn{
-				display: none; 
 			}
 		}
 	}

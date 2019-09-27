@@ -1,5 +1,5 @@
 {
-	"sub_title": "Web Portfölj",
+	"sub_title": "Portfölj",
 	"landing_page":{
 		"short_desc": "Hej och välkommen till min web portfölj, jag heter Alexandru och är en <u>mjukvaruutvecklare</u>.",
 		"long_desc": "Jag är en språkagnostisk utvecklare. Även om jag i mestadels har programmerat på webbstacken, det hindrade mig inte från att lära mig andra språk och ramverk och därmed bredda min kunskap.\nJag har arbetat med några projekt som krävde att både front och back-end skulle utvecklas.",
@@ -14,7 +14,7 @@
 		"menu_title": "Projekt",
 		"skills_text": "Har artbetat med följande programmeringsspråk/verktyg:",
 		"portfolio":{
-			"title": "Web Portfölj",
+			"title": "Portfölj",
 			"desc": "Följande projekt är min webbportfölj. Eftersom jag hade avslutat en kurs på udemy om VueJS, bestämde jag mig för att det var på tide att jag använde den kunskapen. Det här är första gången jag använder VueJs i stor skala och det är också första gången jag verkligen använder en css-förkompilerare (jag använde i ett tidigare projekt, men bara för att minifiera, uglifiera och skapa bitar). Jag lärde mig att använda SASS / SCSS (som jag alltid ville göra) och kom verkligen in i det snabbt. Jag använde verktyget Vue CLI 3 för att snabbt börja arbeta med ett projekt, så att jag kan undvika överhuvudtaget för att starta ett projekt från grunden, det är verkligen mycket effektivare att börja med en pannplattkod. <u> Detta projekt utvecklades under 2019 implementerades ingen affärslogik, förutom PHP Mailer-funktionen. </u>",
 			"skills": ["PHP Mail","VueJS","SCSS","Webpack", "Vue i18N", "Git"]
 		},
