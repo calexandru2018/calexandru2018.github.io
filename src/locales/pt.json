@@ -1,5 +1,5 @@
 {
-	"sub_title": "Web Portfólio",
+	"sub_title": "Portfólio",
 	"landing_page":{
 		"short_desc": "Bem-vindo ao portfólio, chamo-me Alexandru e sou um <u>desenvolvedor de software</u>.",
 		"long_desc": "Sou um desenvolvedor angóstico de linguagens de programacão. Embora eu tenha programado principalmente na webstack, nada me impede de aprender outras linguagens e tecnologias para que assim possa aumentar o meu conhecimento conhecimento geral.\nTrabalhei em alguns projetos que exigiam o desenvolvimento tanto de front-end como back-end.",
@@ -14,7 +14,7 @@
 		"menu_title": "Projectos",
 		"skills_text": "Trabalhei com as seguintes línguas e ferramentas:",
 		"portfolio":{
-			"title": "Web Portfólio",
+			"title": "Portfólio",
 			"desc": "O projeto a seguir é o meu portfólio da web. Desde que terminei um curso na udemy sobre o VueJS, decidi que estava na hora de usar bem esse conhecimento. É a primeira vez que uso VueJs em larga escala e também é a primeira vez que realmente utilizo um pré-compilador de css (usei em um projeto anterior, mas apenas para minificar, uglificar e criar blocos). Eu aprendi a usar o SASS / SCSS (o que eu sempre quis fazer) e realmente entrei rapidamente. Usei a ferramenta Vue CLI 3 para começar a trabalhar rapidamente com um projeto, para evitar a sobrecarga de configurar um projeto a partir do zero, é realmente muito mais eficaz começar com um código padrão. <u> Este projeto foi desenvolvido durante 2019, nenhuma lógica de negócios foi implementada, além da função PHP Mailer. </u>",
 			"skills": ["PHP Mail","VueJS","SCSS","Webpack", "Vue i18N", "Git"]
 		},

@@ -1,5 +1,5 @@
 {
-	"sub_title": "Web Portfolio",
+	"sub_title": "Portfolio",
 	"landing_page":{
 		"short_desc": "Welcome to portfolio, my name is Alexandru and I am a <u>software developer</u>.",
 		"long_desc": "I am a language agnostic developer. Although most of my projects were developed for the webstack, that does not stop me from learning other languages and frameworks that will inevitably broaden my skills and my knowledge.\nI've worked on some projects that required both and back-end to be developed.",
@@ -14,7 +14,7 @@
 		"menu_title": "Projects",
 		"skills_text": "Worked with the following languages and tools:",
 		"portfolio":{
-			"title": "Web Portfolio",
+			"title": "Portfolio",
 			"desc": "The following project, is my web portfolio. Since I had finished a course on udemy about VueJS, I decided that it was about time that I put that knowledge to good use. This is the time first that I use VueJs on a large scale and it is also the first time that I really use a css pre-compiler (I used in a previous project, but only to minify, uglify and create chunks). I learned how to use SASS/SCSS (which I always wanted to do), and really got into it quickly. I used the Vue CLI 3 tool... [Read more]",
 			"read_more": "...to quickly start working with a project, so that I can avoid the overhead of setting up a project from scratch, it is really much more effective to start with a boilerplate code.<u>This project was developed during during 2019, no business logic was implemented, apart from the PHP Mailer function.</u>",
 			"skills": ["PHP Mail", "VueJS","SCSS", "Webpack", "Vue i18N", "Git"]
