@@ -360,6 +360,9 @@ $left-btn-pos-trans: 100%;
 		nav{
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
+			.about-me-lg{
+				font-size: 1.8em !important;
+			}
 			.nav-btn{
 				font-size: 1.7rem !important;
 				width: $nav-btn-width - 30% !important;
