@@ -213,14 +213,14 @@ $secondary-text-color: rgb(47,57,77);
 	.slide-enter-active,
 	.slide-leave-active {
 		overflow:hidden;
-		transition: opacity 0.5s, max-height 0.5s;
-		max-height: 230px;
+		transition: opacity 0.7s, max-height 0.6s;
+		max-height: 450px;
 	}
 	.slide-enter,
 	.slide-leave-to
 	{
-	opacity: 0;
-	max-height: 0px;
+		opacity: 0;
+		max-height: 0;
 	}
 
 	.projects-grid{
