@@ -8,7 +8,7 @@
 		<div class="projects-container"  v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
 			<h1 class="card-header">{{ $t("projects.menu_title") }}</h1>
 			<div class="projects-grid">
-				<div class="projects-item">
+				<div class="projects-item fit-height">
 					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/screen-prtf.png" alt="">
 						<div class="item-header">
@@ -25,10 +25,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="card-middle">
+					<button @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
+					<div class="card-middle" v-if="projects_expander.portfolio">
 						<p v-html="$t('projects.portfolio.desc')"></p>
 					</div>
-					<div class="card-bottom">
+					<div class="card-bottom" v-if="projects_expander.portfolio">
 						<h5>{{ $t("projects.skills_text") }}</h5>
 						<ul class="tech-skills-list">
 							<li v-for="(i) in portolio_skills" :key="i">
@@ -36,8 +37,9 @@
 							</li>
 						</ul>
 					</div>
+					<button @click="minimize('portfolio')" v-if="projects_expander.portfolio">Close</button>
 				</div>
-				<div class="projects-item">
+				<div class="projects-item fit-height">
 					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/screen-bom2.png" alt="">
 						<div class="item-header">
@@ -52,10 +54,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="card-middle">
+					<button @click="expand('bom2')" v-if="!projects_expander.bom2">Read about</button>
+					<div class="card-middle" v-if="projects_expander.bom2">
 						<p v-html="$t('projects.bom2.desc')"></p>
 					</div>
-					<div class="card-bottom">
+					<div class="card-bottom" v-if="projects_expander.bom2">
 						<h5>{{ $t("projects.skills_text") }}</h5>
 						<ul class="tech-skills-list">
 							<li v-for="(i) in bom2_skills" :key="i">
@@ -63,9 +66,10 @@
 							</li>
 						</ul>
 					</div>
+					<button @click="minimize('bom2')" v-if="projects_expander.bom2">Close</button>
 				</div>
 				<!-- lk Properties -->
-				<div class="projects-item">
+				<div class="projects-item fit-height">
 					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/screen-lk.png" alt="">
 						<div class="item-header">
@@ -80,10 +84,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="card-middle">
+					<button @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">Read about</button>
+					<div class="card-middle" v-if="projects_expander.lkproperties">
 						<p v-html="$t('projects.lkproperties.desc')"></p>
 					</div>
-					<div class="card-bottom">
+					<div class="card-bottom"  v-if="projects_expander.lkproperties">
 						<h5>{{ $t("projects.skills_text") }}</h5>
 						<ul class="tech-skills-list">
 							<li v-for="(i) in lkproperties_skills" :key="i">
@@ -91,9 +96,10 @@
 							</li>
 						</ul>
 					</div>
+					<button @click="minimize('lkproperties')" v-if="projects_expander.lkproperties">Close</button>
 				</div>
 				<!-- project vartan-ik -->
-				<div class="projects-item">
+				<div class="projects-item fit-height">
 					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/vartan-b.png" alt="">
 						<div class="item-header">
@@ -108,10 +114,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="card-middle">
+					<button @click="expand('vartan', $event)">Read about</button>
+					<div class="card-middle" v-if="project_name_expand == 'vartan' & project_expand">
 						<p v-html="$t('projects.vartan.desc')"></p>
 					</div>
-					<div class="card-bottom">
+					<div class="card-bottom" v-if="project_name_expand == 'vartan' & project_expand">
 						<h5>{{ $t("projects.skills_text") }}</h5>
 						<ul class="tech-skills-list">
 							<li v-for="(i) in vartan_skills" :key="i">
@@ -130,17 +137,53 @@
 
 	export default {
 		props: ['hide_comp_btn_shadow','card_base_layout', 'left_hand_use'],
-		methods: {
-			hideComponent(){
-				eventBus.$emit('show-component', false);
-			}
-		},
 		data(){
 			return{
 				portolio_skills: this.$i18n.t('projects.portfolio.skills'),
 				bom2_skills: this.$i18n.t('projects.bom2.skills'),
 				lkproperties_skills: this.$i18n.t('projects.lkproperties.skills'),
 				vartan_skills: this.$i18n.t('projects.vartan.skills'),
+				project_name_expand: '',
+				project_expand: false, 
+				projects_expander:{
+					portfolio: false,
+					bom2: false,
+					lkproperties: false,
+					vartan: false,
+				}
+			}
+		},
+		methods: {
+			hideComponent(){
+				eventBus.$emit('show-component', false);
+			},
+			expand(project, hide_project = false){
+				const t  = this;
+				let hide = true;
+
+				if(hide_project)
+					hide = false;
+
+				switch(project){
+					case 'portfolio':
+						t.projects_expander.portfolio = hide;
+						break;
+					case 'bom2':
+						t.projects_expander.bom2 = hide;
+						break;
+					case 'lkproperties':
+						t.projects_expander.lkproperties = hide;
+						break;
+					case 'vartan':
+						t.projects_expander.vartan = hide;
+						break;
+				}
+				
+				// this.project_name_expand = project
+				// this.project_expand = true;
+			},
+			minimize(project){
+				this.expand(project, true);
 			}
 		},
 	}
@@ -150,7 +193,10 @@
 $item-shdw-color: rgb(0,0,0);
 $secondary-text-color: rgb(47,57,77);
 
-
+.fit-height{
+	// height: fit-content !important;
+	display: table !important;
+}
 
 	.projects-grid{
 		display: grid;

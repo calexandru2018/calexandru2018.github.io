@@ -1,8 +1,8 @@
 {
 	"sub_title": "Web Portfolio",
 	"landing_page":{
-		"short_desc": "Welcome to portfolio, my name is Alexandru and I am a <u>software developper</u>.",
-		"long_desc": "I am a language agnostic developer. Although most of my projects were developed for the webstack, that does not stop me from learning other languages and frameworks that will inevitably broaden my skills and my knowldege.\nI´ve worked on some projects that required both and back-end to be developed.",
+		"short_desc": "Welcome to portfolio, my name is Alexandru and I am a <u>software developer</u>.",
+		"long_desc": "I am a language agnostic developer. Although most of my projects were developed for the webstack, that does not stop me from learning other languages and frameworks that will inevitably broaden my skills and my knowledge.\nI've worked on some projects that required both and back-end to be developed.",
 		"contact_desc": "Do you want to get in touch ? You can either fill out the form or email me at: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
 	},
 	"main_navigation_btns": {
