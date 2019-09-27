@@ -25,8 +25,6 @@
 							</div>
 						</div>
 					</div>
-					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
-					<button class="btn-read-more" @click="minimize('portfolio')" v-else>Close</button>
 					<transition name="slide" mode="out-in">
 						<div class="card-middle" v-if="projects_expander.portfolio">
 							<p v-html="$t('projects.portfolio.desc')"></p>
@@ -42,7 +40,8 @@
 							</ul>
 						</div>
 					</transition>
-					
+					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
+					<button class="btn-read-more" @click="minimize('portfolio')" v-else>Close</button>
 				</div>
 				<div class="projects-item fit-height">
 					<div class="card-top">
@@ -59,8 +58,6 @@
 							</div>
 						</div>
 					</div>
-					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2">Read about</button>
-					<button class="btn-read-more" @click="minimize('bom2')" v-else>Close</button>
 					<transition name="slide" mode="out-in">
 						<div class="card-middle" v-if="projects_expander.bom2">
 							<p v-html="$t('projects.bom2.desc')"></p>
@@ -76,6 +73,8 @@
 							</ul>
 						</div>
 					</transition>
+					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2">Read about</button>
+					<button class="btn-read-more" @click="minimize('bom2')" v-else>Close</button>
 				</div>
 				<!-- lk Properties -->
 				<div class="projects-item fit-height">
@@ -93,8 +92,6 @@
 							</div>
 						</div>
 					</div>
-					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">Read about</button>
-					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>Close</button>
 					<transition name="slide" mode="out-in">
 						<div class="card-middle" v-if="projects_expander.lkproperties">
 							<p v-html="$t('projects.lkproperties.desc')"></p>
@@ -110,6 +107,8 @@
 							</ul>
 						</div>
 					</transition>
+					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">Read about</button>
+					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>Close</button>
 				</div>
 				<!-- project vartan-ik -->
 				<div class="projects-item fit-height">
@@ -127,8 +126,6 @@
 							</div>
 						</div>
 					</div>
-					<button class="btn-read-more" @click="expand('vartan')" v-if="!projects_expander.vartan">Read about</button>
-					<button class="btn-read-more" @click="minimize('vartan')" v-if="projects_expander.vartan">Close</button>
 					<transition name="slide" mode="out-in">
 						<div class="card-middle" v-if="projects_expander.vartan">
 							<p v-html="$t('projects.vartan.desc')"></p>
@@ -144,6 +141,8 @@
 							</ul>
 						</div>
 					</transition>
+					<button class="btn-read-more" @click="expand('vartan')" v-if="!projects_expander.vartan">Read about</button>
+					<button class="btn-read-more" @click="minimize('vartan')" v-else>Close</button>
 				</div>
 			</div>
 		</div>
@@ -211,18 +210,18 @@
 $item-shdw-color: rgb(0,0,0);
 $secondary-text-color: rgb(47,57,77);
 
-.slide-enter-active,
-.slide-leave-active {
-	overflow:hidden;
-	transition: opacity 0.5s, max-height 0.5s;
-	max-height: 230px;
-}
-.slide-enter,
-.slide-leave-to
-{
-  opacity: 0;
-  max-height: 0px;
-}
+	.slide-enter-active,
+	.slide-leave-active {
+		overflow:hidden;
+		transition: opacity 0.5s, max-height 0.5s;
+		max-height: 230px;
+	}
+	.slide-enter,
+	.slide-leave-to
+	{
+	opacity: 0;
+	max-height: 0px;
+	}
 
 	.projects-grid{
 		display: flex;
@@ -244,7 +243,8 @@ $secondary-text-color: rgb(47,57,77);
 				grid-template-columns: 1fr 1fr;
 				align-items: center;
 				margin: 1em 0;
-				box-shadow: 0px 4px 3px -3px $secondary-text-color;
+				border-radius: 0 !important;
+				box-shadow: 0px 4px 2px -4px $secondary-text-color;
 			}
 			.item-header > *:first-child{
 				justify-items: start;
@@ -267,7 +267,7 @@ $secondary-text-color: rgb(47,57,77);
 				}
 			}
 			.card-middle{
-				margin: 2em 0;
+				margin: 2em 0 2em 0;
 			}
 			.card-bottom{
 				align-self: center;
