@@ -15,10 +15,10 @@
 							<h3 v-html="$t('projects.portfolio.title')"></h3>
 							<div class="item-links">
 								<span></span>
+								<span></span>
 								<a href="https://github.com/calexandru2018/portfolio" target="_blank">
 									<img class="eye" src="../assets/img/utility/eye.svg" alt="">
 								</a>
-								<span></span>
 								<a href="https://calexandru.com/" target="_blank">
 									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
@@ -50,8 +50,10 @@
 							<h3 v-html="$t('projects.bom2.title')"></h3>
 							<div class="item-links">
 								<span></span>
-								<img class="eye-closed" src="../assets/img/utility/eye-closed.svg" alt="">
 								<span></span>
+								<a href="#">
+									<img class="eye-closed" src="../assets/img/utility/eye-closed.svg" alt="">
+								</a>
 								<a href="https://bomaoquadrado.pt/" target="_blank">
 									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
@@ -84,8 +86,10 @@
 							<h3 v-html="$t('projects.lkproperties.title')"></h3>
 							<div class="item-links">
 								<span></span>
-								<img class="eye-closed" src="../assets/img/utility/eye-closed.svg" alt="">
 								<span></span>
+								<a href="#">
+									<img class="eye-closed" src="../assets/img/utility/eye-closed.svg" alt="">
+								</a>
 								<a href="https://lk-properties.pt/" target="_blank">
 									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
@@ -118,8 +122,8 @@
 							<h3 v-html="$t('projects.vartan.title')"></h3>
 							<div class="item-links">
 								<span></span>
-								<img class="eye" src="../assets/img/utility/eye.svg" alt="">
 								<span></span>
+								<img class="eye" src="../assets/img/utility/eye.svg" alt="">
 								<a href="http://vartan-b.dx.am/" target="_blank">
 									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
@@ -259,10 +263,13 @@ $secondary-text-color: rgb(47,57,77);
 				justify-items: center;
 			}
 			.item-links{
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				justify-items: center;
-				align-items: center;
+				// display: grid;
+				// grid-template-columns: repeat(4, 1fr);
+				// justify-items: center;
+				// align-items: center;
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: space-between;
 				height: 100%;
 				img{
 					width: auto;
