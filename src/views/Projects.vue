@@ -230,7 +230,7 @@ $secondary-text-color: rgb(47,57,77);
 		justify-content: space-evenly;
 		padding: 1em 0;
 		.projects-item{
-			width: 100%;
+			width: 85%;
 			display: table !important;
 			padding: 1em 1.5em;
 			border-radius: 5px;
