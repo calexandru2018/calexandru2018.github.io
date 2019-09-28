@@ -171,7 +171,7 @@
 					bom2: false,
 					lkproperties: false,
 					vartan: false,
-				}
+				},
 			}
 		},
 		methods: {
@@ -202,7 +202,7 @@
 			},
 			minimize(project){
 				this.expand(project, true);
-			}
+			},
 		},
 	}
 </script>
@@ -211,14 +211,6 @@
 $item-shdw-color: rgb(0,0,0);
 $secondary-text-color: rgb(47,57,77);
 
-	.eye{
-	}
-	.eye-closed{
-		// asdas
-	}
-	.external-link{
-		// asds
-	}
 	.slide-enter-active,
 	.slide-leave-active {
 		overflow:hidden;
@@ -244,6 +236,10 @@ $secondary-text-color: rgb(47,57,77);
 			margin-bottom: 1em;
 			border-radius: 5px;
 			background-color: rgb(255,255,255);
+			transition: filter ease 0.3s;
+			&:hover{
+				filter: drop-shadow(0px 0px 6px gray)
+			}
 			.cover-img{
 				width: 100%;
 			}
