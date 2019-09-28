@@ -3,7 +3,7 @@
 	"landing_page":{
 		"short_desc": "Welcome to portfolio, my name is Alexandru and I am a <u>software developer</u>.",
 		"long_desc": "I am a language agnostic developer. Although most of my projects were developed for the webstack, that does not stop me from learning other languages and frameworks that will inevitably broaden my skills and my knowledge.\nI've worked on some projects that required both and back-end to be developed.",
-		"contact_desc": "Do you want to get in touch ? You can either fill out the form or email me at: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
+		"contact_desc": "Do you want to get in touch ? You can email me at: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
 	},
 	"main_navigation_btns": {
 		"projects": "Projects",
@@ -13,6 +13,8 @@
 	"projects":{
 		"menu_title": "Projects",
 		"skills_text": "Worked with the following languages and tools:",
+		"btn_show": "About",
+		"btn_close": "Close",
 		"portfolio":{
 			"title": "Portfolio",
 			"desc": "The following project, is my web portfolio. Since I had finished a course on udemy about VueJS, I decided that it was about time that I put that knowledge to good use. This is the time first that I use VueJs on a large scale and it is also the first time that I really use a css pre-compiler (I used in a previous project, but only to minify, uglify and create chunks). I learned how to use SASS/SCSS (which I always wanted to do), and really got into it quickly. I used the Vue CLI 3 tool to quickly start working with a project, so that I can avoid the overhead of setting up a project from scratch, it is really much more effective to start with a boilerplate code.<u>This project was developed during during 2019, no business logic was implemented, apart from the PHP Mailer function.</u>",
@@ -45,7 +47,7 @@
 	},
 	"contact": {
 		"menu_title": "Contact",
-		"menu_text": "You can either email me at <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a> or fill the contact form:",
+		"menu_text": "You can either email me at <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a>.",
 		"contact_form":{
 			"confirm_sent": "Sent",
 			"error_sent": "Error sending",

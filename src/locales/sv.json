@@ -3,7 +3,7 @@
 	"landing_page":{
 		"short_desc": "Hej och välkommen till min web portfölj, jag heter Alexandru och är en <u>mjukvaruutvecklare</u>.",
 		"long_desc": "Jag är en språkagnostisk utvecklare. Även om jag i mestadels har programmerat på webbstacken, det hindrade mig inte från att lära mig andra språk och ramverk och därmed bredda min kunskap.\nJag har arbetat med några projekt som krävde att både front och back-end skulle utvecklas.",
-		"contact_desc": "Vill du komma i kontakt med mig? Du kan antingen fylla i formuläret eller nå mig på: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
+		"contact_desc": "Vill du komma i kontakt med mig? Du kan nå mig bäst på: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">."
 	},
 	"main_navigation_btns": {
 		"projects": "Projekt",
@@ -13,6 +13,8 @@
 	"projects":{
 		"menu_title": "Projekt",
 		"skills_text": "Har artbetat med följande programmeringsspråk/verktyg:",
+		"btn_show": "Om",
+		"btn_close": "Stäng",
 		"portfolio":{
 			"title": "Portfölj",
 			"desc": "Följande projekt är min webbportfölj. Eftersom jag hade avslutat en kurs på udemy om VueJS, bestämde jag mig för att det var på tide att jag använde den kunskapen. Det här är första gången jag använder VueJs i stor skala och det är också första gången jag verkligen använder en css-förkompilerare (jag använde i ett tidigare projekt, men bara för att minifiera, uglifiera och skapa bitar). Jag lärde mig att använda SASS / SCSS (som jag alltid ville göra) och kom verkligen in i det snabbt. Jag använde verktyget Vue CLI 3 för att snabbt börja arbeta med ett projekt, så att jag kan undvika överhuvudtaget för att starta ett projekt från grunden, det är verkligen mycket effektivare att börja med en pannplattkod. <u> Detta projekt utvecklades under 2019 implementerades ingen affärslogik, förutom PHP Mailer-funktionen. </u>",
@@ -36,15 +38,15 @@
 	},
 	"about_me":{
 		"menu_title": "Om mig",
-		"p1": "Test",
-		"p2": "Test2",
-		"p3": "Test3",
-		"p4": "Test4",
-		"p5": "Worked with the following libraries/frameworks:"
+		"p1": "Jag är en programvara och språk agnostisk utvecklare. Även om de flesta av mina projekt har utvecklats för webbstacket hindrar det mig inte från att lära mig andra språk och ramverk som oundvikligen kommer att utvidga mina kunskaper och min kunskap. Jag har arbetat med några projekt som krävde att både och back-end skulle utvecklas.",
+		"p2": "Jag började programmera på gymnasiet och sedan dess har jag försökt utveckla mina färdigheter. I slutet av mitt senaste gymnasium fick jag en praktik (som var en del av gymnasiets läroplan) som varade i cirka 3 månader i ett webb-dev / promo-företag. Företaget skapade affischer, besökskort men hade också ett webbutvecklingsteam. Jag var en av de tre lärlingarna.",
+		"p3": "Efter gymnasiet fortsatte jag att koda, testa och lära mig nya sätt att programmera, olika ramar och bibliotek. Just nu studerar jag Systemutveckling vid Uppsala universitet.",
+		"p4": "Har arbetat med följande språk:",
+		"p5": "Har arbetat med följande bibliotek, ramverk och verktyg:"
 	},
 	"contact": {
 		"menu_title": "Kontakt",
-		"menu_text": "Du kan antingen nå mig på <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a> or eller fyll i följande formulär:",
+		"menu_text": "Du kan nå mig på <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a>.",
 		"contact_form":{
 			"confirm_sent": "Skickat",
 			"error_sent": "Kunde ej skicka",

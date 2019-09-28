@@ -3,7 +3,7 @@
 	"landing_page":{
 		"short_desc": "Bem-vindo ao portfólio, chamo-me Alexandru e sou um <u>desenvolvedor de software</u>.",
 		"long_desc": "Sou um desenvolvedor angóstico de linguagens de programacão. Embora eu tenha programado principalmente na webstack, nada me impede de aprender outras linguagens e tecnologias para que assim possa aumentar o meu conhecimento conhecimento geral.\nTrabalhei em alguns projetos que exigiam o desenvolvimento tanto de front-end como back-end.",
-		"contact_desc": "Deseja entrar em contato comigo? Poderá preencher o formulário ou simplesmente enviar um email para: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
+		"contact_desc": "Deseja entrar em contato comigo? Envie um email para: <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_to\">calexandru2018@pm.me</a>."
 	},
 	"main_navigation_btns": {
 		"projects": "Projectos",
@@ -13,6 +13,8 @@
 	"projects":{
 		"menu_title": "Projectos",
 		"skills_text": "Trabalhei com as seguintes línguas e ferramentas:",
+		"btn_show": "Sobre",
+		"btn_close": "Fechar",
 		"portfolio":{
 			"title": "Portfólio",
 			"desc": "O projeto a seguir é o meu portfólio da web. Desde que terminei um curso na udemy sobre o VueJS, decidi que estava na hora de usar bem esse conhecimento. É a primeira vez que uso VueJs em larga escala e também é a primeira vez que realmente utilizo um pré-compilador de css (usei em um projeto anterior, mas apenas para minificar, uglificar e criar blocos). Eu aprendi a usar o SASS / SCSS (o que eu sempre quis fazer) e realmente entrei rapidamente. Usei a ferramenta Vue CLI 3 para começar a trabalhar rapidamente com um projeto, para evitar a sobrecarga de configurar um projeto a partir do zero, é realmente muito mais eficaz começar com um código padrão. <u> Este projeto foi desenvolvido durante 2019, nenhuma lógica de negócios foi implementada, além da função PHP Mailer. </u>",
@@ -31,20 +33,21 @@
 		"vartan":{
 			"title": "Värtan IK - B",
 			"desc": "Este foi um projeto de hobby que desenvolvi, durante o tempo em que jogava futebol para um time de futebol. Nem todo mundo em nossa equipe tinha uma conta no Facebook para ingressar em um grupo do Facebook e deixar o restante da equipe se eles estavam participando da sessão de treinamento ou não. Eu tive a idéia de criar uma página da Web simples para que todos os membros Como a equipe poderia ter uma maneira de marcar sua presença, isso por sua vez nos ajudou (treinadores) a planejar melhor nossas sessões de treinamento. <u> Este projeto foi desenvolvido em 2014, possui front-end e back-end. </u>",
+			"read_more": "",
 			"skills": ["PHP","JS","HTML/CSS","jQuery"]
 		}
 	},
 	"about_me":{
 		"menu_title": "Sobre mim",
-		"p1": "Test",
-		"p2": "Test2",
-		"p3": "Test3",
-		"p4": "Test4",
-		"p5": "Worked with the following libraries/frameworks:"
+		"p1": "Sou desenvolvedor independente de software e idioma. Embora a maioria dos meus projetos tenha sido desenvolvida para o webstack, isso não me impede de aprender outros idiomas e estruturas que inevitavelmente ampliarão minhas habilidades e meu conhecimento. Trabalhei em alguns projetos que exigiam o desenvolvimento de back-end e back-end.",
+		"p2": "Comecei a programar no ensino médio e desde então tenho tentado desenvolver minhas habilidades. No final do meu último ano do ensino médio, consegui um estágio (que fazia parte do currículo do ensino médio), que durou cerca de três meses em uma empresa de web-dev / promo. A empresa fez cartazes, cartões de visita, mas também teve uma equipe de desenvolvimento web. Eu fui um dos três aprendizes.",
+		"p3": "Após o colegial, continuei codificando, testando e aprendendo novas formas de programação, diferentes estruturas e bibliotecas. No momento, estou estudando desenvolvimento de sistemas na Universidade de Uppsala.",
+		"p4": "Trabalhei com as seguintes linguagens de programação:",
+		"p5": "Trabalhei com as seguintes bibliotecas, frameworks e ferramentas:"
 	},
 	"contact": {
 		"menu_title": "Contacto",
-		"menu_text": "Pode-me enviar um email através de  <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a> ou prenchendo o seguinte formulário:",
+		"menu_text": "Pode-me enviar um email através de  <a class=\"landing-email-link\" href=\"mailto:calexandru2018@pm.me\" target=\"_top\">calexandru2018@pm.me</a>.",
 		"contact_form":{
 			"confirm_sent": "Enviado",
 			"error_sent": "Error ao enviar",

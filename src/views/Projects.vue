@@ -40,8 +40,8 @@
 							</ul>
 						</div>
 					</transition>
-					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
-					<button class="btn-read-more" @click="minimize('portfolio')" v-else>Close</button>
+					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">{{ $t("projects.btn_show") }} {{ $t("projects.portfolio.title") }}</button>
+					<button class="btn-read-more" @click="minimize('portfolio')" v-else>{{ $t("projects.btn_close") }}</button>
 				</div>
 				<div class="projects-item">
 					<div class="card-top">
@@ -75,8 +75,8 @@
 							</ul>
 						</div>
 					</transition>
-					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2">Read about</button>
-					<button class="btn-read-more" @click="minimize('bom2')" v-else>Close</button>
+					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2">{{ $t("projects.btn_show") }} {{ $t("projects.bom2.title") }}</button>
+					<button class="btn-read-more" @click="minimize('bom2')" v-else>{{ $t("projects.btn_close") }}</button>
 				</div>
 				<!-- lk Properties -->
 				<div class="projects-item">
@@ -111,8 +111,8 @@
 							</ul>
 						</div>
 					</transition>
-					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">Read about</button>
-					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>Close</button>
+					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">{{ $t("projects.btn_show") }} {{ $t("projects.lkproperties.title") }}</button>
+					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>{{ $t("projects.btn_close") }}</button>
 				</div>
 				<!-- project vartan-ik -->
 				<div class="projects-item">
@@ -145,8 +145,8 @@
 							</ul>
 						</div>
 					</transition>
-					<button class="btn-read-more" @click="expand('vartan')" v-if="!projects_expander.vartan">Read about</button>
-					<button class="btn-read-more" @click="minimize('vartan')" v-else>Close</button>
+					<button class="btn-read-more" @click="expand('vartan')" v-if="!projects_expander.vartan">{{ $t("projects.btn_show") }} {{ $t("projects.vartan.title") }}</button>
+					<button class="btn-read-more" @click="minimize('vartan')" v-else>{{ $t("projects.btn_close") }}</button>
 				</div>
 			</div>
 		</div>

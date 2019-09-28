@@ -333,6 +333,7 @@ $left-btn-pos-trans: 100%;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
 				height: 100%;
+				width: 100% !important;
 				font-size: 1.2em;
 			}
 			.nav-btn{
@@ -352,6 +353,9 @@ $left-btn-pos-trans: 100%;
 				width: $nav-btn-width - 25% !important;
 				height: 3.5em !important;
 			}
+			.about-me-lg{
+				width: 100% !important;
+			}
 		}
 	}
 	// 4k resolutions 3840 x 2160
@@ -360,6 +364,7 @@ $left-btn-pos-trans: 100%;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
+				width: 100% !important;
 				font-size: 1.8em !important;
 			}
 			.nav-btn{
