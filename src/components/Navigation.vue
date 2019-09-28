@@ -291,7 +291,7 @@ $left-btn-pos-trans: 100%;
 		nav{
     		margin: 2em 25px 0 25px !important;
 			.about-me-lg{
-				display: flex;
+				display: flex !important;
 				width: 70%;
 				justify-self: end;
 				font-size: 0.8em;
@@ -333,7 +333,6 @@ $left-btn-pos-trans: 100%;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
 				height: 100%;
-				width: 100% !important;
 				font-size: 1.2em;
 			}
 			.nav-btn{

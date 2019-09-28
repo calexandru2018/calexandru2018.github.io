@@ -93,11 +93,12 @@
 		}
 	}
 	//1440 x 821
-	@media (min-width: 992px) and (min-height: 1024px){ 
+	@media (min-width: 992px) and (min-height: 720px){ 
 		.about-me-lg{
-			display: none;
+			display: none !important;
 		}
 	}
+
 	@media (min-width: 1920px){
 		.skill-list{
 			display: grid;
