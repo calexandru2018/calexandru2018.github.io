@@ -8,7 +8,7 @@
 		<div class="projects-container"  v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
 			<h1 class="card-header">{{ $t("projects.menu_title") }}</h1>
 			<div class="projects-grid">
-				<div class="projects-item fit-height">
+				<div class="projects-item">
 					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/screen-prtf.png" alt="">
 						<div class="item-header">
@@ -16,11 +16,11 @@
 							<div class="item-links">
 								<span></span>
 								<a href="https://github.com/calexandru2018/portfolio" target="_blank">
-									<img src="../assets/img/utility/eye.svg" alt="">
+									<img class="eye" src="../assets/img/utility/eye.svg" alt="">
 								</a>
 								<span></span>
 								<a href="https://calexandru.com/" target="_blank">
-									<img src="../assets/img/utility/domain.svg" alt="">
+									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
 							</div>
 						</div>
@@ -43,17 +43,17 @@
 					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">Read about</button>
 					<button class="btn-read-more" @click="minimize('portfolio')" v-else>Close</button>
 				</div>
-				<div class="projects-item fit-height">
+				<div class="projects-item">
 					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/screen-bom2.png" alt="">
 						<div class="item-header">
 							<h3 v-html="$t('projects.bom2.title')"></h3>
 							<div class="item-links">
 								<span></span>
-								<img src="../assets/img/utility/eye-closed.svg" alt="">
+								<img class="eye-closed" src="../assets/img/utility/eye-closed.svg" alt="">
 								<span></span>
 								<a href="https://bomaoquadrado.pt/" target="_blank">
-									<img src="../assets/img/utility/domain.svg" alt="">
+									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
 							</div>
 						</div>
@@ -77,17 +77,17 @@
 					<button class="btn-read-more" @click="minimize('bom2')" v-else>Close</button>
 				</div>
 				<!-- lk Properties -->
-				<div class="projects-item fit-height">
+				<div class="projects-item">
 					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/screen-lk.png" alt="">
 						<div class="item-header">
 							<h3 v-html="$t('projects.lkproperties.title')"></h3>
 							<div class="item-links">
 								<span></span>
-								<img src="../assets/img/utility/eye-closed.svg" alt="">
+								<img class="eye-closed" src="../assets/img/utility/eye-closed.svg" alt="">
 								<span></span>
 								<a href="https://lk-properties.pt/" target="_blank">
-									<img src="../assets/img/utility/domain.svg" alt="">
+									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
 							</div>
 						</div>
@@ -111,17 +111,17 @@
 					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>Close</button>
 				</div>
 				<!-- project vartan-ik -->
-				<div class="projects-item fit-height">
+				<div class="projects-item">
 					<div class="card-top">
 						<img class="cover-img" src="../assets/img/projects/vartan-b.png" alt="">
 						<div class="item-header">
 							<h3 v-html="$t('projects.vartan.title')"></h3>
 							<div class="item-links">
 								<span></span>
-								<img src="../assets/img/utility/eye.svg" alt="">
+								<img class="eye" src="../assets/img/utility/eye.svg" alt="">
 								<span></span>
 								<a href="http://vartan-b.dx.am/" target="_blank">
-									<img src="../assets/img/utility/domain.svg" alt="">
+									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
 							</div>
 						</div>
@@ -195,9 +195,6 @@
 						t.projects_expander.vartan = hide;
 						break;
 				}
-				
-				// this.project_name_expand = project
-				// this.project_expand = true;
 			},
 			minimize(project){
 				this.expand(project, true);
@@ -210,6 +207,14 @@
 $item-shdw-color: rgb(0,0,0);
 $secondary-text-color: rgb(47,57,77);
 
+	.eye{
+	}
+	.eye-closed{
+		// asdas
+	}
+	.external-link{
+		// asds
+	}
 	.slide-enter-active,
 	.slide-leave-active {
 		overflow:hidden;
@@ -222,7 +227,6 @@ $secondary-text-color: rgb(47,57,77);
 		opacity: 0;
 		max-height: 0;
 	}
-
 	.projects-grid{
 		display: flex;
 		flex-direction: row;
@@ -233,8 +237,9 @@ $secondary-text-color: rgb(47,57,77);
 			width: 85%;
 			display: table !important;
 			padding: 1em 1.5em;
+			margin-bottom: 1em;
 			border-radius: 5px;
-			box-shadow: 1px 1px 10px -6px $item-shdw-color;
+			background-color: rgb(255,255,255);
 			.cover-img{
 				width: 100%;
 			}
@@ -280,14 +285,12 @@ $secondary-text-color: rgb(47,57,77);
 				font-size: 0.8em;
 				color: rgb(255, 255, 255);
 				font-weight: bold;
-				// background-color: rgb(135, 206, 250);
 				background-image: linear-gradient(to bottom, rgb(135, 206, 250) 50%, rgb(255, 255, 255) 50%);
 				background-size: 100% 203%;
 				background-position:right top;
 				margin: 2em 0em;
 				cursor: pointer;
 				transition: background-size ease 0.3s, background-position ease 0.3s;
-				// width: (100vh / 4)+'px';
 				&:hover{
 					background-position: left bottom;
 					color: rgb(135, 206, 250);
@@ -328,12 +331,14 @@ $secondary-text-color: rgb(47,57,77);
 	}
 	/* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
+		.card-header{
+			font-size: 4em !important;
+		}
 		.projects-grid{
 			.projects-item{
-				margin: 1em;
-				// .card-top{
-				// 	height: 17em;
-				// }
+				width: 35% !important;
+				margin: 1em !important;
+    			font-size: 1.2em !important;
 			}
 		}
 	}
@@ -343,15 +348,10 @@ $secondary-text-color: rgb(47,57,77);
 		}
 	}
 	@media (min-width: 1024px) { 
-		.projects-grid{
-			.projects-item{
-				margin: 1em;
-			}
-		}
+
 	}
 	@media (min-width: 1300px) { 
 		.projects-grid{
-
 			.projects-item{
 				margin: 1.5em;
     			font-size: 1.15em;
@@ -386,5 +386,4 @@ $secondary-text-color: rgb(47,57,77);
 			}
 		}
 	}
-	
 </style>
