@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="class_visible ? 'blur-all':''">
+  <div id="app">
 	<app-portfolio-header></app-portfolio-header>
 	<app-navigation v-bind:component_to_show="component_to_show" v-bind:class_visible="class_visible"></app-navigation>
 	<transition
@@ -87,10 +87,6 @@ $card-base-background: rgb(255,255,255);
 $component-main-color: rgb(255, 255, 255);
 $component-secondary-color: rgb(80, 146, 156);
 /* eslint-disable */
-.blur-all > *{
-	transition: filter ease 0.6s;
-	// filter:blur(1px);
-}
 .page{ //Used in CV to show it aligned to center
 	margin: 0 auto !important;
 }	
@@ -120,8 +116,6 @@ $component-secondary-color: rgb(80, 146, 156);
 		width: 100vw;
 		position: fixed;
 		top: 0;
-		// filter: blur(0) !important
-		filter: drop-shadow(2px 4px 6px black);
 	}
 	.card-base-layout{
 		display: grid;
@@ -206,6 +200,7 @@ $component-secondary-color: rgb(80, 146, 156);
 			padding: 0em 2.5em !important;
 			.component{
 				left: 0;
+				filter: drop-shadow(2px 4px 6px black);
 			}
 			.card-base-layout {
 				.projects-content-container{

@@ -75,7 +75,7 @@
 							</ul>
 						</div>
 					</transition>
-					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2">{{ $t("projects.btn_show") }} {{ $t("projects.bom2.title") }}</button>
+					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2" v-html="$t('projects.btn_show')+' '+$t('projects.bom2.title')"></button>
 					<button class="btn-read-more" @click="minimize('bom2')" v-else>{{ $t("projects.btn_close") }}</button>
 				</div>
 				<!-- lk Properties -->
@@ -236,10 +236,6 @@ $secondary-text-color: rgb(47,57,77);
 			margin-bottom: 1em;
 			border-radius: 5px;
 			background-color: rgb(255,255,255);
-			transition: box-shadow ease 0.3s, background-color ease 0.3s,filter  ease 0.3s;
-			&:hover{
-				filter: drop-shadow(0px 0px 6px gray);
-			}
 			.cover-img{
 				width: 100%;
 			}
@@ -342,6 +338,10 @@ $secondary-text-color: rgb(47,57,77);
 				width: 35% !important;
 				margin: 1em !important;
     			font-size: 1.2em !important;
+				&:hover{
+					transition: filter  ease 0.3s;
+					filter: drop-shadow(0px 0px 6px gray);
+				}
 			}
 		}
 	}
