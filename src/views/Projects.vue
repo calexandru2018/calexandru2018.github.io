@@ -236,9 +236,9 @@ $secondary-text-color: rgb(47,57,77);
 			margin-bottom: 1em;
 			border-radius: 5px;
 			background-color: rgb(255,255,255);
-			transition: filter ease 0.3s;
+			transition: box-shadow ease 0.3s, background-color ease 0.3s,filter  ease 0.3s;
 			&:hover{
-				filter: drop-shadow(0px 0px 6px gray)
+				filter: drop-shadow(0px 0px 6px gray);
 			}
 			.cover-img{
 				width: 100%;
