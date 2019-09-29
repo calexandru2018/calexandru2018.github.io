@@ -123,7 +123,9 @@
 							<div class="item-links">
 								<span></span>
 								<span></span>
-								<img class="eye" src="../assets/img/utility/eye.svg" alt="">
+								<a href="https://github.com/calexandru2018/football-project" target="_blank">
+									<img class="eye" src="../assets/img/utility/eye.svg" alt="">
+								</a>
 								<a href="http://vartan-b.dx.am/" target="_blank">
 									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
 								</a>
