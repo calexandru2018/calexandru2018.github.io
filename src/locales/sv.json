@@ -30,6 +30,11 @@
 			"desc": "Detta var en projekt som jag utvecklade för en kund som ville kunna posta fastigheter för köp, hyra och försäljning. Jag var tvungen att göra flera intervjuer med kunden så att jag kunde samla alla nödvändiga krav för projektet. I första hand ville kunden också ha en back-end så att den kunde infoga all information oberoende, för att detta skulle kunna åstadkommas, designade jag databasen på ett sådant sätt att den kunde rymma flera språk. Kunden uttryckte också behovet av en \"skapa konto\" -funktionalitet för slutanvändarna, jag rekommenderade att vi kunde istället prioritera andra områden istället eftersom slutanvändarna lätt kunde kontakta kunden. Kunden är belägen i Portugal. <u> Detta projekt utvecklades 2018 under ett par månader, har både front och back-end som är ganska komplicerat. </u>",
 			"skills": ["PHP","PHP Mail","JS/jQuery","HTML/CSS","Bootstrap","Git"]
 		},
+		"projekt":{
+			"title": "Group Project",
+			"desc": "School group project",
+			"skills": ["PHP","JS/jQuery","HTML/CSS","Git"]
+		},
 		"vartan":{
 			"title": "Värtan IK - B",
 			"desc": "Detta var ett hobbyprojekt som jag utvecklade, under den tiden jag spelade fotboll för ett fotbollslag. Inte alla i vårt team hade ett facebookkonto för att gå med i en facebookgrupp och låta resten av teamteamet om de deltog i träningen eller inte. Jag kom på idén att skapa en enkel webbsida så att alla medlemmar i vår team kan ha ett sätt att markera sitt deltagande, vilket i sin tur hjälpte oss (utbildare) att bättre planera våra träningspass. <u> Detta projekt utvecklades 2014, har både front och back-end. </u>",

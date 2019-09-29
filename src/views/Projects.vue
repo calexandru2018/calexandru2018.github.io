@@ -114,6 +114,42 @@
 					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">{{ $t("projects.btn_show") }} {{ $t("projects.lkproperties.title") }}</button>
 					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>{{ $t("projects.btn_close") }}</button>
 				</div>
+				<!-- project school "projekt" -->
+				<div class="projects-item">
+					<div class="card-top">
+						<img class="cover-img" src="../assets/img/projects/projekt.png" alt="">
+						<div class="item-header">
+							<h3 v-html="$t('projects.projekt.title')"></h3>
+							<div class="item-links">
+								<span></span>
+								<span></span>
+								<a href="https://github.com/calexandru2018/projekt/" target="_blank">
+									<img class="eye" src="../assets/img/utility/eye.svg" alt="">
+								</a>
+								<a href="#" target="_blank">
+									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<transition name="slide" mode="out-in">
+						<div class="card-middle" v-if="projects_expander.projekt">
+							<p v-html="$t('projects.projekt.desc')"></p>
+						</div>
+					</transition>
+					<transition name="slide" mode="out-in">
+						<div class="card-bottom" v-if="projects_expander.projekt">
+							<h5>{{ $t("projects.skills_text") }}</h5>
+							<ul class="tech-skills-list">
+								<li v-for="(i) in projekt_skills" :key="i">
+									<span class="list-item">{{i}}</span>
+								</li>
+							</ul>
+						</div>
+					</transition>
+					<button class="btn-read-more" @click="expand('projekt')" v-if="!projects_expander.projekt">{{ $t("projects.btn_show") }} {{ $t("projects.projekt.title") }}</button>
+					<button class="btn-read-more" @click="minimize('projekt')" v-else>{{ $t("projects.btn_close") }}</button>
+				</div>
 				<!-- project vartan-ik -->
 				<div class="projects-item">
 					<div class="card-top">
@@ -165,6 +201,7 @@
 				portolio_skills: this.$i18n.t('projects.portfolio.skills'),
 				bom2_skills: this.$i18n.t('projects.bom2.skills'),
 				lkproperties_skills: this.$i18n.t('projects.lkproperties.skills'),
+				projekt_skills: this.$i18n.t('projects.projekt.skills'),
 				vartan_skills: this.$i18n.t('projects.vartan.skills'),
 				project_name_expand: '',
 				project_expand: false, 
@@ -172,6 +209,7 @@
 					portfolio: false,
 					bom2: false,
 					lkproperties: false,
+					projekt: false,
 					vartan: false,
 				},
 			}
@@ -196,6 +234,9 @@
 						break;
 					case 'lkproperties':
 						t.projects_expander.lkproperties = hide;
+						break;
+					case 'projekt':
+						t.projects_expander.projekt = hide;
 						break;
 					case 'vartan':
 						t.projects_expander.vartan = hide;
