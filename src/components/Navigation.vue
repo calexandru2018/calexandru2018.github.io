@@ -33,15 +33,13 @@
 	import { eventBus } from '../main';
 
 	export default {
-		name: "naviga__",
 		props:['component_to_show','class_visible'],
 		data() {
 			return{
 				left_hand_use: true,
-				arrow_orientation: 'arrow-right.svg',
 				nav_btn_margin: '0 auto 0 0',
 				nav_btn_slide: 'nav-btn-slide-left', //default
-				change_hand_btn: 'change-hand-btn-slide-right',
+				change_hand_btn: 'change-hand-btn-slide-right', //default
 			}
 		},
 		methods:{
@@ -49,39 +47,34 @@
 				eventBus.$emit('component-to-show', component, true);
 			},
 			changeUseHand(){
-				if(this.left_hand_use == true){
+				this.nav_btn_slide = 'nav-btn-slide-left';
+				this.change_hand_btn = 'change-hand-btn-slide-right';
+
+				if(this.left_hand_use){
 					this.left_hand_use = false;
-					this.arrow_orientation = 'arrow-left.svg';
 					this.nav_btn_slide = 'nav-btn-slide-right';
 					this.change_hand_btn = 'change-hand-btn-slide-left';
 				}else{
-					this.left_hand_use = true;
-					
-					this.arrow_orientation = 'arrow-right.svg';
-					this.nav_btn_slide = 'nav-btn-slide-left';
-					this.change_hand_btn = 'change-hand-btn-slide-right';
+					this.left_hand_use = true;					
 				}
 				eventBus.$emit('left-hand-use', this.left_hand_use);
 			},
 			check(){
-				console.log(this.component_to_show)
+				// console.log(this.component_to_show)
 			}
 		},
 		created(){
-			console.log(`Created_____Display left handed ${this.left_hand_use} and ${this.arrow_orientation}`);
+			// console.log(`Created_____Display left handed ${this.left_hand_use} and ${this.arrow_orientation}`);
 		}
 	}
 </script>
 
 <style lang="scss">
 	.landing-email-link{
-		// font-weight: bold;
 		text-decoration: none;
 		color: rgb(192, 153, 103);
-		// color: rgb(255, 255, 0);
 		transition: color ease 0.5s;
 		&:hover{
-			// color: rgb(154, 205, 50);
 			color: rgb(135, 206, 250);
 		}
 	}
