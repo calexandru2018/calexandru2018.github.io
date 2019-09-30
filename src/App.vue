@@ -61,18 +61,19 @@
 			});
 			eventBus.$on('left-hand-use', (booleanVal) => {
 				this.left_hand_use = booleanVal;
-				if(booleanVal == false){
+
+				this.slide_enter = 'slide-enter-active_left_hand';
+				this.slide_leave = 'slide-leave-active_left_hand';
+				this.hide_comp_btn_shadow = 'hide-component-btn-shadow-left';
+				this.card_base_layout.grid_layout_class = 'card-base-layout-left';
+				this.card_base_layout.grid_positioning = 'grid-column-star: 2; grid-column-end: 3';
+
+				if(!booleanVal){
 					this.slide_enter = 'slide-enter-active_right_hand';
 					this.slide_leave = 'slide-leave-active_right_hand';
 					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-right';
 					this.card_base_layout.grid_layout_class = 'card-base-layout-right';
 					this.card_base_layout.grid_positioning = 'grid-column-star: 1; grid-column-end: 2';
-				}else{
-					this.slide_enter = 'slide-enter-active_left_hand';
-					this.slide_leave = 'slide-leave-active_left_hand';
-					this.hide_comp_btn_shadow = 'hide-component-btn-shadow-left';
-					this.card_base_layout.grid_layout_class = 'card-base-layout-left';
-					this.card_base_layout.grid_positioning = 'grid-column-star: 2; grid-column-end: 3';
 				}
 			});
 		},
@@ -194,7 +195,7 @@ $component-secondary-color: rgb(80, 146, 156);
 	}
 	
 
-	// 	// MEDIA QUERIES START
+	// MEDIA QUERIES START
 	@media (min-width: 768px) { 
 		#app{
 			padding: 0em 2.5em !important;
@@ -314,7 +315,7 @@ $component-secondary-color: rgb(80, 146, 156);
 	// MEDIA QUERIES END
 </style>
 <style lang="scss" scoped>
-$animation-duration: 0.35s;
+$animation-duration: 0.4s;
 
 	//START Animations
 	.slide-enter-active_left_hand{
@@ -332,42 +333,42 @@ $animation-duration: 0.35s;
 	@keyframes slide-in-left{
 		from{
 			transform: translateX(150%) scale(0);
-			opacity: 0.0;
+			opacity: 0;
 		}
 		to{
 			transform: translateX(0%) scale(1);
-			opacity: 1.0;
+			opacity: 1;
 		}
 	}
 	@keyframes slide-out-left{
 		from{
 			transform: translateX(0%) scale(1);
-			opacity: 1.0;
+			opacity: 1;
 		}
 		to{
 			transform: translateX(150%) scale(0);
-			opacity: 0.0;
+			opacity: 0;
 		}
 	}
 
 	@keyframes slide-in-right{
 		from{
 			transform: translateX(-150%) scale(0);
-			opacity: 0.0;
+			opacity: 0;
 		}
 		to{
 			transform: translateX(0%) scale(1);
-			opacity: 1.0;
+			opacity: 1;
 		}
 	}
 	@keyframes slide-out-right{
 		from{
 			transform: translateX(0%) scale(1);
-			opacity: 1.0;
+			opacity: 1;
 		}
 		to{
 			transform: translateX(-150%) scale(0);
-			opacity: 0.0;
+			opacity: 0;
 		}
 	}
 	// END Animation
