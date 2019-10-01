@@ -126,8 +126,8 @@
 								<a href="https://github.com/calexandru2018/projekt/" target="_blank">
 									<img class="eye" src="../assets/img/utility/eye.svg" alt="">
 								</a>
-								<a href="#" target="_blank">
-									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
+								<a href="#">
+									<img class="external-link" src="../assets/img/utility/no-domain.svg" alt="">
 								</a>
 							</div>
 						</div>

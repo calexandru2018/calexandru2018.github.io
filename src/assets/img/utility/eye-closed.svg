@@ -30,14 +30,14 @@
    guidetolerance="10"
    inkscape:pageopacity="0"
    inkscape:pageshadow="2"
-   inkscape:window-width="675"
-   inkscape:window-height="496"
+   inkscape:window-width="1002"
+   inkscape:window-height="676"
    id="namedview41"
    showgrid="false"
    inkscape:zoom="4.1864754"
-   inkscape:cx="28.186001"
+   inkscape:cx="-12.540382"
    inkscape:cy="28.186001"
-   inkscape:window-x="2094"
+   inkscape:window-x="918"
    inkscape:window-y="136"
    inkscape:window-maximized="0"
    inkscape:current-layer="Capa_1" />
@@ -52,11 +52,11 @@
    r="12"
    id="circle4" />
 <line
-   style="fill:none;stroke:#EBBA16;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
-   x1="6.052"
-   y1="51.436"
-   x2="52.552"
-   y2="4.936"
+   style="fill:none;stroke:#ebba16;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+   x1="4.9360018"
+   y1="51.436001"
+   x2="51.436001"
+   y2="4.9360003"
    id="line6" />
 <path
    style="fill:#1f83c9;fill-opacity:0.29411766"
