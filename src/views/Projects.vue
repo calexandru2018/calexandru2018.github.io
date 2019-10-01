@@ -298,10 +298,6 @@ $secondary-text-color: rgb(47,57,77);
 				justify-items: center;
 			}
 			.item-links{
-				// display: grid;
-				// grid-template-columns: repeat(4, 1fr);
-				// justify-items: center;
-				// align-items: center;
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: space-between;
@@ -328,7 +324,7 @@ $secondary-text-color: rgb(47,57,77);
 				color: rgb(255, 255, 255);
 				font-weight: bold;
 				background-image: linear-gradient(to bottom, rgb(135, 206, 250) 50%, rgb(255, 255, 255) 50%);
-				background-size: 100% 203%;
+				background-size: 100% 202%;
 				background-position:right top;
 				margin: 2em 0em;
 				cursor: pointer;
@@ -381,9 +377,12 @@ $secondary-text-color: rgb(47,57,77);
 				width: 35% !important;
 				margin: 1em !important;
     			font-size: 1.2em !important;
+				background-color: transparent !important;
 				&:hover{
-					transition: filter  ease 0.3s;
-					filter: drop-shadow(0px 0px 6px gray);
+					transition: filter  ease 0.3s, transform  ease 0.3s, background-color  ease 0.3s;
+					filter: drop-shadow(0px 0px 3px gray);
+					transform: scale(1.03);
+					background-color: rgb(255,255,255) !important;
 				}
 			}
 		}
