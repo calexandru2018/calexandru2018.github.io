@@ -36,8 +36,8 @@
 </script>
 
 <style lang="scss" scoped>
-$default-text-color: rgb(255,255,255);
-$h2-shdw: rgb(255,255,255);
+$default-text-color: rgb(241,242,242);
+$h2-shdw: rgb(241,242,242);
 $font-header-size: 1.79em;
 $font-p-size: 1.3em;
 $font-lang-size: 1em;
