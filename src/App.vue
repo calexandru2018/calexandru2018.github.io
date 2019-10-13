@@ -84,7 +84,7 @@
 $default-text-color: rgb(255,255,255);
 $secondary-text-color: rgb(47,57,77);
 $accent-color: whrgb(255,255,255);
-$card-base-background: rgb(255,255,255);
+$card-base-background: rgb(241,242,242);
 $component-main-color: rgb(255, 255, 255);
 $component-secondary-color: rgb(80, 146, 156);
 /* eslint-disable */
@@ -123,11 +123,11 @@ $component-secondary-color: rgb(80, 146, 156);
 		// grid-template-columns: 10% 90%;
 		& > div:nth-child(2){
 			// background-color: $card-base-background;
-			background-color: rgb(240, 248, 248);
+			background-color: $card-base-background;
 			color: $secondary-text-color;
 			.card-header{
 				// background-color: $component-main-color;
-				background-color: rgb(240, 248, 248);
+				background-color: $card-base-background;
 				margin: auto;
 				padding: 0.6em 0 0.1em 0;
 				width: 90%;
@@ -146,17 +146,16 @@ $component-secondary-color: rgb(80, 146, 156);
 			width: 100%;
 			height: 100%;
 			// background-color: $component-main-color;
-			background-color: rgb(240, 248, 248);
+			background-color: $card-base-background;
 			border: none;
 			color: rgb(112, 128, 144);
 			padding: 0;
 			cursor: pointer;
 			transition: background-color ease-in-out 0.2s;
 			&:hover, &:active{
-				color:white;
 				background-color: rgb(112, 128, 144);
 				i{
-					color:white;
+					color:$card-base-background;
 				}
 			}	
 		}
