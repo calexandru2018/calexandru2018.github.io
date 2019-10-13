@@ -198,14 +198,80 @@
 		props: ['hide_comp_btn_shadow','card_base_layout', 'left_hand_use'],
 		data(){
 			return{
+				projects: {
+					utility:{
+						eyeOpenImgUrl: '../assets/img/utility/eye.svg',
+						eyeClosedImgUrl: '../assets/img/utility/eye-closed.svg',
+						domainImgUrl: '../assets/img/utility/domain.svg',
+						domainlessImgUrl: '../assets/img/utility/no-domain.svg',
+					},
+					portfolio: {
+						projName: 'portfolio',
+						imgUrl: '../assets/img/projects/screen-prtf.png',
+						title: this.$i18n.t('projects.portfolio.title'),
+						link:{
+							github: 'https://github.com/calexandru2018/portfolio',
+							href: 'https://calexandru.com/'
+						},
+						projDesc: this.$i18n.t('projects.portfolio.desc'),
+						projSkillsTitle: this.$i18n.t('projects.skills_text'),
+						skill: this.$i18n.t('projects.portfolio.skills')
+					},
+					bom2: {
+						projName: 'bom2',
+						imgUrl: '../assets/img/projects/screen-bom2.png',
+						title: this.$i18n.t('projects.bom2.title'),
+						link:{
+							github: false,
+							href: 'https://bomaoquadrado.pt/'
+						},
+						projDesc: this.$i18n.t('projects.bom2.desc'),
+						projSkillsTitle: this.$i18n.t('projects.skills_text'),
+						skill: this.$i18n.t('projects.bom2.skills')
+					},
+					lkproperties: {
+						projName: 'lkproperties',
+						imgUrl: '../assets/img/projects/screen-lk.png',
+						title: this.$i18n.t('projects.lkproperties.title'),
+						link:{
+							github: false,
+							href: 'https://lk-properties.pt/'
+						},
+						projDesc: this.$i18n.t('projects.lkproperties.desc'),
+						projSkillsTitle: this.$i18n.t('projects.skills_text'),
+						skill: this.$i18n.t('projects.lkproperties.skills')
+					},
+					projekt: {
+						projName: 'projekt',
+						imgUrl: '../assets/img/projects/screen-prtf.png',
+						title: this.$i18n.t('projects.projekt.title'),
+						link:{
+							github: 'https://github.com/calexandru2018/projekt/',
+							href: false
+						},
+						projDesc: this.$i18n.t('projects.projekt.desc'),
+						projSkillsTitle: this.$i18n.t('projects.skills_text'),
+						skill: this.$i18n.t('projects.projekt.skills')
+					},
+					vartan: {
+						projName: 'vartan',
+						imgUrl: '../assets/img/projects/screen-prtf.png',
+						title: this.$i18n.t('projects.vartan.title'),
+						link:{
+							github: 'https://github.com/calexandru2018/football-project',
+							href: 'http://vartan-b.dx.am/'
+						},
+						projDesc: this.$i18n.t('projects.vartan.desc'),
+						projSkillsTitle: this.$i18n.t('vartan.skills_text'),
+						skill: this.$i18n.t('projects.vartan.skills')
+					},
+				},
 				portolio_skills: this.$i18n.t('projects.portfolio.skills'),
 				bom2_skills: this.$i18n.t('projects.bom2.skills'),
 				lkproperties_skills: this.$i18n.t('projects.lkproperties.skills'),
 				projekt_skills: this.$i18n.t('projects.projekt.skills'),
 				vartan_skills: this.$i18n.t('projects.vartan.skills'),
-				project_name_expand: '',
-				project_expand: false, 
-				projects_expander:{
+				projects_expander: {
 					portfolio: false,
 					bom2: false,
 					lkproperties: false,
