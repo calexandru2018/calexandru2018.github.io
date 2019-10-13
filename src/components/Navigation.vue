@@ -82,13 +82,14 @@
 
 <style lang="scss" scoped>
 // $default-text-color: rgb(255,255,255);
-$default-text-color: rgb(255,255,255);
+$default-text-color: rgb(241,242,242);
 $btn-def-border-color: rgb(255,255,255);
 $btn-hover-text-color:rgba(100,100,100,0.9);
 $chng-btn-size: 3.5em;
 $nav-btn-width: 50%;
-$nav-btn-transition: 0.15s;
+$nav-btn-transition-time: 0.15s;
 $left-btn-pos-trans: 100%; 
+
 	nav{
 		display: grid;
 		grid-template-rows: repeat(4, 1fr);
@@ -108,23 +109,23 @@ $left-btn-pos-trans: 100%;
 			position: relative;
 			&:first-child{
 				transition: 
-					color $nav-btn-transition ease-in-out, 
-					background-color $nav-btn-transition ease-in-out, 
-					border $nav-btn-transition ease-in-out, 
+					color $nav-btn-transition-time ease-in-out, 
+					background-color $nav-btn-transition-time ease-in-out, 
+					border $nav-btn-transition-time ease-in-out, 
 					left ease-in-out 0.7s;
 			}
 			&:nth-child(2){
 				transition: 
-					color $nav-btn-transition ease-in-out, 
-					background-color $nav-btn-transition ease-in-out, 
-					border $nav-btn-transition ease-in-out, 
+					color $nav-btn-transition-time ease-in-out, 
+					background-color $nav-btn-transition-time ease-in-out, 
+					border $nav-btn-transition-time ease-in-out, 
 					left ease-in-out 0.4s;
 			}
 			&:nth-child(3){
 				transition: 
-					color $nav-btn-transition ease-in-out, 
-					background-color $nav-btn-transition ease-in-out, 
-					border $nav-btn-transition ease-in-out, 
+					color $nav-btn-transition-time ease-in-out, 
+					background-color $nav-btn-transition-time ease-in-out, 
+					border $nav-btn-transition-time ease-in-out, 
 					left ease-in-out 0.2s;
 			}
 			&:hover{
@@ -142,7 +143,7 @@ $left-btn-pos-trans: 100%;
 			}
 			div{
 				transition: all 0.4s ease;
-				background: linear-gradient(to right, rgb(255, 255, 255) 49%, rgba(0, 0, 0, 0) 49%);
+				background: linear-gradient(to right, rgb(241, 242, 242) 49%, rgba(0, 0, 0, 0) 49%);
 				background-size: 205% 110%;
 				background-position: left;
 				width: 100%;
@@ -153,10 +154,10 @@ $left-btn-pos-trans: 100%;
 				justify-content: space-around;
 				align-items: center;
 				mix-blend-mode: screen;
-				color: white;
+				color: rgb(241,242,242);
 				p{
 					mix-blend-mode: difference;
-					color: white;
+					color: rgb(241,242,242);
 					padding: 0;
 					margin: 0;
 					color: $default-text-color;
@@ -175,24 +176,18 @@ $left-btn-pos-trans: 100%;
 		grid-column-end: 3;
 		grid-row-start: 1;
 		grid-row-end: 4;
-		// background-color: rgba(255,255,255, 0.5);
 		&>div{
-			// mix-blend-mode: screen;
 			padding: 1em 5em;
 			border-radius: 2px;
-			background-color: rgb(255,255,255);
+			background-color: rgb(241,242,242);
 			color: rgb(112, 128, 144);
 		}
 		h1,h2,h3,h4,h5,h6{
-			// margin: 1em auto 0.5em auto;
 			text-align: left !important;
-			// mix-blend-mode: difference;
 		}
 		p{
-			// margin: 1em 3em 0.5em 2em;
 			line-height: 1.2em;
 			text-align: justify;
-			// mix-blend-mode: difference;
 		}
 	}
 	.change-hand-btn{
@@ -205,12 +200,14 @@ $left-btn-pos-trans: 100%;
     	position: relative;
 		align-self: center;
 		outline: none !important;
+		mix-blend-mode: screen;
 		img{
 			width: $chng-btn-size - 1;
 			height: $chng-btn-size - 1;
 			vertical-align: middle;
 			vertical-align: middle;
 			outline: none !important;
+			mix-blend-mode: difference;
 		}
 	}
 	.nav-btn-slide-right{//initial stage; using in left hande mode
