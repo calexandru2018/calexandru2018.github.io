@@ -13,16 +13,16 @@
 			<div></div>
 			<div class="external-links">
 				<a class="github" href="https://github.com/calexandru2018" target="_blank">
-					<img src="../assets/img/social/github.svg" alt="">
+					<img src="../assets/img/social/github_simple.svg" alt="">
 				</a>
 				<a class="stackoverflow" href="https://stackoverflow.com/users/2547630/calexandru" target="_blank">
-					<img src="../assets/img/social/stack-overflow.svg" alt="">
+					<img src="../assets/img/social/stack-overflow_simple.svg" alt="">
 				</a>
 				<a class="linkedin" href="https://www.linkedin.com/in/calexandru2018/" target="_blank">
-					<img src="../assets/img/social/linkedin.svg" alt="">
+					<img src="../assets/img/social/linkedin_simple.svg" alt="">
 				</a>
 				<a class="twitter" href="https://twitter.com/calexandru2018" target="_blank">
-					<img src="../assets/img/social/twitter.svg" alt="">
+					<img src="../assets/img/social/twitter_simple.svg" alt="">
 				</a>
 			</div>
 		</div>
@@ -92,7 +92,7 @@ $font-lang-size: 1em;
 				outline: none !important;
 				img{
 					width: 1.8em;
-					transition: filter ease-out 0.1s;
+					transition: filter ease 0.2s;
 					&:hover{
 						filter: drop-shadow(0px 0px 3px $h2-shdw);
 						outline: none !important;
