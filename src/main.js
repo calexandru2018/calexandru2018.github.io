@@ -17,7 +17,7 @@ new Vue({
 	i18n,
 	render: h => h(App),
 	created(){
-		document.title = "Web Portfolio";
+		document.title = "Alexandru Cheltuitor - Portfolio";
 	}
 }).$mount("#app");
 
