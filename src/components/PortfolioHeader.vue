@@ -151,7 +151,7 @@ $font-lang-size: 1em;
 	@media (min-width: 414px) { 
 		.top-nav{
 			h2{
-				font-size: $font-header-size + 0.45em !important;
+				font-size: $font-header-size + 0.6em !important;
 			}
 			p{
 				font-size: $font-p-size + 0.45em !important;
