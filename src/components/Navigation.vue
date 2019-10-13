@@ -81,6 +81,7 @@
 </style>
 
 <style lang="scss" scoped>
+// $default-text-color: rgb(255,255,255);
 $default-text-color: rgb(255,255,255);
 $btn-def-border-color: rgb(255,255,255);
 $btn-hover-text-color:rgba(100,100,100,0.9);
@@ -180,7 +181,7 @@ $left-btn-pos-trans: 100%;
 			padding: 1em 5em;
 			border-radius: 2px;
 			background-color: rgb(255,255,255);
-			color: rgb(80, 146, 156);
+			color: rgb(112, 128, 144);
 		}
 		h1,h2,h3,h4,h5,h6{
 			// margin: 1em auto 0.5em auto;
