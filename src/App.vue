@@ -104,7 +104,7 @@ $component-secondary-color: rgb(80, 146, 156);
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: $default-text-color;
-		background-image: url('~/img/background/bg.jpg');
+		background-image: url('~/img/background/beautiful-branch-bright-772520.jpg');
 		background-position: top;
 		background-size: cover;
 		height: inherit;
@@ -332,42 +332,50 @@ $animation-duration: 0.4s;
 	}
 	@keyframes slide-in-left{
 		from{
-			transform: translateX(150%) scale(0);
+			transform: translateX(150%);
+			// transform: translateX(150%) scale(0);
 			opacity: 0;
 		}
 		to{
-			transform: translateX(0%) scale(1);
+			transform: translateX(0%);
+			// transform: translateX(0%) scale(1);
 			opacity: 1;
 		}
 	}
 	@keyframes slide-out-left{
 		from{
-			transform: translateX(0%) scale(1);
+			transform: translateX(0%);
+			// transform: translateX(0%) scale(1);
 			opacity: 1;
 		}
 		to{
-			transform: translateX(150%) scale(0);
+			transform: translateX(150%);
+			// transform: translateX(150%) scale(0);
 			opacity: 0;
 		}
 	}
 
 	@keyframes slide-in-right{
 		from{
-			transform: translateX(-150%) scale(0);
+			transform: translateX(-150%);
+			// transform: translateX(-150%) scale(0);
 			opacity: 0;
 		}
 		to{
-			transform: translateX(0%) scale(1);
+			transform: translateX(0%);
+			// transform: translateX(0%) scale(1);
 			opacity: 1;
 		}
 	}
 	@keyframes slide-out-right{
 		from{
-			transform: translateX(0%) scale(1);
+			transform: translateX(0%);
+			// transform: translateX(0%) scale(1);
 			opacity: 1;
 		}
 		to{
-			transform: translateX(-150%) scale(0);
+			transform: translateX(-150%);
+			// transform: translateX(-150%) scale(0);
 			opacity: 0;
 		}
 	}
