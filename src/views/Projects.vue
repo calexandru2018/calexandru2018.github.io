@@ -34,7 +34,7 @@
 					</transition>
 					<transition name="slide" mode="out-in">
 						<div class="card-bottom" v-if="project.expanded">
-							<h5>{{ project.SkillsTitle }}</h5>
+							<h5>{{ project.projSkillsTitle }}</h5>
 							<ul class="tech-skills-list">
 								<li v-for="(i) in project.skills" :key="i">
 									<span class="list-item">{{i}}</span>
@@ -231,9 +231,15 @@ $secondary-text-color: rgb(47,57,77);
 			}
 			.card-middle{
 				margin: 2em 0 2em 0;
+				p{
+					color: gray !important;
+				}
 			}
 			.card-bottom{
 				align-self: center;
+				ul{
+					color: gray !important;
+				}
 			}
 			.btn-read-more{
 				border: none;
