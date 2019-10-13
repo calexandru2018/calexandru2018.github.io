@@ -17,7 +17,7 @@
 								<span></span>
 								<span></span>
 								<a style="display: inline-block; position: relative; z-index: 1" :href="project.link.github" target="_blank">
-									<span style="display: inline-block">
+									<span style="display: inline-block" :class="project.link.github ? 'blink-eye-animation' : 'negation-eye-animation'">
 										<object style="position: relative; z-index: -1" class="eye" type="image/svg+xml" :data="(project.link.github ? require('../assets/img/utility/' + utility.eyeOpenImgUrl) : require('../assets/img/utility/' + utility.eyeClosedImgUrl))"></object>
 									</span>
 								</a>
@@ -228,9 +228,6 @@ $secondary-text-color: rgb(47,57,77);
 					vertical-align: middle;
 					cursor: pointer;
 				}
-				span:hover{
-					animation: blink-animation .6s ease forwards;
-				}
 			}
 			.card-middle{
 				margin: 2em 0 2em 0;
@@ -286,6 +283,12 @@ $secondary-text-color: rgb(47,57,77);
 				}
 			}
 		}
+	}
+	.blink-eye-animation:hover{
+		animation: blink-animation .6s ease forwards;
+	}
+	.negation-eye-animation:hover{
+		animation: no-access 0.7s ease forwards;
 	}
 
 	@media (min-width: 576px) { 
@@ -365,6 +368,20 @@ $secondary-text-color: rgb(47,57,77);
 		}
 		to{
 			transform: rotateX(0deg);
+		}
+	}
+	@keyframes no-access{
+		0%{
+			transform: translateX(0) skewY(0deg) rotateY(0deg);
+		}
+		33%{
+			transform: translateX(10px) skewY(-10deg) rotateY(80deg);
+		}
+		66%{
+			transform: translateX(-10px) skewY(10deg) rotateY(-80deg);
+		}
+		100%{
+			transform: translateX(0) skewY(0deg) rotateY(0deg);
 		}
 	}
 </style>
