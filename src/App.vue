@@ -120,13 +120,10 @@ $component-secondary-color: rgb(80, 146, 156);
 	}
 	.card-base-layout{
 		display: grid;
-		// grid-template-columns: 10% 90%;
 		& > div:nth-child(2){
-			// background-color: $card-base-background;
 			background-color: $card-base-background;
 			color: $secondary-text-color;
 			.card-header{
-				// background-color: $component-main-color;
 				background-color: $card-base-background;
 				margin: auto;
 				padding: 0.6em 0 0.1em 0;
