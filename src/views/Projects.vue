@@ -8,183 +8,42 @@
 		<div class="projects-container"  v-bind:style="card_base_layout.grid_positioning + '; grid-row-start: 1;'">
 			<h1 class="card-header">{{ $t("projects.menu_title") }}</h1>
 			<div class="projects-grid">
-				<div class="projects-item">
+				<div class="projects-item" v-for="project in portfolioProjects" :key="project">
 					<div class="card-top">
-						<img class="cover-img" src="../assets/img/projects/screen-prtf.png" alt="">
+						<img class="cover-img" :src="require('../assets/img/projects/' + project.imgUrl)" alt="">
 						<div class="item-header">
-							<h3 v-html="$t('projects.portfolio.title')"></h3>
+							<h3 v-html="project.title"></h3>
 							<div class="item-links">
 								<span></span>
 								<span></span>
-								<a href="https://github.com/calexandru2018/portfolio" target="_blank">
-									<img class="eye" src="../assets/img/utility/eye.svg" alt="">
+								<a style="display: inline-block; position: relative; z-index: 1" :href="project.link.github" target="_blank">
+									<span style="display: inline-block">
+										<object style="position: relative; z-index: -1" class="eye" type="image/svg+xml" :data="(project.link.github ? require('../assets/img/utility/' + utility.eyeOpenImgUrl) : require('../assets/img/utility/' + utility.eyeClosedImgUrl))"></object>
+									</span>
 								</a>
-								<a href="https://calexandru.com/" target="_blank">
-									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
+								<a :href="project.link.href ? project.link.href : '#' " target="_blank">
+									<img class="external-link" :src="(project.link.href ? require('../assets/img/utility/' + utility.domainImgUrl) : require('../assets/img/utility/' + utility.domainlessImgUrl))" alt="">
 								</a>
 							</div>
 						</div>
 					</div>
 					<transition name="slide" mode="out-in">
-						<div class="card-middle" v-if="projects_expander.portfolio">
-							<p v-html="$t('projects.portfolio.desc')"></p>
+						<div class="card-middle" v-if="project.expanded">
+							<p v-html="project.projDesc"></p>
 						</div>
 					</transition>
 					<transition name="slide" mode="out-in">
-						<div class="card-bottom" v-if="projects_expander.portfolio">
-							<h5>{{ $t("projects.skills_text") }}</h5>
+						<div class="card-bottom" v-if="project.expanded">
+							<h5>{{ project.SkillsTitle }}</h5>
 							<ul class="tech-skills-list">
-								<li v-for="(i) in portolio_skills" :key="i">
+								<li v-for="(i) in project.skills" :key="i">
 									<span class="list-item">{{i}}</span>
 								</li>
 							</ul>
 						</div>
 					</transition>
-					<button class="btn-read-more" @click="expand('portfolio')" v-if="!projects_expander.portfolio">{{ $t("projects.btn_show") }} {{ $t("projects.portfolio.title") }}</button>
-					<button class="btn-read-more" @click="minimize('portfolio')" v-else>{{ $t("projects.btn_close") }}</button>
-				</div>
-				<div class="projects-item">
-					<div class="card-top">
-						<img class="cover-img" src="../assets/img/projects/screen-bom2.png" alt="">
-						<div class="item-header">
-							<h3 v-html="$t('projects.bom2.title')"></h3>
-							<div class="item-links">
-								<span></span>
-								<span></span>
-								<a href="#">
-									<img class="eye-closed" src="../assets/img/utility/eye-closed.svg" alt="">
-								</a>
-								<a href="https://bomaoquadrado.pt/" target="_blank">
-									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<transition name="slide" mode="out-in">
-						<div class="card-middle" v-if="projects_expander.bom2">
-							<p v-html="$t('projects.bom2.desc')"></p>
-						</div>
-					</transition>
-					<transition name="slide" mode="out-in">
-						<div class="card-bottom" v-if="projects_expander.bom2">
-							<h5>{{ $t("projects.skills_text") }}</h5>
-							<ul class="tech-skills-list">
-								<li v-for="(i) in bom2_skills" :key="i">
-									<span class="list-item">{{i}}</span>
-								</li>
-							</ul>
-						</div>
-					</transition>
-					<button class="btn-read-more" @click="expand('bom2')" v-if="!projects_expander.bom2" v-html="$t('projects.btn_show')+' '+$t('projects.bom2.title')"></button>
-					<button class="btn-read-more" @click="minimize('bom2')" v-else>{{ $t("projects.btn_close") }}</button>
-				</div>
-				<!-- lk Properties -->
-				<div class="projects-item">
-					<div class="card-top">
-						<img class="cover-img" src="../assets/img/projects/screen-lk.png" alt="">
-						<div class="item-header">
-							<h3 v-html="$t('projects.lkproperties.title')"></h3>
-							<div class="item-links">
-								<span></span>
-								<span></span>
-								<a href="#">
-									<img class="eye-closed" src="../assets/img/utility/eye-closed.svg" alt="">
-								</a>
-								<a href="https://lk-properties.pt/" target="_blank">
-									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<transition name="slide" mode="out-in">
-						<div class="card-middle" v-if="projects_expander.lkproperties">
-							<p v-html="$t('projects.lkproperties.desc')"></p>
-						</div>
-					</transition>
-					<transition name="slide" mode="out-in">
-						<div class="card-bottom"  v-if="projects_expander.lkproperties">
-							<h5>{{ $t("projects.skills_text") }}</h5>
-							<ul class="tech-skills-list">
-								<li v-for="(i) in lkproperties_skills" :key="i">
-									<span class="list-item">{{i}}</span>
-								</li>
-							</ul>
-						</div>
-					</transition>
-					<button class="btn-read-more" @click="expand('lkproperties')" v-if="!projects_expander.lkproperties">{{ $t("projects.btn_show") }} {{ $t("projects.lkproperties.title") }}</button>
-					<button class="btn-read-more" @click="minimize('lkproperties')" v-else>{{ $t("projects.btn_close") }}</button>
-				</div>
-				<!-- project school "projekt" -->
-				<div class="projects-item">
-					<div class="card-top">
-						<img class="cover-img" src="../assets/img/projects/projekt.png" alt="">
-						<div class="item-header">
-							<h3 v-html="$t('projects.projekt.title')"></h3>
-							<div class="item-links">
-								<span></span>
-								<span></span>
-								<a href="https://github.com/calexandru2018/projekt/" target="_blank">
-									<img class="eye" src="../assets/img/utility/eye.svg" alt="">
-								</a>
-								<a href="#">
-									<img class="external-link" src="../assets/img/utility/no-domain.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<transition name="slide" mode="out-in">
-						<div class="card-middle" v-if="projects_expander.projekt">
-							<p v-html="$t('projects.projekt.desc')"></p>
-						</div>
-					</transition>
-					<transition name="slide" mode="out-in">
-						<div class="card-bottom" v-if="projects_expander.projekt">
-							<h5>{{ $t("projects.skills_text") }}</h5>
-							<ul class="tech-skills-list">
-								<li v-for="(i) in projekt_skills" :key="i">
-									<span class="list-item">{{i}}</span>
-								</li>
-							</ul>
-						</div>
-					</transition>
-					<button class="btn-read-more" @click="expand('projekt')" v-if="!projects_expander.projekt">{{ $t("projects.btn_show") }} {{ $t("projects.projekt.title") }}</button>
-					<button class="btn-read-more" @click="minimize('projekt')" v-else>{{ $t("projects.btn_close") }}</button>
-				</div>
-				<!-- project vartan-ik -->
-				<div class="projects-item">
-					<div class="card-top">
-						<img class="cover-img" src="../assets/img/projects/vartan-b.png" alt="">
-						<div class="item-header">
-							<h3 v-html="$t('projects.vartan.title')"></h3>
-							<div class="item-links">
-								<span></span>
-								<span></span>
-								<a href="https://github.com/calexandru2018/football-project" target="_blank">
-									<img class="eye" src="../assets/img/utility/eye.svg" alt="">
-								</a>
-								<a href="http://vartan-b.dx.am/" target="_blank">
-									<img class="external-link" src="../assets/img/utility/domain.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<transition name="slide" mode="out-in">
-						<div class="card-middle" v-if="projects_expander.vartan">
-							<p v-html="$t('projects.vartan.desc')"></p>
-						</div>
-					</transition>
-					<transition name="slide" mode="out-in">
-						<div class="card-bottom" v-if="projects_expander.vartan">
-							<h5>{{ $t("projects.skills_text") }}</h5>
-							<ul class="tech-skills-list">
-								<li v-for="(i) in vartan_skills" :key="i">
-									<span class="list-item">{{i}}</span>
-								</li>
-							</ul>
-						</div>
-					</transition>
-					<button class="btn-read-more" @click="expand('vartan')" v-if="!projects_expander.vartan">{{ $t("projects.btn_show") }} {{ $t("projects.vartan.title") }}</button>
-					<button class="btn-read-more" @click="minimize('vartan')" v-else>{{ $t("projects.btn_close") }}</button>
+					<button class="btn-read-more" @click="expand(project.projName)" v-if="!project.expanded">{{ $t("projects.btn_show") }} {{ project.title }}</button>
+					<button class="btn-read-more" @click="minimize(project.projName)" v-else>{{ $t("projects.btn_close") }}</button>
 				</div>
 			</div>
 		</div>
@@ -198,16 +57,17 @@
 		props: ['hide_comp_btn_shadow','card_base_layout', 'left_hand_use'],
 		data(){
 			return{
-				projects: {
-					utility:{
-						eyeOpenImgUrl: '../assets/img/utility/eye.svg',
-						eyeClosedImgUrl: '../assets/img/utility/eye-closed.svg',
-						domainImgUrl: '../assets/img/utility/domain.svg',
-						domainlessImgUrl: '../assets/img/utility/no-domain.svg',
-					},
+				utility:{
+					eyeOpenImgUrl: 'eye.svg',
+					eyeClosedImgUrl: 'eye-closed.svg',
+					domainImgUrl: 'domain.svg',
+					domainlessImgUrl: 'no-domain.svg',
+				},
+				portolio_skills: this.$i18n.t('projects.portfolio.skills'),
+				portfolioProjects: {
 					portfolio: {
 						projName: 'portfolio',
-						imgUrl: '../assets/img/projects/screen-prtf.png',
+						imgUrl: 'screen-prtf.png',
 						title: this.$i18n.t('projects.portfolio.title'),
 						link:{
 							github: 'https://github.com/calexandru2018/portfolio',
@@ -215,11 +75,12 @@
 						},
 						projDesc: this.$i18n.t('projects.portfolio.desc'),
 						projSkillsTitle: this.$i18n.t('projects.skills_text'),
-						skill: this.$i18n.t('projects.portfolio.skills')
+						skills: this.$i18n.t('projects.portfolio.skills'),
+						expanded: false,
 					},
 					bom2: {
 						projName: 'bom2',
-						imgUrl: '../assets/img/projects/screen-bom2.png',
+						imgUrl: 'screen-bom2.png',
 						title: this.$i18n.t('projects.bom2.title'),
 						link:{
 							github: false,
@@ -227,11 +88,12 @@
 						},
 						projDesc: this.$i18n.t('projects.bom2.desc'),
 						projSkillsTitle: this.$i18n.t('projects.skills_text'),
-						skill: this.$i18n.t('projects.bom2.skills')
+						skills: this.$i18n.t('projects.bom2.skills'),
+						expanded: false,
 					},
 					lkproperties: {
 						projName: 'lkproperties',
-						imgUrl: '../assets/img/projects/screen-lk.png',
+						imgUrl: 'screen-lk.png',
 						title: this.$i18n.t('projects.lkproperties.title'),
 						link:{
 							github: false,
@@ -239,11 +101,12 @@
 						},
 						projDesc: this.$i18n.t('projects.lkproperties.desc'),
 						projSkillsTitle: this.$i18n.t('projects.skills_text'),
-						skill: this.$i18n.t('projects.lkproperties.skills')
+						skills: this.$i18n.t('projects.lkproperties.skills'),
+						expanded: false,
 					},
 					projekt: {
 						projName: 'projekt',
-						imgUrl: '../assets/img/projects/screen-prtf.png',
+						imgUrl: 'screen-projekt.png',
 						title: this.$i18n.t('projects.projekt.title'),
 						link:{
 							github: 'https://github.com/calexandru2018/projekt/',
@@ -251,11 +114,12 @@
 						},
 						projDesc: this.$i18n.t('projects.projekt.desc'),
 						projSkillsTitle: this.$i18n.t('projects.skills_text'),
-						skill: this.$i18n.t('projects.projekt.skills')
+						skills: this.$i18n.t('projects.projekt.skills'),
+						expanded: false,
 					},
 					vartan: {
 						projName: 'vartan',
-						imgUrl: '../assets/img/projects/screen-prtf.png',
+						imgUrl: 'screen-vartanb.png',
 						title: this.$i18n.t('projects.vartan.title'),
 						link:{
 							github: 'https://github.com/calexandru2018/football-project',
@@ -263,20 +127,9 @@
 						},
 						projDesc: this.$i18n.t('projects.vartan.desc'),
 						projSkillsTitle: this.$i18n.t('vartan.skills_text'),
-						skill: this.$i18n.t('projects.vartan.skills')
+						skills: this.$i18n.t('projects.vartan.skills'),
+						expanded: false,
 					},
-				},
-				portolio_skills: this.$i18n.t('projects.portfolio.skills'),
-				bom2_skills: this.$i18n.t('projects.bom2.skills'),
-				lkproperties_skills: this.$i18n.t('projects.lkproperties.skills'),
-				projekt_skills: this.$i18n.t('projects.projekt.skills'),
-				vartan_skills: this.$i18n.t('projects.vartan.skills'),
-				projects_expander: {
-					portfolio: false,
-					bom2: false,
-					lkproperties: false,
-					projekt: false,
-					vartan: false,
 				},
 			}
 		},
@@ -293,19 +146,19 @@
 
 				switch(project){
 					case 'portfolio':
-						t.projects_expander.portfolio = hide;
+						t.portfolioProjects.portfolio.expanded = hide;
 						break;
 					case 'bom2':
-						t.projects_expander.bom2 = hide;
+						t.portfolioProjects.bom2.expanded = hide;
 						break;
 					case 'lkproperties':
-						t.projects_expander.lkproperties = hide;
+						t.portfolioProjects.lkproperties.expanded = hide;
 						break;
 					case 'projekt':
-						t.projects_expander.projekt = hide;
+						t.portfolioProjects.projekt.expanded = hide;
 						break;
 					case 'vartan':
-						t.projects_expander.vartan = hide;
+						t.portfolioProjects.vartan.expanded = hide;
 						break;
 				}
 			},
@@ -339,6 +192,7 @@ $secondary-text-color: rgb(47,57,77);
 		justify-content: space-evenly;
 		padding: 1em 0;
 		.projects-item{
+			pointer-events: all;
 			width: 85%;
 			display: table !important;
 			padding: 1em 1.5em;
@@ -368,7 +222,7 @@ $secondary-text-color: rgb(47,57,77);
 				flex-wrap: nowrap;
 				justify-content: space-between;
 				height: 100%;
-				img{
+				img, object{
 					width: auto;
 					height: 1.8em;
 					vertical-align: middle;
