@@ -148,23 +148,23 @@ $component-secondary-color: rgb(80, 146, 156);
 			// background-color: $component-main-color;
 			background-color: rgb(240, 248, 248);
 			border: none;
-			color: $default-text-color;
+			color: rgb(112, 128, 144);
 			padding: 0;
 			cursor: pointer;
 			transition: background-color ease-in-out 0.2s;
 			&:hover, &:active{
 				color:white;
-				background-color: $component-secondary-color;
+				background-color: rgb(112, 128, 144);
 				i{
 					color:white;
 				}
 			}	
 		}
 		.hide-component-btn-shadow-left{
-			box-shadow: inset 13px 13px 0px -5px $component-secondary-color;
+			box-shadow: inset 13px 13px 0px -5px rgb(112, 128, 144);
 		}
 		.hide-component-btn-shadow-right{
-			box-shadow: inset -13px 13px 0px -5px $component-secondary-color;
+			box-shadow: inset -13px 13px 0px -5px rgb(112, 128, 144);
 		}
 	}
 	i{
@@ -173,7 +173,7 @@ $component-secondary-color: rgb(80, 146, 156);
 		display: inline-block;
 		padding: 0.7em;
 		margin-left: -.4em;
-		color:$component-secondary-color;
+		color:rgb(112, 128, 144);
 	}
 	.right {
 		transform: rotate(-45deg);
@@ -242,15 +242,8 @@ $component-secondary-color: rgb(80, 146, 156);
 				top: 10%;
 				margin: 0 10%;
 			}
-			.card-base-layout{
-				.hide-component-btn{
-					border-top-left-radius: 10px;
-					border-bottom-left-radius: 10px;
-				}
-				
+			.card-base-layout{				
 				& div:nth-child(2){
-					border-top-right-radius: 10px;
-					border-bottom-right-radius: 10px;
 					.card-header{
 						padding: 1em 0 0.1em 0;
 						font-size: 3em;
