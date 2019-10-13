@@ -42,7 +42,7 @@
 							</ul>
 						</div>
 					</transition>
-					<button class="btn-read-more" @click="expand(project.projName)" v-if="!project.expanded">{{ $t("projects.btn_show") }} {{ project.title }}</button>
+					<button class="btn-read-more" @click="expand(project.projName)" v-if="!project.expanded" v-html="$t('projects.btn_show') + ' ' + project.title"></button>
 					<button class="btn-read-more" @click="minimize(project.projName)" v-else>{{ $t("projects.btn_close") }}</button>
 				</div>
 			</div>
