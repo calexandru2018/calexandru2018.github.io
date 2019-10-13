@@ -94,7 +94,7 @@ $left-btn-pos-trans: 100%;
 		display: grid;
 		grid-template-rows: repeat(4, 1fr);
 		align-items: start;
-		margin: -0.5em 25px 0 25px;
+		margin: 0em 25px 0 25px;
 		.nav-btn{
 			width: $nav-btn-width;
 			height: 2.5em;
@@ -242,25 +242,24 @@ $left-btn-pos-trans: 100%;
 	}
 	@media (min-width: 375px) and (min-height: 750px){
 		nav{
-			margin: -1.5em 25px 0 25px !important;
-
 			.nav-btn{
 				font-size: 1em;
 			}
 		}
 	}
-	@media (min-width: 576px) { 
-
+	@media (min-width: 414px) { 
+		.nav-btn{
+			font-size: 1rem;
+			height: 3em !important;
+		}
 	}
 	/* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
 		nav{
-    		margin: -3em 25px 0 25px;
-
 			.nav-btn{
-				font-size: 1rem;
-				width: $nav-btn-width - 10% !important;
-				height: 3.5em !important;
+				font-size: 1.5rem;
+				width: $nav-btn-width - 5% !important;
+				height: 3em !important;
 			}
 			.change-hand-btn{
 				width:  $chng-btn-size + 2em;
@@ -280,16 +279,20 @@ $left-btn-pos-trans: 100%;
 	}
 	@media (min-width: 992px) and (min-height: 720px){ 
 		nav{
-    		margin: 2em 25px 0 25px !important;
+			grid-template-columns: 1fr 2fr;
+			grid-column-gap: 2em;
+    		margin: 0em 25px 0 25px !important;
 			.about-me-lg{
 				display: flex !important;
-				width: 70%;
 				justify-self: end;
-				font-size: 0.8em;
+				font-size: 1em;
+				div{
+					padding: 1em 2em;
+				}
 			}
 			.nav-btn{
 				font-size: 1rem;
-				width: $nav-btn-width + 120% !important;
+				width: $nav-btn-width + 40% !important;
 				height: 3.5em !important;
 			}
 		}
@@ -304,7 +307,6 @@ $left-btn-pos-trans: 100%;
 	@media (min-width: 992px) and (min-height: 1024px){ 
 		nav{
 			margin: -6em 25px 0 25px !important;
-			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
 				width: 100% !important;
@@ -312,24 +314,27 @@ $left-btn-pos-trans: 100%;
 			.nav-btn{
 				// align-self: center;
 				font-size: 1.3rem;
-				width: $nav-btn-width - 0% !important;
+				width: $nav-btn-width + 30% !important;
 				height: 4em !important;
 			}
 		}
 	}
 	@media (min-width: 1300px) { 
 		nav{
-			margin: 50px 25px 0 25px !important;
-			grid-template-columns: 1fr 1fr;
+			margin: 0 25px 0 25px !important;
+			grid-template-columns: 1fr 2fr;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
 				height: 100%;
 				width: 100% !important;
 				font-size: 1.2em;
+				div{
+					padding: 1em 5em;
+				}
 			}
 			.nav-btn{
 				font-size: 1.3rem !important;
-				width: $nav-btn-width - 0% !important;
+				width: $nav-btn-width + 15% !important;
 				height: 3.5em !important;
 			}
 		}
@@ -337,11 +342,10 @@ $left-btn-pos-trans: 100%;
 	// 2k resolutions 2048 x 1080
 	@media (min-width: 2048px) { 
 		nav{
-			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
 			.nav-btn{
 				font-size: 1.5rem !important;
-				width: $nav-btn-width - 25% !important;
+				width: $nav-btn-width + 25% !important;
 				height: 3.5em !important;
 			}
 			.about-me-lg{
@@ -352,16 +356,15 @@ $left-btn-pos-trans: 100%;
 	// 4k resolutions 3840 x 2160
 	@media (min-width: 3840px) { 
 		nav{
-			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(4, 1fr);
 			.about-me-lg{
 				width: 100% !important;
-				font-size: 1.8em !important;
+				font-size: 2.4em !important;
 			}
 			.nav-btn{
-				font-size: 1.7rem !important;
-				width: $nav-btn-width - 30% !important;
-				height: 5.5em !important;
+				font-size: 2.2rem !important;
+				width: $nav-btn-width + 20% !important;
+				height: 5em !important;
 			}
 		}
 	}
