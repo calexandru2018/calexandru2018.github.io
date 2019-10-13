@@ -228,6 +228,9 @@ $secondary-text-color: rgb(47,57,77);
 					vertical-align: middle;
 					cursor: pointer;
 				}
+				span:hover{
+					animation: blink-animation .6s ease forwards;
+				}
 			}
 			.card-middle{
 				margin: 2em 0 2em 0;
@@ -284,6 +287,7 @@ $secondary-text-color: rgb(47,57,77);
 			}
 		}
 	}
+
 	@media (min-width: 576px) { 
 
 	}
@@ -349,6 +353,18 @@ $secondary-text-color: rgb(47,57,77);
 					line-height: 1.4em !important;
 				}
 			}
+		}
+	}
+	@keyframes blink-animation{
+		from{
+			transform: rotateX(0deg);
+		}
+		50%{
+			transform: rotateX(80deg);
+			
+		}
+		to{
+			transform: rotateX(0deg);
 		}
 	}
 </style>
