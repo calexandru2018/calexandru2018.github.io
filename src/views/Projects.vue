@@ -65,6 +65,19 @@
 				},
 				portolio_skills: this.$i18n.t('projects.portfolio.skills'),
 				portfolioProjects: {
+					pvpn: {
+						projName: 'protonvpn_linux_gui',
+						imgUrl: 'screen-pvpn.png',
+						title: this.$i18n.t('projects.protonvpn_linux_gui.title'),
+						link:{
+							github: 'https://github.com/calexandru2018/protonvpn-linux-gui',
+							href: false
+						},
+						projDesc: this.$i18n.t('projects.protonvpn_linux_gui.desc'),
+						projSkillsTitle: this.$i18n.t('projects.skills_text'),
+						skills: this.$i18n.t('projects.protonvpn_linux_gui.skills'),
+						expanded: false,
+					},
 					portfolio: {
 						projName: 'portfolio',
 						imgUrl: 'screen-prtf.png',
@@ -126,7 +139,7 @@
 							href: 'http://vartan-b.dx.am/'
 						},
 						projDesc: this.$i18n.t('projects.vartan.desc'),
-						projSkillsTitle: this.$i18n.t('vartan.skills_text'),
+						projSkillsTitle: this.$i18n.t('projects.skills_text'),
 						skills: this.$i18n.t('projects.vartan.skills'),
 						expanded: false,
 					},
@@ -145,6 +158,9 @@
 					hide = false;
 
 				switch(project){
+					case 'protonvpn_linux_gui':
+						t.portfolioProjects.pvpn.expanded = hide;
+						break;
 					case 'portfolio':
 						t.portfolioProjects.portfolio.expanded = hide;
 						break;
