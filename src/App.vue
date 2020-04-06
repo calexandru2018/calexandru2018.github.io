@@ -104,7 +104,7 @@ $component-secondary-color: rgb(80, 146, 156);
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: $default-text-color;
-		background-image: url('~/img/background/beautiful-branch-bright-772520.jpg');
+		background-image: url('./assets/img/background/beautiful-branch-bright-772520.jpg');
 		background-position: top;
 		background-size: cover;
 		height: inherit;
