@@ -15,9 +15,14 @@
 		"skills_text": "Worked with the following languages and tools:",
 		"btn_show": "About",
 		"btn_close": "Close",
+		"protonvpn_linux_gui":{
+			"title": "Unofficial ProtonVPN linux GUI",
+			"desc": "At the time when the project started, <a href='https://protonvpn.com/'>ProtonVPN</a> had no official GUI for the Linux platform, only a official community build CLI written in Python. From reading some users commentaries on Reddit, Twitter and their official webpage asking for a GUI, I decided that it would be interesting to learn on how to build a GUI for Linux based systems. It was especially interesting since I had finished my Python online course a couple of months before starting the project. I started into looking in how I could create a Linux cross-platform GUI, that would work on top of the actual CLI. That is when I found Glade. A month later, I was still not satisfied with the GUI since it did not offer an indicator. After some research, I found out about (lib)AppIndicator, two days later, all users could make use of this useful and much needed utility. Can be installed either via <a href='https://pypi.org/project/protonvpn-linux-gui-calexandru2018/'>PIP</a> or <a href='https://aur.archlinux.org/packages/protonvpn-linux-gui/'>Arch</a>. For more information, take a look at my <a href='https://github.com/calexandru2018/protonvpn-linux-gui'>github repo</a>. <u>This project started in early 2020.</u>",
+			"skills": ["Python","Bash","GTK3","Glade","OpenVPN","Protonvpn-cli-ng","AppIndicator","Linux", "Git/Github", "Github Actions", "Systemd"]
+		},
 		"portfolio":{
 			"title": "Portfolio",
-			"desc": "The following project is my web portfolio. Since I had finished a Udemy course on VueJS, I decided that it was about time that I put that knowledge to good use. This was my first time project being fully developed on VueJS. This was also my first time that I have fully utilized a css pre-compilier (I had previously used in a previous project Bom2 but only to minify, uglify and add browser prefixes to the css code). This time, I managed to teach myself on how to use SASS/SCSS (which is what I always wanted to do), and I got into it rather quickly since it felt very natural. I used the Vue CLI 3 tool to quickly start with some boilerplate code, so that I could avoid the initial overhead of setting up a project from scratch, it is really much more effective to start this way. <u>This project was developed during during 2019, no business logic was implemented, apart from the PHP Mailer function.</u>",
+			"desc": "The following project is my web portfolio. Since I had finished a Udemy course on VueJS, I decided that it was about time that I put that knowledge to good use. This was my first time project being fully developed on VueJS. This was also my first time that I have fully utilized a css pre-compilier (I had previously used in a previous project Bom2 but only to minify, uglify and add browser prefixes to the css code). This time, I managed to teach myself on how to use SASS/SCSS (which is what I always wanted to do), and I got into it rather quickly since it felt very natural. I used the Vue CLI 3 tool to quickly start with some boilerplate code, so that I could avoid the initial overhead of setting up a project from scratch, it is really much more effective to start this way. <u>This project was developed during 2019, no business logic was implemented, apart from the PHP Mailer function.</u>",
 			"skills": ["PHP Mail", "VueJS","SCSS", "Webpack", "Vue i18N", "Git"]
 		},
 		"bom2":{
@@ -38,7 +43,6 @@
 		"vartan":{
 			"title": "Värtan IK - B",
 			"desc": "This was a hobby project that had I developed during the time I played football for a football team and was also a partial coach. Me and another coach planned our training sessions based on the amount of people that would join the trainings. We sometimes planned a training for 15 people and only 8 joined and vice-versa. It was a bit frustrating trying to organize something without roughly knowing how many people would show up. <br/>Since not everybody in our team had a facebook account to join a facebook-group and let us (the coaches) if they were attending the training session or not, I came up with the idea of making a simple webpage so that every member of our team could have a way to let us know if they were attending the training session or not. This in turn helped us (coaches) to better plan our training sessions and even enjoy them. <u>This project was developed in 2014, has both front and back-end.</u>",
-			"read_more": "",
 			"skills": ["PHP","JS","HTML/CSS","jQuery"]
 		}
 	},

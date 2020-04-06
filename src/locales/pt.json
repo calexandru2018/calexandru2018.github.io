@@ -15,6 +15,11 @@
 		"skills_text": "Trabalhei com as seguintes línguas e ferramentas:",
 		"btn_show": "Sobre",
 		"btn_close": "Fechar",
+		"protonvpn_linux_gui":{
+			"title": "Inoficial linux GUI para ProtonVPN",
+			"desc": "<u>Projecto comecou em 2020.</u>",
+			"skills": ["Python","Bash","GTK3","Glade","OpenVPN","Protonvpn-cli-ng","AppIndicator","Linux", "Git/Github", "Github Actions", "Systemd"]
+		},
 		"portfolio":{
 			"title": "Portfólio",
 			"desc": "O seguinte projeto é o meu porfolio web. Desde que terminei o curso da Udemy em VueJS, decidi que já era hora de dar bom uso a esse conhecimento. Este foi o meu primeiro projeto a ser totalmente desenvolvido em VueJS, esta foi também a primeira vez que utilizei um pré-compilador css (utilizei-o num projeto anterior, Bom2, mas apenas para minimizar, “uglify” e adicionar prefixos de navegador ao código css). Desta vez, aprendi como usar o SASS/SCSS (algo que eu sempre quis fazer) e realmente aprendi-o bastante rápido, pois a lógica de programação é semelhante à outras línugas. Usei a ferramenta Vue CLI 3 para começar rapidamente com algum código padrão, para assim, evitar a sobrecarga inicial de começar um projeto a partir do zero (é realmente muito mais eficaz começar desta forma). <u>Este projeto foi desenvolvido em 2019, nenhuma “business logic” foi implementada.</u>",

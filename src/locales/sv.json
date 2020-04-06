@@ -15,6 +15,11 @@
 		"skills_text": "Har artbetat med följande programmeringsspråk/verktyg:",
 		"btn_show": "Om",
 		"btn_close": "Stäng",
+		"protonvpn_linux_gui":{
+			"title": "Unofficial ProtonVPN linux GUI",
+			"desc": "<u>Började projektet i 2020.</u>",
+			"skills": ["Python","Bash","GTK3","Glade","OpenVPN","Protonvpn-cli-ng","AppIndicator","Linux", "Git/Github", "Github Actions", "Systemd"]
+		},
 		"portfolio":{
 			"title": "Portfölj",
 			"desc": "Följande projekt är min webbportfölj. Eftersom jag hade avslutat en kurs på udemy om VueJS, bestämde jag mig för att det var på tide att jag använde den kunskapen. Det här är första gången jag använder VueJs i stor skala och det är också första gången jag verkligen använder en css-förkompilerare (jag använde i ett tidigare projekt, men bara för att minifiera, uglifiera och skapa bitar). Jag lärde mig att använda SASS / SCSS (som jag alltid ville göra) och kom verkligen in i det snabbt. Jag använde verktyget Vue CLI 3 för att snabbt börja arbeta med ett projekt, så att jag kan undvika överhuvudtaget för att starta ett projekt från grunden, det är verkligen mycket effektivare att börja med en pannplattkod. <u> Detta projekt utvecklades under 2019 implementerades ingen affärslogik, förutom PHP Mailer-funktionen. </u>",
